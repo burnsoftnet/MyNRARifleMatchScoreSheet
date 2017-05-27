@@ -179,7 +179,7 @@
             iRow++;
         }
     }
-    [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"%@ has %ld rows",displayMatchesClasses.matchclass,iRow] FromSubFunction:@"list_matches.getRowsForSection"];
+    [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"%@ has %ld rows",displayMatchesClasses.matchclass,(long)iRow] FromSubFunction:@"list_matches.getRowsForSection"];
     return iRow;
 }
 

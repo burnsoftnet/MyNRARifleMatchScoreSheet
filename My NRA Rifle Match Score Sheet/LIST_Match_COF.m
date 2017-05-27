@@ -132,9 +132,17 @@
 #pragma mark Table Set Sections
 //set the sections in the table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+#pragma mark Table Set Number of Rows
+//set the number of rows int he table
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if ([myMatchListings count] > 0)
     {
-        return 1;
+        self.tableView.backgroundView = nil;
+        return [myMatchListings count];
     } else {
         // Display a message when the table is empty
         UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -151,13 +159,6 @@
         
     }
     return 0;
-}
-
-#pragma mark Table Set Number of Rows
-//set the number of rows int he table
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [myMatchListings count];
 }
 
 #pragma mark Table Set Cell Data
