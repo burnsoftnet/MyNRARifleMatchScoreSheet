@@ -162,7 +162,7 @@
      
      */
     
-    return 1;
+    //return 1;
 }
 
 -(NSInteger)getRowsForSection:(NSInteger)section
@@ -261,6 +261,7 @@
     
     if ([currentSection isEqualToString:cellClass])
         {
+            ArrayCount++;
             isRowHidden = NO;
             cell.tag = displayMatches.MID;
             cell.textLabel.text = displayMatches.matchname;
@@ -273,7 +274,7 @@
             [tableView beginUpdates];
             [tableView endUpdates];
         }
-        ArrayCount++;
+        //ArrayCount++;
     return cell;
     
     
