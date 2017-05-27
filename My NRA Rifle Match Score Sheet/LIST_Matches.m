@@ -136,25 +136,30 @@
 //set the sections in the table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //if ([myMatchListings count] > 0)
-    if ([myMatchClasses count] > 0)
+    if (USEGROUPING)
     {
-        return [myMatchClasses count];
+        if ([myMatchClasses count] > 0)
+        {
+            return [myMatchClasses count];
+        } else {
+            // Display a message when the table is empty
+            UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+            
+            messageLabel.text = @"No data is currently available. Please Add a Match.";
+            messageLabel.textColor = [UIColor blackColor];
+            messageLabel.numberOfLines = 0;
+            messageLabel.textAlignment = NSTextAlignmentCenter;
+            messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+            [messageLabel sizeToFit];
+            
+            self.tableView.backgroundView = messageLabel;
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+            
+        }
+        return 0;
     } else {
-        // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = @"No data is currently available. Please Add a Match.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+        return 1;
     }
-    return 0;
     
     /* orginal Code
      
@@ -187,20 +192,31 @@
 //set the number of rows int he table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self getRowsForSection:section];
+    //return [self getRowsForSection:section];
    //return [myMatchListings count];
     /* Original Code
      return [myMatchListings count];
      */
+    if (USEGROUPING)
+    {
+        return [self getRowsForSection:section];
+    } else {
+        return [myMatchListings count];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    MatchLists *myObj = [myMatchListings objectAtIndex:section];
-    NSString *header = myObj.matchclass;
-    myObj = nil;
-    isRowHidden = NO;
-    return header;
+    if (USEGROUPING)
+    {
+        MatchLists *myObj = [myMatchListings objectAtIndex:section];
+        NSString *header = myObj.matchclass;
+        myObj = nil;
+        isRowHidden = NO;
+        return header;
+    } else {
+        return nil;
+    }
 }
 
 
@@ -243,23 +259,25 @@
      return cell;
      */
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    MatchLists *myObj = [myMatchListings objectAtIndex:indexPath.section];
-    NSString *currentSection = myObj.matchclass;
-    //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-    MatchLists *displayMatches = [myMatchListings objectAtIndex:ArrayCount];
-    NSString *cellClass = displayMatches.matchclass;
-    
-    [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"currentSection = %@",currentSection] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-    [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"cellClass = %@",cellClass] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-    [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"Match Name = %@",displayMatches.matchname] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-    
-    if ([currentSection isEqualToString:cellClass])
+    if (USEGROUPING)
+    {
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
+        
+        MatchLists *myObj = [myMatchListings objectAtIndex:indexPath.section];
+        NSString *currentSection = myObj.matchclass;
+        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        MatchLists *displayMatches = [myMatchListings objectAtIndex:ArrayCount];
+        NSString *cellClass = displayMatches.matchclass;
+        
+        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"currentSection = %@",currentSection] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
+        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"cellClass = %@",cellClass] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
+        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"Match Name = %@",displayMatches.matchname] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
+        
+        if ([currentSection isEqualToString:cellClass])
         {
             ArrayCount++;
             isRowHidden = NO;
@@ -275,7 +293,21 @@
             [tableView endUpdates];
         }
         //ArrayCount++;
-    return cell;
+        return cell;
+    } else {
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
+        MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        
+        cell.tag = displayMatches.MID;
+        cell.textLabel.text = displayMatches.matchname;
+        cell.detailTextLabel.text = displayMatches.matchdetails;
+        
+        return cell;
+    }
     
     
     /*  Oringinal Code

@@ -14,6 +14,8 @@
 #import "LIST_Match_COF.h"
 #import "Add_MatchViewController.h"
 
+static BOOL USEGROUPING = NO;
+
 @interface LIST_Matches : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 - (IBAction)refresh:(UIRefreshControl *)sender; //refresh action for the myTableView
