@@ -138,6 +138,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A547A94B1EDA3B5900B1576C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A557C9751EBD160000E6B0AC /* AppDelegate.h */,
+				A557C9761EBD160000E6B0AC /* AppDelegate.m */,
+				A557C97B1EBD160000E6B0AC /* Main.storyboard */,
+				A557C97E1EBD160000E6B0AC /* Assets.xcassets */,
+				A557C9801EBD160000E6B0AC /* LaunchScreen.storyboard */,
+				A557C9831EBD160000E6B0AC /* Info.plist */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		A557C9661EBD160000E6B0AC = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +174,7 @@
 				A557C98B1EBD163900E6B0AC /* Form Classes */,
 				A557C98A1EBD163200E6B0AC /* Classes */,
 				A557C9891EBD161800E6B0AC /* images */,
-				A557C9751EBD160000E6B0AC /* AppDelegate.h */,
-				A557C9761EBD160000E6B0AC /* AppDelegate.m */,
-				A557C97B1EBD160000E6B0AC /* Main.storyboard */,
-				A557C97E1EBD160000E6B0AC /* Assets.xcassets */,
-				A557C9801EBD160000E6B0AC /* LaunchScreen.storyboard */,
-				A557C9831EBD160000E6B0AC /* Info.plist */,
+				A547A94B1EDA3B5900B1576C /* Main */,
 				A557C9721EBD160000E6B0AC /* Supporting Files */,
 			);
 			path = "My NRA Rifle Match Score Sheet";

@@ -135,7 +135,6 @@
 #pragma mark Table Set Sections
 //set the sections in the table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //if ([myMatchListings count] > 0)
     if (USEGROUPING)
     {
         if ([myMatchClasses count] > 0)
@@ -160,14 +159,6 @@
     } else {
         return 1;
     }
-    
-    /* orginal Code
-     
-     return 1;
-     
-     */
-    
-    //return 1;
 }
 
 -(NSInteger)getRowsForSection:(NSInteger)section
@@ -192,11 +183,6 @@
 //set the number of rows int he table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return [self getRowsForSection:section];
-   //return [myMatchListings count];
-    /* Original Code
-     return [myMatchListings count];
-     */
     if (USEGROUPING)
     {
         return [self getRowsForSection:section];
@@ -212,7 +198,8 @@
         MatchLists *myObj = [myMatchListings objectAtIndex:section];
         NSString *header = myObj.matchclass;
         myObj = nil;
-        isRowHidden = NO;
+        //isRowHidden = NO;
+        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"header is %@",header] FromSubFunction:@"list_matches.titleForHeaderInSection"];
         return header;
     } else {
         return nil;
@@ -276,24 +263,26 @@
         [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"currentSection = %@",currentSection] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
         [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"cellClass = %@",cellClass] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
         [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"Match Name = %@",displayMatches.matchname] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
+        NSLog(@"Array Count: %ld",(long)ArrayCount);
         
         if ([currentSection isEqualToString:cellClass])
         {
-            ArrayCount++;
-            isRowHidden = NO;
+            //ArrayCount++;
+            //isRowHidden = NO;
             cell.tag = displayMatches.MID;
             cell.textLabel.text = displayMatches.matchname;
             cell.detailTextLabel.text = displayMatches.matchdetails;
-            [tableView beginUpdates];
-            [tableView endUpdates];
+            //[tableView beginUpdates];
+            //[tableView endUpdates];
         } else {
-            isRowHidden = YES;
+            //isRowHidden = YES;
             cell.hidden = YES;
-            [tableView beginUpdates];
-            [tableView endUpdates];
+            //[tableView beginUpdates];
+            //[tableView endUpdates];
         }
-        //ArrayCount++;
+        ArrayCount++;
         return cell;
+        
     } else {
         static NSString *CellIdentifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -308,24 +297,7 @@
         
         return cell;
     }
-    
-    
-    /*  Oringinal Code
-     static NSString *CellIdentifier = @"Cell";
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-     if (!cell) {
-     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-     }
-     MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-     
-     cell.tag = displayMatches.MID;
-     cell.textLabel.text = displayMatches.matchname;
-     cell.detailTextLabel.text = displayMatches.matchdetails;
-     
-     return cell;
-    */
 }
-
 /*
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -337,8 +309,7 @@
     }
     return height;
 }
- 
- */
+*/
  
 #pragma mark Table Row Selected
 //actions to take when a row has been selected.
