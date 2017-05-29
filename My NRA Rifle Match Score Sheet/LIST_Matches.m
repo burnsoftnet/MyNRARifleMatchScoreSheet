@@ -17,7 +17,8 @@
     NSInteger LastSection;
     BOOL isRowHidden;
     NSInteger ArrayCount;
-    NSMutableDictionary *theDictionaryMatchClass;
+    
+    NSMutableDictionary *DictionaryMatchClass;
 }
 @end
 
@@ -97,11 +98,10 @@
 -(void) loadData
 {
     ArrayCount = 0;
+    DictionaryMatchClass = [NSMutableDictionary dictionary];
     [myMatchListings removeAllObjects];
     MatchLists *objMatch = [MatchLists new];
     NSString *errorMsg = [NSString new];
-    theDictionaryMatchClass = [NSMutableDictionary dictionary];
-    
     
     myMatchListings = [objMatch getAllMatchListsByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     [FormFunctions checkForError:errorMsg MyTitle:@"LoadData:" ViewController:self];
@@ -109,8 +109,38 @@
     myMatchClasses = [objMatch getDistinctMatchClassesByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     [FormFunctions checkForError:errorMsg MyTitle:@"Error Load Data Match Class:" ViewController:self];
 
-        
+        //[DictionaryMatchClass setValue:<#(nullable id)#> forUndefinedKey:<#(nonnull NSString *)#>]
+    [self setupDictionary];
+    
+    myMatchClasses = [[DictionaryMatchClass allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
     [[self myTableView] reloadData];
+}
+
+-(void)setupDictionary
+{
+    NSString *errorMsg;
+    [DictionaryMatchClass removeAllObjects];
+    for (int x = 0; x < [myMatchClasses count]; x++) {
+        MatchLists *displayMatcheClasses = [myMatchClasses objectAtIndex:x];
+        NSString *currentClassName = displayMatcheClasses.matchclass;
+        //[DictionaryMatchClass]
+        //NSLog(@"working with division %@",currentClassName);
+        [DictionaryMatchClass setObject:[MatchLists getAllMatchListsByMatchDivision:currentClassName DatabasePath:dbPathString ErrorMessage:&errorMsg] forKey:currentClassName];
+        /*
+        for (int i = 0; i < [myMatchListings count]; i++) {
+            MatchLists *displayMatches = [myMatchListings objectAtIndex:i];
+            NSString *className = displayMatches.matchclass;
+            NSString *matchName = displayMatches.matchname;
+            if ([currentClassName isEqualToString:className])
+            {
+                NSLog(@"setting match %@  in division %@",matchName,className);
+                [DictionaryMatchClass setObject:myMatchListings forKey:currentClassName];
+            }
+        }
+         */
+    }
+
 }
 
 #pragma mark Prepare for Segue
@@ -189,7 +219,10 @@
 {
     if (USEGROUPING)
     {
-        return [self getRowsForSection:section];
+        //return [self getRowsForSection:section];
+        NSString *sectionTitle = [myMatchClasses objectAtIndex:section];
+        NSArray *sectionDivision = [DictionaryMatchClass objectForKey:sectionTitle];
+        return [sectionDivision count];
     } else {
         return [myMatchListings count];
     }
@@ -203,7 +236,7 @@
         NSString *header = myObj.matchclass;
         myObj = nil;
         //isRowHidden = NO;
-        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"header is %@",header] FromSubFunction:@"list_matches.titleForHeaderInSection"];
+        //[FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"header is %@",header] FromSubFunction:@"list_matches.titleForHeaderInSection"];
         return header;
     } else {
         return nil;
@@ -257,6 +290,26 @@
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
+
+        
+        // Configure the cell...
+        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        //NSString *MatchName = [sectionMatches objectAtIndex:indexPath.row];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+        
+        cell.tag = displayMatches.MID;
+        cell.textLabel.text = displayMatches.matchname;
+        cell.detailTextLabel.text = displayMatches.matchdetails;
+        //cell.imageView.image = [UIImage imageNamed:[self getImageFilename:animal]];
+        
+        return cell;
+        /*
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
         
         MatchLists *myObj = [myMatchListings objectAtIndex:indexPath.section];
         NSString *currentSection = myObj.matchclass;
@@ -286,7 +339,7 @@
         }
         ArrayCount++;
         return cell;
-        
+        */
     } else {
         static NSString *CellIdentifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];

@@ -14,7 +14,7 @@
 #import "LIST_Match_COF.h"
 #import "Add_MatchViewController.h"
 
-static BOOL USEGROUPING = NO;
+static BOOL USEGROUPING = YES;
 
 @interface LIST_Matches : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 

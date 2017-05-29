@@ -23,6 +23,13 @@
 //Get the formated matchname, matchdetails and ID of match for TableView Controller
 -(NSMutableArray *) getAllMatchListsByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 
+#pragma mark Get All Match Listing by Division Array
+//Get the formated matchname, matchdetails and ID of match by Division for TableView Controller
+-(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
+
+#pragma mark Get All Match Listing by Division Array METHOD
++(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
+
 #pragma mark Get Distinct Match Classes Array
 //Get the distinct match class of match for TableView Controller
 -(NSArray *) getDistinctMatchClassesByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;

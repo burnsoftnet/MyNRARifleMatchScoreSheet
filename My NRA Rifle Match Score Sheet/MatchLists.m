@@ -71,6 +71,70 @@
     return matchLists;
 }
 
+#pragma mark Get All Match Listing by Division Array
+//Get the formated matchname, matchdetails and ID of match by Division for TableView Controller
+-(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
+{
+    matchLists = [NSMutableArray new];
+    sqlite3_stmt *statement;
+    if (sqlite3_open([dbPath UTF8String],&MatchDB) == SQLITE_OK) {
+        [matchLists removeAllObjects];
+        NSString *querySQL = [NSString stringWithFormat:@"select ID,matchname,matchdetails,mclass from view_match_list where mclass='%@' order by dt COLLATE NOCASE ASC",mclass];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                NSString *matchID = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                NSString *MatchName = [NSString new];
+                
+                if ( sqlite3_column_type(statement, 1) != SQLITE_NULL )
+                {
+                    MatchName = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement,1)];
+                } else {
+                    MatchName = @" ";
+                }
+                
+                NSString *MatchDetails = [NSString new];
+                if ( sqlite3_column_type(statement, 2) != SQLITE_NULL )
+                {
+                    MatchDetails = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement,2)];
+                } else {
+                    MatchDetails = @"NEW";
+                }
+                
+                NSString *mClass = [NSString new];
+                if ( sqlite3_column_type(statement, 3) != SQLITE_NULL)
+                {
+                    mClass = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                } else {
+                    mClass =@"UNKNOWN";
+                }
+                
+                
+                MatchLists *myMatch = [MatchLists new];
+                [myMatch setMID:[matchID intValue]];
+                [myMatch setMatchname:MatchName];
+                [myMatch setMatchdetails:MatchDetails];
+                [myMatch setMatchclass:mClass];
+                
+                [matchLists addObject:myMatch];
+                
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            *errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getAllMatchLists . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+    return matchLists;
+}
+
+#pragma mark Get All Match Listing by Division Array METHOD
++(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
+{
+    MatchLists *myObj = [MatchLists new];
+    return [myObj getAllMatchListsByMatchDivision:mclass DatabasePath:dbPath ErrorMessage:errorMsg];
+}
+
 #pragma mark Get Distinct Match Classes Array
 //Get the distinct match class of match for TableView Controller
 -(NSArray *) getDistinctMatchClassesByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
