@@ -10,6 +10,7 @@
 #import <sqlite3.h>
 #import "BurnSoftDatabase.h"
 #import "BurnSoftGeneral.h"
+#import "MatchListCOF.h"
 
 @interface MatchLists : NSObject
 
@@ -57,4 +58,8 @@
 #pragma mark Delete Match List
 //Delete the Match and all the courses of fire and the data relating to that match
 -(BOOL) deleteMatchListsByID:(NSString *) mid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
+
+#pragma mark Copy Match ANd Details
+//copy the match and the course of fires in order and add all zeros for the course of fire.
+-(void) copyMatchByMatchID:(NSString *) mid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 @end

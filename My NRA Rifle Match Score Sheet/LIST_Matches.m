@@ -281,21 +281,25 @@
    //FormFunctions *myFunctions = [FormFunctions new];
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
-        MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
         
         destViewController.MID = mid;
         [self.navigationController pushViewController:destViewController animated:YES];
     }];
-
-    editAction.backgroundColor = [UIColor blueColor];
     
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         //insert your deleteAction here
         
         NSString *errorMsg;
-        MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
         if ([displayMatches deleteMatchListsByID:mid DatabasePath:dbPathString ErrorMessage:&errorMsg])
         {
@@ -305,8 +309,26 @@
         }
         
     }];
+    
+    UITableViewRowAction *copyAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Copy" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        //Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
+        NSString *errorMsg;
+        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
+        //NSLog(@"%@",mid);
+        [displayMatches copyMatchByMatchID:mid DatabasePath:dbPathString ErrorMessage:&errorMsg];
+        //destViewController.MID = mid;
+        //[self.navigationController pushViewController:destViewController animated:YES];
+    }];
+
+    editAction.backgroundColor = [UIColor blueColor];
     deleteAction.backgroundColor = [UIColor redColor];
-    return  @[deleteAction,editAction];
+    editAction.backgroundColor = [UIColor greenColor];
+    
+    return  @[editAction,deleteAction,copyAction];
     //return  @[deleteAction];
 }
 @end

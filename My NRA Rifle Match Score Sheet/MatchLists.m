@@ -287,4 +287,96 @@
     return bANS;
 }
 
+#pragma Get Match ID by values
+//find the match that has all the values peassed
+-(NSString *) getMatchIDbyName:(NSString *) matchName MatchClassID:(NSString *) MCID Location:(NSString *) location Relay:(NSString *) relay Target:(NSString *) target DateOfMatch:(NSString *) dateofmatch DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
+{
+    NSString *sAns = @"0";
+    sqlite3_stmt *statement;
+    if (sqlite3_open([dbPath UTF8String],&MatchDB) == SQLITE_OK) {
+        [matchLists removeAllObjects];
+        NSString *querySQL = [NSString stringWithFormat:@"select id from match_list where name='%@' and location='%@' and target='%@' and relay='%@' and MCID=%@ and dt='%@'",matchName,location,target,relay,MCID,dateofmatch];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                sAns = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            *errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getMatchIDbyName . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+
+    return sAns;
+}
+
+#pragma mark Copy Match ANd Details
+//copy the match and the course of fires in order and add all zeros for the course of fire.
+-(void) copyMatchByMatchID:(NSString *) mid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
+{
+    NSString *name = [NSString new];
+    NSString *location = [NSString new];
+    NSString *target = [NSString new];
+    NSString *relay = [NSString new];
+    NSString *MCID = [NSString new];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    NSString *dateOfMatch = [NSString stringWithFormat:@"%ld-%ld-%ld",(long)[components year],(long)[components month],(long)[components day]];
+    
+    sqlite3_stmt *statement;
+    if (sqlite3_open([dbPath UTF8String],&MatchDB) == SQLITE_OK) {
+        NSString *querySQL = [NSString stringWithFormat:@"select name,location,target,relay,MCID from match_list where id=%@",mid];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                name = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                location = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement,1)];
+                target = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement,2)];
+                relay = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                MCID = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            *errorMsg = [NSString stringWithFormat:@"Error while creating select statement for copyMatchByMatchID . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+    
+    [self InsertNewMatchbyName:name MatchClassID:MCID Location:location Relay:relay Target:target DateOfMatch:dateOfMatch DatabasePath:dbPath ErrorMessage:errorMsg];
+    NSString *matchID = [self getMatchIDbyName:name MatchClassID:MCID Location:location Relay:relay Target:target DateOfMatch:dateOfMatch DatabasePath:dbPath ErrorMessage:errorMsg];
+    //NSLog(@"match id is %@",matchID);
+
+    MatchListCOF *myObj = [MatchListCOF new];
+    
+    NSMutableArray *arryCOF = [NSMutableArray new];
+    
+    if (sqlite3_open([dbPath UTF8String],&MatchDB) == SQLITE_OK) {
+        NSString *querySQL = [NSString stringWithFormat:@"select MCOFID from match_list_cof where MLID=%@ order by ID ASC",mid];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                NSString *CourseOfFireID = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                [arryCOF addObject:CourseOfFireID];
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            *errorMsg = [NSString stringWithFormat:@"Error while creating select statement for copyMatchByMatchID . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+    
+    for (int x = 0; x < [arryCOF count]; x++) {
+        NSString *CourseOfFireID = [arryCOF objectAtIndex:x];
+        NSString *MLCID = [NSString new];
+        
+        MLCID = [myObj InsertCourseOfFireIDfromListByMatchID:matchID COFID:CourseOfFireID DatabasePath:dbPath ErrorMessage:errorMsg];
+        
+        NSString *SQLquery = [NSString stringWithFormat:@"INSERT INTO match_list_cof_details(MLCID,MLID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2) VALUES(%@,%@,%@,'0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0',0,0,0,0,0);",MLCID,matchID,CourseOfFireID];
+        [BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPath MessageHandler:errorMsg];
+    }
+    myObj = nil;
+    
+}
+
+
 @end
