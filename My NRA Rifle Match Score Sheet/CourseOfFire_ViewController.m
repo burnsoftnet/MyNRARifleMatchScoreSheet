@@ -303,6 +303,7 @@
                     //X total String2
                     sqlColumn = 29;
                     _lblXTotal2.text = [[NSString alloc] initWithUTF8String: (const char*)sqlite3_column_text(statement, sqlColumn)];
+                    
                 }
                 sqlite3_finalize(statement);
             }
@@ -479,7 +480,7 @@
     } else {
         MLCID = [myObj getCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
         
-        SQLquery = [NSString stringWithFormat:@"UPDATE match_list_cof_details set MLCID=%@,MLID=%@,MCOFID=%@,s1='%@',s2='%@',r1='%@',r2='%@',r3='%@',r4='%@',r5='%@',r6='%@',r7='%@',r8='%@',r9='%@',r10='%@',r11='%@',r12='%@',r13='%@',r14='%@',r15='%@',r16='%@',r17='%@',r18='%@',r19='%@',r20='%@',total1='%@',total2='%@',endtotal='%@',x_count_1='%@',x_count_2='%@' where ID=%@;",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,_COFID];
+        SQLquery = [NSString stringWithFormat:@"UPDATE match_list_cof_details set MLCID=%@,MLID=%@,MCOFID=%@,s1='%@',s2='%@',r1='%@',r2='%@',r3='%@',r4='%@',r5='%@',r6='%@',r7='%@',r8='%@',r9='%@',r10='%@',r11='%@',r12='%@',r13='%@',r14='%@',r15='%@',r16='%@',r17='%@',r18='%@',r19='%@',r20='%@',total1='%@',total2='%@',endtotal='%@',x_count_1='%@',x_count_2='%@' where ID=%@;",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,self.COFID];
     }
    if (![BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPathString MessageHandler:&errorMessage])
    {

@@ -17,6 +17,7 @@
 @property (strong,nonatomic) NSString *matchname;
 @property (strong,nonatomic) NSString *matchdetails;
 @property (strong,nonatomic) NSString *matchclass;
+@property (strong,nonatomic) NSMutableDictionary *classDict;
 
 #pragma mark Get All Match Listing Array
 //Get the formated matchname, matchdetails and ID of match for TableView Controller

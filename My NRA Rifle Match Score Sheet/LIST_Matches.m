@@ -17,6 +17,7 @@
     NSInteger LastSection;
     BOOL isRowHidden;
     NSInteger ArrayCount;
+    NSMutableDictionary *theDictionaryMatchClass;
 }
 @end
 
@@ -99,6 +100,8 @@
     [myMatchListings removeAllObjects];
     MatchLists *objMatch = [MatchLists new];
     NSString *errorMsg = [NSString new];
+    theDictionaryMatchClass = [NSMutableDictionary dictionary];
+    
     
     myMatchListings = [objMatch getAllMatchListsByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     [FormFunctions checkForError:errorMsg MyTitle:@"LoadData:" ViewController:self];
@@ -106,6 +109,7 @@
     myMatchClasses = [objMatch getDistinctMatchClassesByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     [FormFunctions checkForError:errorMsg MyTitle:@"Error Load Data Match Class:" ViewController:self];
 
+        
     [[self myTableView] reloadData];
 }
 
