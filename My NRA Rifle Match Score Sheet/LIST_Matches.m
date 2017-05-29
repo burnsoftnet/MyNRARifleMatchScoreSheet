@@ -320,6 +320,7 @@
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
         //NSLog(@"%@",mid);
         [displayMatches copyMatchByMatchID:mid DatabasePath:dbPathString ErrorMessage:&errorMsg];
+        [self reloadData];
         //destViewController.MID = mid;
         //[self.navigationController pushViewController:destViewController animated:YES];
     }];

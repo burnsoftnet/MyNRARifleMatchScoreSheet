@@ -44,10 +44,12 @@
                     ScoreDetails = @"";
                 }
                 
+                
                 MatchListCOF *myMatch = [MatchListCOF new];
                 [myMatch setCOFID:[matchID intValue]];
                 [myMatch setCof_name:MatchName];
                 [myMatch setScoredetails:ScoreDetails];
+                
                 
                 [matchLists addObject:myMatch];
                 

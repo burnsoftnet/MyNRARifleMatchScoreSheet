@@ -16,6 +16,7 @@
 {
     sqlite3 *MatchDB;
     NSString *dbPathString;
+    NSString *matchListCOFList;
 }
 @synthesize pvCourseOfFire;
 
@@ -181,7 +182,7 @@
     {
         sqlite3_stmt * statement;
         if (sqlite3_open([dbPathString UTF8String],&MatchDB) == SQLITE_OK) {
-            NSString *querySQL = [NSString stringWithFormat:@"SELECT ID, MCOFID,cof,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2 from view_match_list_cof_details where ID=%@",self.COFID];
+            NSString *querySQL = [NSString stringWithFormat:@"SELECT ID, MCOFID,cof,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2,MLCID from view_match_list_cof_details where ID=%@",self.COFID];
             int ret = sqlite3_prepare_v2(MatchDB, [querySQL UTF8String], -1, &statement, NULL);
             int sqlColumn = 0;
             
@@ -304,6 +305,9 @@
                     sqlColumn = 29;
                     _lblXTotal2.text = [[NSString alloc] initWithUTF8String: (const char*)sqlite3_column_text(statement, sqlColumn)];
                     
+                    //MLCID or Match List COF List ID
+                    sqlColumn = 30;
+                    matchListCOFList = [[NSString alloc] initWithUTF8String: (const char*)sqlite3_column_text(statement, sqlColumn)];
                 }
                 sqlite3_finalize(statement);
             }
@@ -478,7 +482,10 @@
         
         SQLquery = [NSString stringWithFormat:@"INSERT INTO match_list_cof_details(MLCID,MLID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2) VALUES(%@,%@,%@,'%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@',%@,%@,%@,%@,%@);",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2];
     } else {
-        MLCID = [myObj getCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
+        //MLCID = [myObj getCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
+        MLCID = matchListCOFList;
+        SQLquery = [NSString stringWithFormat:@"update match_list_cof set MCOFID=%@ where ID=%@",MCOFID ,matchListCOFList];
+        [BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPathString MessageHandler:&errorMessage];
         
         SQLquery = [NSString stringWithFormat:@"UPDATE match_list_cof_details set MLCID=%@,MLID=%@,MCOFID=%@,s1='%@',s2='%@',r1='%@',r2='%@',r3='%@',r4='%@',r5='%@',r6='%@',r7='%@',r8='%@',r9='%@',r10='%@',r11='%@',r12='%@',r13='%@',r14='%@',r15='%@',r16='%@',r17='%@',r18='%@',r19='%@',r20='%@',total1='%@',total2='%@',endtotal='%@',x_count_1='%@',x_count_2='%@' where ID=%@;",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,self.COFID];
     }
