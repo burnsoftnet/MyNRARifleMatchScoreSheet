@@ -109,7 +109,6 @@
     myMatchClasses = [objMatch getDistinctMatchClassesByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     [FormFunctions checkForError:errorMsg MyTitle:@"Error Load Data Match Class:" ViewController:self];
 
-        //[DictionaryMatchClass setValue:<#(nullable id)#> forUndefinedKey:<#(nonnull NSString *)#>]
     [self setupDictionary];
     
     myMatchClasses = [[DictionaryMatchClass allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
@@ -124,21 +123,7 @@
     for (int x = 0; x < [myMatchClasses count]; x++) {
         MatchLists *displayMatcheClasses = [myMatchClasses objectAtIndex:x];
         NSString *currentClassName = displayMatcheClasses.matchclass;
-        //[DictionaryMatchClass]
-        //NSLog(@"working with division %@",currentClassName);
         [DictionaryMatchClass setObject:[MatchLists getAllMatchListsByMatchDivision:currentClassName DatabasePath:dbPathString ErrorMessage:&errorMsg] forKey:currentClassName];
-        /*
-        for (int i = 0; i < [myMatchListings count]; i++) {
-            MatchLists *displayMatches = [myMatchListings objectAtIndex:i];
-            NSString *className = displayMatches.matchclass;
-            NSString *matchName = displayMatches.matchname;
-            if ([currentClassName isEqualToString:className])
-            {
-                NSLog(@"setting match %@  in division %@",matchName,className);
-                [DictionaryMatchClass setObject:myMatchListings forKey:currentClassName];
-            }
-        }
-         */
     }
 
 }
@@ -232,12 +217,7 @@
 {
     if (USEGROUPING)
     {
-        MatchLists *myObj = [myMatchListings objectAtIndex:section];
-        NSString *header = myObj.matchclass;
-        myObj = nil;
-        //isRowHidden = NO;
-        //[FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"header is %@",header] FromSubFunction:@"list_matches.titleForHeaderInSection"];
-        return header;
+        return [myMatchClasses objectAtIndex:section];
     } else {
         return nil;
     }
@@ -248,41 +228,6 @@
 //set the cell data by use of an array
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-     //Another option would be to "hide" a row/cell. The technique I've used for this is to provide a height of 0 for the given cell via heightForRowAtIndexPath:
-     
-     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    if (LastSection > 0)
-    {
-        LastSection = indexPath.section;
-        ArrayIndex += [self getRowsForSection:LastSection];
-    }
-    //ArrayIndex++;
-    //NSLog(@"%ld",(long)indexPath.section);
-    MatchLists *myObj = [myMatchListings objectAtIndex:indexPath.section];
-    NSString *currentSection = myObj.matchclass;
-    MatchLists *displayMatches = [myMatchListings objectAtIndex:ArrayIndex];
-    NSString *cellClass = displayMatches.matchclass;
-    
-    for (int x = 0; x < [myMatchListings count]; x++) {
-        if ([currentSection isEqualToString:cellClass])
-        {
-            cell.tag = displayMatches.MID;
-            cell.textLabel.text = displayMatches.matchname;
-            cell.detailTextLabel.text = displayMatches.matchdetails;
-            //return cell;
-            
-        }
-    }
-     return cell;
-     */
-    
     if (USEGROUPING)
     {
         static NSString *CellIdentifier = @"Cell";
@@ -291,8 +236,6 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
 
-        
-        // Configure the cell...
         NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
         NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
         //NSString *MatchName = [sectionMatches objectAtIndex:indexPath.row];
@@ -301,45 +244,8 @@
         cell.tag = displayMatches.MID;
         cell.textLabel.text = displayMatches.matchname;
         cell.detailTextLabel.text = displayMatches.matchdetails;
-        //cell.imageView.image = [UIImage imageNamed:[self getImageFilename:animal]];
         
         return cell;
-        /*
-        static NSString *CellIdentifier = @"Cell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        }
-        
-        MatchLists *myObj = [myMatchListings objectAtIndex:indexPath.section];
-        NSString *currentSection = myObj.matchclass;
-        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-        MatchLists *displayMatches = [myMatchListings objectAtIndex:ArrayCount];
-        NSString *cellClass = displayMatches.matchclass;
-        
-        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"currentSection = %@",currentSection] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"cellClass = %@",cellClass] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-        [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"Match Name = %@",displayMatches.matchname] FromSubFunction:@"list_matches.cellForRowAtIndexPath"];
-        NSLog(@"Array Count: %ld",(long)ArrayCount);
-        
-        if ([currentSection isEqualToString:cellClass])
-        {
-            //ArrayCount++;
-            //isRowHidden = NO;
-            cell.tag = displayMatches.MID;
-            cell.textLabel.text = displayMatches.matchname;
-            cell.detailTextLabel.text = displayMatches.matchdetails;
-            //[tableView beginUpdates];
-            //[tableView endUpdates];
-        } else {
-            //isRowHidden = YES;
-            cell.hidden = YES;
-            //[tableView beginUpdates];
-            //[tableView endUpdates];
-        }
-        ArrayCount++;
-        return cell;
-        */
     } else {
         static NSString *CellIdentifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -355,18 +261,7 @@
         return cell;
     }
 }
-/*
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGFloat height = 0.0;
-    if (isRowHidden) {
-        height = 0.0;
-    } else {
-        height = 44.0;
-    }
-    return height;
-}
-*/
+
  
 #pragma mark Table Row Selected
 //actions to take when a row has been selected.
