@@ -157,7 +157,7 @@
     NSString *SQLquery = [NSString stringWithFormat:@"delete from match_list_cof where MLID=%@ and MCOFID=%@",mid,mlcofid];
     if ([BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPath MessageHandler:errorMsg])
     {
-        SQLquery = [NSString stringWithFormat:@"delete from match_list_cof_details where MLCID=%@",mcofid];
+        SQLquery = [NSString stringWithFormat:@"delete from match_list_cof_details where ID=%@",mcofid];
         if ([BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPath MessageHandler:errorMsg])
         {
             bANS = YES;
