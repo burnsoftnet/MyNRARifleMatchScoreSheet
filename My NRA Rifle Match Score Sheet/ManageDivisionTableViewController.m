@@ -100,6 +100,8 @@
         textField.borderStyle = UITextBorderStyleRoundedRect;
     }];
 
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){}]];
+    
     [alertController addAction:[UIAlertAction actionWithTitle:@"ADD" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSArray * textfields = alertController.textFields;
         UITextField * namefield = textfields[0];
@@ -200,6 +202,7 @@
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.text = cofName;
     }];
+    
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Update" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSArray * textfields = alertController.textFields;

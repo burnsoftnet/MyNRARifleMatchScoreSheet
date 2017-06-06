@@ -89,6 +89,7 @@
 //add the details of a new match
 -(void) AddCOF
 {
+    //preferredStyle:UIAlertControllerStyleAlert
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Course of Fire"
                                                                               message: @"Add Course of Fire"
                                                                        preferredStyle:UIAlertControllerStyleAlert];
@@ -107,6 +108,9 @@
         textField.secureTextEntry = YES;
     }];
      */
+    //UIAlertActionStyleDefault
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){}]];
+    
     [alertController addAction:[UIAlertAction actionWithTitle:@"ADD" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSArray * textfields = alertController.textFields;
         UITextField * namefield = textfields[0];
