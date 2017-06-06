@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MYSettings.h"
 #import "BurnSoftDatabase.h"
-//#import "DBUpgrade.h"
+#import "DBUpgrade.h"
 //#import "DatabaseManagement.h"
 #import "FormFunctions.h"
 

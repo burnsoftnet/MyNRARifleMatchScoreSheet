@@ -160,6 +160,7 @@
 -(NSString *) AddValueFromTextBox:(UITextField *) myBox xSwitch:(UISwitch *) mySwitch AddSwitch:(NSString **) addswitch
 {
     NSString *sAns = myBox.text;
+    *addswitch = @"0";
     if ([mySwitch isOn])
     {
         sAns = @"10";
@@ -328,6 +329,8 @@
     [self AddValueFromTextBox:self.txtS1 xSwitch:self.swXS1 AddSwitch:&switchvalue];
     [self AddValueFromTextBox:self.txtS2 xSwitch:self.swXS2 AddSwitch:&switchvalue];
     switchvalue = @"0";
+    xtotal_string1 = @"0";
+    xtotal_string2 = @"0";
     
     NSString *r1 = [self AddValueFromTextBox:self.txtR1 xSwitch:self.swXR1 AddSwitch:&switchvalue];
     string1total = [BurnSoftMath AddTwoItemsAsIntegerString:string1total :r1];
@@ -368,6 +371,7 @@
     NSString *r10 = [self AddValueFromTextBox:self.txtR10 xSwitch:self.swXR10 AddSwitch:&switchvalue];
     string1total = [BurnSoftMath AddTwoItemsAsIntegerString:string1total :r10];
     xtotal_string1 = [BurnSoftMath AddTwoItemsAsIntegerString:xtotal_string1 :switchvalue];
+
     self.lblXTotal.text = xtotal_string1;
     self.lblString1Total.text = string1total;
     switchvalue = @"0";
@@ -470,7 +474,7 @@
     NSString *endtotal = _lblCOFTotal.text;
     NSString *X_Total1 = _lblXTotal.text;
     NSString *X_Total2 = _lblXTotal2.text;
-    
+    NSString *X_Total = [BurnSoftMath AddTwoItemsAsIntegerString:X_Total1 :X_Total2];
     NSString *MLCID = [NSString new];
     
     
@@ -480,14 +484,14 @@
     {
         MLCID = [myObj InsertCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
         
-        SQLquery = [NSString stringWithFormat:@"INSERT INTO match_list_cof_details(MLCID,MLID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2) VALUES(%@,%@,%@,'%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@',%@,%@,%@,%@,%@);",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2];
+        SQLquery = [NSString stringWithFormat:@"INSERT INTO match_list_cof_details(MLCID,MLID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2,xtotal) VALUES(%@,%@,%@,'%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@',%@,%@,%@,%@,%@,%@);",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,X_Total];
     } else {
         //MLCID = [myObj getCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
         MLCID = matchListCOFList;
         SQLquery = [NSString stringWithFormat:@"update match_list_cof set MCOFID=%@ where ID=%@",MCOFID ,matchListCOFList];
         [BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPathString MessageHandler:&errorMessage];
         
-        SQLquery = [NSString stringWithFormat:@"UPDATE match_list_cof_details set MLCID=%@,MLID=%@,MCOFID=%@,s1='%@',s2='%@',r1='%@',r2='%@',r3='%@',r4='%@',r5='%@',r6='%@',r7='%@',r8='%@',r9='%@',r10='%@',r11='%@',r12='%@',r13='%@',r14='%@',r15='%@',r16='%@',r17='%@',r18='%@',r19='%@',r20='%@',total1='%@',total2='%@',endtotal='%@',x_count_1='%@',x_count_2='%@' where ID=%@;",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,self.COFID];
+        SQLquery = [NSString stringWithFormat:@"UPDATE match_list_cof_details set MLCID=%@,MLID=%@,MCOFID=%@,s1='%@',s2='%@',r1='%@',r2='%@',r3='%@',r4='%@',r5='%@',r6='%@',r7='%@',r8='%@',r9='%@',r10='%@',r11='%@',r12='%@',r13='%@',r14='%@',r15='%@',r16='%@',r17='%@',r18='%@',r19='%@',r20='%@',total1=%@,total2=%@,endtotal=%@,x_count_1=%@,x_count_2=%@,xtotal=%@ where ID=%@;",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,X_Total,self.COFID];
     }
    if (![BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPathString MessageHandler:&errorMessage])
    {

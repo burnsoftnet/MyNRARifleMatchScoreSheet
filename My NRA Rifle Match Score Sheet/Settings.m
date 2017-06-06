@@ -15,6 +15,7 @@
 @implementation Settings
 {
     NSString *dbPathString;
+    sqlite3 *MatchDB;
 }
 #pragma mark On Form Load
 //When form first loads
@@ -51,6 +52,7 @@
     [FormFunctions setBorderButton:self.btnManageCOF];
     [FormFunctions setBorderButton:self.btniTunesBackup];
     [FormFunctions setBorderButton:self.btnManageDivision];
+    self.txtNRANumber.text=[self getNRANumber];
     
     myObj = nil;
 }
@@ -71,6 +73,37 @@
     myObj = nil;
     
 }
+#pragma mark Get NRA Number
+//Get the NRA number from the user settings table to display on the UI.
+-(NSString *) getNRANumber
+{
+    NSString *sAns = @"0";
+    NSString *errorMsg;
+    sqlite3_stmt *statement;
+    if (sqlite3_open([dbPathString UTF8String],&MatchDB) == SQLITE_OK) {
+        NSString *querySQL = [NSString stringWithFormat:@"select setting_value from user_settings where setting='NRA#'"];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                sAns = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getMatchIDbyName . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+    
+    return sAns;
+}
+
+-(void) updateNRANumber
+{
+    NSString *errorMsg;
+    NSString *SQL = [NSString stringWithFormat:@"update user_settings set setting_value='%@' where setting='NRA#'", self.txtNRANumber.text];
+    [BurnSoftDatabase runQuery:SQL DatabasePath:dbPathString MessageHandler:&errorMsg];
+    //[FormFunctions checkForError:errorMsg MyTitle:@"Update NRA Number" ViewController:self];
+}
 /*
 #pragma mark - Navigation
 
@@ -81,4 +114,7 @@
 }
 */
 
+- (IBAction)updateSettings:(id)sender {
+    [self updateNRANumber];
+}
 @end

@@ -15,10 +15,12 @@
 
 @interface Settings : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNRANumber;
 @property (weak, nonatomic) IBOutlet UILabel *lblAppVersion;
 @property (weak, nonatomic) IBOutlet UILabel *lblDBVersion;
 @property (weak, nonatomic) IBOutlet UIButton *btniTunesBackup;
 @property (weak, nonatomic) IBOutlet UIButton *btnManageDivision;
 @property (weak, nonatomic) IBOutlet UIButton *btnManageCOF;
+- (IBAction)updateSettings:(id)sender;
 
 @end

@@ -29,8 +29,11 @@
     [myObj copyDbIfNeeded:@MYDBNAME MessageHandler:&errorMsg];
     [FormFunctions doBuggermeMessage:[NSString stringWithFormat:@"Error Occured: %@",errorMsg] FromSubFunction:@"MainStartViewController.viewDidLoad"];
     
-    //DBUpgrade *myDB = [DBUpgrade new];
-    //[myDB checkDBVersionAgainstExpectedVersion];
+    //Check the database version to see if it needs to be upgraded.
+    DBUpgrade *myDB = [DBUpgrade new];
+    [myDB checkDBVersionAgainstExpectedVersion];
+    
+    //Start iCloud sync for backups
     //[DatabaseManagement startiCloudSync];
     
      //Used for airdrop
@@ -41,7 +44,7 @@
     //END AIRDROP
     
     myObj = nil;
-    //myDB = nil;
+    myDB = nil;
 
 }
 
