@@ -73,7 +73,7 @@
     {
         [myObjFF doBuggermeMessage:[NSString stringWithFormat:@"%@",fileName] FromSubFunction:@"DatabaseManagement.loadFileListings"];
         
-        if (![fileName isEqualToString:@"MEO.zip"]){
+        if (![fileName isEqualToString:@"MNRSS.zip"]){
             [BurnSoftGeneral DeleteFileByPath:[NSString stringWithFormat:@"%@/%@",documentsDirectory,fileName] ErrorMessage:&deleteError];
         }
     }

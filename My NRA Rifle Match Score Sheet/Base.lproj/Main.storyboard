@@ -1148,10 +1148,11 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1029" id="kEu-lZ-toX"/>
+                                        </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-Eu-mP6">
-                                        <rect key="frame" x="183" y="551" width="56" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-Eu-mP6">
                                         <state key="normal" title="  Apply  "/>
                                         <connections>
                                             <action selector="btnApply:" destination="Lrj-mh-hec" eventType="touchUpInside" id="MKa-AM-2fL"/>
@@ -1159,12 +1160,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-79" id="Fka-TC-Vr2"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="leading" secondItem="1Ro-Ow-yRU" secondAttribute="leading" constant="20" id="WtX-JU-2tR"/>
-                                    <constraint firstAttribute="bottom" secondItem="rMo-fp-Whg" secondAttribute="bottom" constant="-14" id="cBY-45-x0R"/>
-                                    <constraint firstAttribute="trailing" secondItem="rMo-fp-Whg" secondAttribute="trailing" constant="20" id="hcW-3c-yNg"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="1Ro-Ow-yRU" secondAttribute="centerX" id="ikI-LR-C1G"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerY" secondItem="1Ro-Ow-yRU" secondAttribute="centerY" id="qtB-e4-JkQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rMo-fp-Whg" secondAttribute="trailing" constant="20" id="2dY-bZ-S0k"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-60" id="5Wa-XD-lhJ"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="leading" secondItem="1Ro-Ow-yRU" secondAttribute="leading" constant="20" id="88Z-Lb-TzR"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="DrG-Eu-mP6" secondAttribute="centerX" id="KTx-H8-5BR"/>
+                                    <constraint firstItem="DrG-Eu-mP6" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="570" id="aq8-kH-YP5"/>
+                                    <constraint firstAttribute="bottom" secondItem="rMo-fp-Whg" secondAttribute="bottom" constant="-143" id="cZa-rk-vzD"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="1Ro-Ow-yRU" secondAttribute="centerX" id="ljf-xs-vPi"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
