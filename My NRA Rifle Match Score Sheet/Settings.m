@@ -46,12 +46,16 @@
 // Load the Database Path
 -(void) LoadSettings;
 {
+    [DatabaseManagement startiCloudSync];
     BurnSoftDatabase *myObj = [BurnSoftDatabase new];
     dbPathString = [myObj getDatabasePath:@MYDBNAME];
     
     [FormFunctions setBorderButton:self.btnManageCOF];
     [FormFunctions setBorderButton:self.btniTunesBackup];
     [FormFunctions setBorderButton:self.btnManageDivision];
+    [FormFunctions setBorderButton:self.btnBackuptoiCloud];
+    [FormFunctions setBorderButton:self.btnRestoreFromiCloud];
+    
     self.txtNRANumber.text=[self getNRANumber];
     
     myObj = nil;
@@ -117,4 +121,44 @@
 - (IBAction)updateSettings:(id)sender {
     [self updateNRANumber];
 }
+
+#pragma mark Backup to iCloud Button
+// Action to start the backup to iCloud Drive
+- (IBAction)btnBackuptoiCloud:(id)sender {
+    DatabaseManagement *myObjDM = [DatabaseManagement new];
+    FormFunctions *myObjFF = [FormFunctions new];
+    NSString *msg = [NSString new];
+    
+    BOOL success = [myObjDM backupDatabaseToiCloudByDBName:@MYDBNAME LocalDatabasePath:dbPathString ErrorMessage:&msg];
+    if (success){
+        msg = [NSString stringWithFormat:@"Databae Backup was successful!"];
+        [myObjFF sendMessage:msg MyTitle:@"Success!" ViewController:self];
+    } else {
+        [myObjFF sendMessage:msg MyTitle:@"ERROR!" ViewController:self];
+    }
+    [DatabaseManagement startiCloudSync];
+    
+    myObjDM = nil;
+    myObjFF = nil;
+}
+
+#pragma mark Restore from iCloud Button
+// Action to start the restore from iCloud Drive
+- (IBAction)btnRestoreFromiCloud:(id)sender {
+    [DatabaseManagement startiCloudSync];
+    DatabaseManagement *myObjDM = [DatabaseManagement new];
+    FormFunctions *myObjFF = [FormFunctions new];
+    NSString *msg = [NSString new];
+    BOOL success =[myObjDM restoreDatabaseFromiCloudByDBName:@MYDBNAME LocalDatabasePath:dbPathString ErrorMessage:&msg];
+    if (success){
+        msg = [NSString stringWithFormat:@"Databae Restore was successful!"];
+        [myObjFF sendMessage:msg MyTitle:@"Success!" ViewController:self];
+    } else {
+        [myObjFF sendMessage:msg MyTitle:@"ERROR!" ViewController:self];
+    }
+    
+    myObjDM = nil;
+    myObjFF = nil;
+}
+
 @end

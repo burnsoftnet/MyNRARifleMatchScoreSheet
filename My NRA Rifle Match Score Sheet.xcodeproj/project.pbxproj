@@ -11,6 +11,7 @@
 		A516DE0C1ED9B8F200253D11 /* ManageCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.m */; };
 		A516DE0F1ED9D52100253D11 /* ManageDivisions.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.m */; };
 		A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */; };
+		A53C44DA1EE7795200CC309C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C44D91EE7795200CC309C /* CloudKit.framework */; };
 		A541C0821EBD6194007B857E /* MatchLists.m in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.m */; };
 		A547A9481EDA256B00B1576C /* Icon-Notifcation.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9451EDA256B00B1576C /* Icon-Notifcation.png */; };
 		A547A9491EDA256B00B1576C /* Icon-Notifcation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */; };
@@ -66,6 +67,8 @@
 		A516DE0E1ED9D52100253D11 /* ManageDivisions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDivisions.m; sourceTree = "<group>"; };
 		A516DE101ED9D75A00253D11 /* ManageDivisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageDivisionTableViewController.h; sourceTree = "<group>"; };
 		A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDivisionTableViewController.m; sourceTree = "<group>"; };
+		A53C44D81EE7794B00CC309C /* My NRA Rifle Match Score Sheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My NRA Rifle Match Score Sheet.entitlements"; sourceTree = "<group>"; };
+		A53C44D91EE7795200CC309C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A541C0801EBD6194007B857E /* MatchLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchLists.h; sourceTree = "<group>"; };
 		A541C0811EBD6194007B857E /* MatchLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchLists.m; sourceTree = "<group>"; };
 		A547A9451EDA256B00B1576C /* Icon-Notifcation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation.png"; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53C44DA1EE7795200CC309C /* CloudKit.framework in Frameworks */,
 				A557C9901EBD168200E6B0AC /* libsqlite3.0.tbd in Frameworks */,
 				A557C98E1EBD167500E6B0AC /* Foundation.framework in Frameworks */,
 			);
@@ -177,6 +181,7 @@
 		A557C9711EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				A53C44D81EE7794B00CC309C /* My NRA Rifle Match Score Sheet.entitlements */,
 				A557C98B1EBD163900E6B0AC /* Form Classes */,
 				A557C98A1EBD163200E6B0AC /* Classes */,
 				A557C9891EBD161800E6B0AC /* images */,
@@ -260,6 +265,7 @@
 		A557C98C1EBD167500E6B0AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A53C44D91EE7795200CC309C /* CloudKit.framework */,
 				A557C98F1EBD168200E6B0AC /* libsqlite3.0.tbd */,
 				A557C98D1EBD167500E6B0AC /* Foundation.framework */,
 			);
@@ -366,6 +372,17 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MF94VYSKL4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -565,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -579,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -34,7 +34,7 @@
     [myDB checkDBVersionAgainstExpectedVersion];
     
     //Start iCloud sync for backups
-    //[DatabaseManagement startiCloudSync];
+    [DatabaseManagement startiCloudSync];
     
      //Used for airdrop
     //[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(checkInBox) name:UIApplicationDidBecomeActiveNotification object:nil];

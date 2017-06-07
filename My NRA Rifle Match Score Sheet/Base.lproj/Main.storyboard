@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,9 +38,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlK-dj-B6W">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="e8j-cm-VaV"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,7 +55,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwT-of-SaZ">
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="  Use iTunes File Shareing for Backup &amp; Restore  ">
+                                <state key="normal" title="  Use iTunes File Sharing for Backup &amp; Restore  ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -105,50 +103,75 @@
                                     <action selector="updateSettings:" destination="F0w-DN-10k" eventType="editingDidEnd" id="1Ay-8z-ZQs"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-4w-coZ">
+                                <state key="normal" title=" Restore from iCloud ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRestoreFromiCloud:" destination="F0w-DN-10k" eventType="touchUpInside" id="hV7-Rr-fxy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMT-rL-q43">
+                                <state key="normal" title=" Backup to iCloud ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackuptoiCloud:" destination="F0w-DN-10k" eventType="touchUpInside" id="GYr-gc-Qsp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KHA-1y-jt9" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" id="03B-Ox-YwP"/>
-                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="top" secondItem="czp-xf-K8u" secondAttribute="bottom" constant="13" id="0Lj-RG-4ux"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="trailing" secondItem="2IO-lB-3dh" secondAttribute="trailing" id="0qP-YR-bW4"/>
-                            <constraint firstItem="czp-xf-K8u" firstAttribute="top" secondItem="TCN-et-hrD" secondAttribute="bottom" constant="8" symbolic="YES" id="1Fq-1y-dka"/>
-                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="trailing" secondItem="G58-Ex-tZW" secondAttribute="trailingMargin" id="1vY-Vy-gsi"/>
-                            <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" secondItem="vUm-Rw-FCx" secondAttribute="leading" id="3Lm-5b-Ert"/>
-                            <constraint firstItem="czp-xf-K8u" firstAttribute="trailing" secondItem="KHA-1y-jt9" secondAttribute="trailing" id="47n-eG-7eJ"/>
-                            <constraint firstItem="92v-EA-f1A" firstAttribute="centerX" secondItem="Q8C-C9-WpM" secondAttribute="centerX" id="4ps-gZ-zuA"/>
-                            <constraint firstItem="vUm-Rw-FCx" firstAttribute="firstBaseline" secondItem="r2v-Vb-sMN" secondAttribute="firstBaseline" id="7gv-7l-Sqv"/>
-                            <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leading" id="9IV-6L-nba"/>
-                            <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-1" id="B2I-sI-VhI"/>
-                            <constraint firstItem="QlK-dj-B6W" firstAttribute="leading" secondItem="r2v-Vb-sMN" secondAttribute="leading" id="CtH-NI-Zjg"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-17" id="D1q-wH-3Dg"/>
-                            <constraint firstItem="QlK-dj-B6W" firstAttribute="trailing" secondItem="r2v-Vb-sMN" secondAttribute="trailing" id="Dbd-xr-Zw7"/>
-                            <constraint firstItem="QlK-dj-B6W" firstAttribute="leading" secondItem="DOH-z8-gLl" secondAttribute="trailing" constant="21" id="HiI-KS-kJM"/>
-                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="leading" secondItem="yMl-Ri-OyU" secondAttribute="trailing" constant="8" symbolic="YES" id="JJd-H9-9bh"/>
-                            <constraint firstItem="QlK-dj-B6W" firstAttribute="top" secondItem="BL7-Sd-M8E" secondAttribute="bottom" constant="12" id="KrZ-gO-siZ"/>
-                            <constraint firstItem="92v-EA-f1A" firstAttribute="top" secondItem="KHA-1y-jt9" secondAttribute="bottom" constant="17" id="RMx-32-r2l"/>
-                            <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="KHA-1y-jt9" secondAttribute="leading" id="RT4-dh-ME9"/>
-                            <constraint firstItem="2IO-lB-3dh" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" id="RqT-mg-SCv"/>
-                            <constraint firstItem="2IO-lB-3dh" firstAttribute="top" secondItem="vUm-Rw-FCx" secondAttribute="bottom" constant="15" id="Tdx-4A-Dk0"/>
-                            <constraint firstItem="yMl-Ri-OyU" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" id="Utv-hw-9sl"/>
-                            <constraint firstItem="yMl-Ri-OyU" firstAttribute="top" secondItem="czp-xf-K8u" secondAttribute="bottom" constant="16" id="VSo-N2-mYl"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="ISQ-Fy-HkV" secondAttribute="bottom" constant="14" id="WZG-Jp-SaR"/>
-                            <constraint firstItem="r2v-Vb-sMN" firstAttribute="top" secondItem="QlK-dj-B6W" secondAttribute="bottom" constant="4" id="dEu-Pa-6Pa"/>
-                            <constraint firstItem="Q8C-C9-WpM" firstAttribute="top" secondItem="92v-EA-f1A" secondAttribute="bottom" constant="8" symbolic="YES" id="eQY-ub-18v"/>
-                            <constraint firstAttribute="trailing" secondItem="czp-xf-K8u" secondAttribute="trailing" id="kcu-Rz-w3k"/>
-                            <constraint firstItem="KwT-of-SaZ" firstAttribute="top" secondItem="2IO-lB-3dh" secondAttribute="bottom" constant="16" id="lr2-cu-ops"/>
-                            <constraint firstItem="vUm-Rw-FCx" firstAttribute="top" secondItem="DOH-z8-gLl" secondAttribute="bottom" constant="7" id="mj5-7i-zNU"/>
-                            <constraint firstItem="KwT-of-SaZ" firstAttribute="centerX" secondItem="KHA-1y-jt9" secondAttribute="centerX" id="o9q-Cd-J4w"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="2IO-lB-3dh" secondAttribute="leading" id="p7k-D9-Wx5"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="yMl-Ri-OyU" secondAttribute="bottom" constant="20" id="qKW-Mc-LBG"/>
-                            <constraint firstItem="KHA-1y-jt9" firstAttribute="top" secondItem="KwT-of-SaZ" secondAttribute="bottom" constant="17" id="xDG-Qu-HKy"/>
-                            <constraint firstItem="DOH-z8-gLl" firstAttribute="centerY" secondItem="QlK-dj-B6W" secondAttribute="centerY" id="ziN-WN-ahd"/>
+                            <constraint firstAttribute="trailing" secondItem="czp-xf-K8u" secondAttribute="trailing" id="1Fq-OM-7c7"/>
+                            <constraint firstItem="QlK-dj-B6W" firstAttribute="top" secondItem="BL7-Sd-M8E" secondAttribute="bottom" constant="12" id="1vx-V5-MDJ"/>
+                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="top" secondItem="czp-xf-K8u" secondAttribute="bottom" constant="13" id="2wb-Nu-yF4"/>
+                            <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leading" id="3Mk-gZ-49T"/>
+                            <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="KHA-1y-jt9" secondAttribute="leading" id="8mc-l9-9cp"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="ISQ-Fy-HkV" secondAttribute="bottom" constant="14" id="Aw2-2n-TkC"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="centerX" secondItem="KHA-1y-jt9" secondAttribute="centerX" id="DhA-NY-HIb"/>
+                            <constraint firstItem="hhv-4w-coZ" firstAttribute="leading" secondItem="gMT-rL-q43" secondAttribute="trailing" constant="58" id="FIh-fa-4eN"/>
+                            <constraint firstItem="2IO-lB-3dh" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" id="Fsk-0e-afb"/>
+                            <constraint firstItem="gMT-rL-q43" firstAttribute="baseline" secondItem="hhv-4w-coZ" secondAttribute="baseline" id="Gum-4F-Ivl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QlK-dj-B6W" secondAttribute="trailing" constant="53" id="J9r-9s-3aY"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="trailing" secondItem="2IO-lB-3dh" secondAttribute="trailing" id="K4t-T3-G1V"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="top" secondItem="2IO-lB-3dh" secondAttribute="bottom" constant="16" id="Kc4-ws-QBT"/>
+                            <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-1" id="KvI-j2-QuN"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="yMl-Ri-OyU" secondAttribute="bottom" constant="20" id="LLc-iM-QGL"/>
+                            <constraint firstItem="yMl-Ri-OyU" firstAttribute="top" secondItem="czp-xf-K8u" secondAttribute="bottom" constant="16" id="LLu-e3-0Fh"/>
+                            <constraint firstItem="vUm-Rw-FCx" firstAttribute="top" secondItem="DOH-z8-gLl" secondAttribute="bottom" constant="7" id="Pfq-Tu-34I"/>
+                            <constraint firstItem="KHA-1y-jt9" firstAttribute="top" secondItem="gMT-rL-q43" secondAttribute="bottom" constant="21" id="RIv-ZW-qeh"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="trailing" secondItem="hhv-4w-coZ" secondAttribute="trailing" id="SNP-CI-tTE"/>
+                            <constraint firstItem="r2v-Vb-sMN" firstAttribute="leading" secondItem="vUm-Rw-FCx" secondAttribute="trailing" constant="34" id="Sa5-0T-7va"/>
+                            <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" secondItem="vUm-Rw-FCx" secondAttribute="leading" id="Xlf-Zx-uXK"/>
+                            <constraint firstItem="yMl-Ri-OyU" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" id="aFP-Rk-kFo"/>
+                            <constraint firstItem="2IO-lB-3dh" firstAttribute="top" secondItem="vUm-Rw-FCx" secondAttribute="bottom" constant="15" id="aZH-UL-HVq"/>
+                            <constraint firstItem="gMT-rL-q43" firstAttribute="top" secondItem="KwT-of-SaZ" secondAttribute="bottom" constant="15" id="b6F-Zh-ovj"/>
+                            <constraint firstItem="92v-EA-f1A" firstAttribute="top" secondItem="KHA-1y-jt9" secondAttribute="bottom" constant="17" id="bhv-GZ-Bd0"/>
+                            <constraint firstItem="czp-xf-K8u" firstAttribute="top" secondItem="TCN-et-hrD" secondAttribute="bottom" constant="8" symbolic="YES" id="cif-Pe-BCC"/>
+                            <constraint firstItem="Q8C-C9-WpM" firstAttribute="top" secondItem="92v-EA-f1A" secondAttribute="bottom" constant="8" symbolic="YES" id="e7j-3o-4L4"/>
+                            <constraint firstItem="czp-xf-K8u" firstAttribute="trailing" secondItem="KHA-1y-jt9" secondAttribute="trailing" id="eaH-XO-Cnb"/>
+                            <constraint firstItem="DOH-z8-gLl" firstAttribute="centerY" secondItem="QlK-dj-B6W" secondAttribute="centerY" id="eg9-98-VIg"/>
+                            <constraint firstItem="QlK-dj-B6W" firstAttribute="leading" secondItem="DOH-z8-gLl" secondAttribute="trailing" constant="21" id="ew6-m9-3nN"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="2IO-lB-3dh" secondAttribute="leading" id="f1e-pk-pxL"/>
+                            <constraint firstItem="vUm-Rw-FCx" firstAttribute="centerX" secondItem="gMT-rL-q43" secondAttribute="centerX" id="fMC-QB-m2M"/>
+                            <constraint firstItem="vUm-Rw-FCx" firstAttribute="baseline" secondItem="r2v-Vb-sMN" secondAttribute="firstBaseline" id="gDW-oP-eMg"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-17" id="gSD-wa-vtG"/>
+                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="leading" secondItem="yMl-Ri-OyU" secondAttribute="trailing" constant="8" symbolic="YES" id="hlm-9O-f6v"/>
+                            <constraint firstItem="92v-EA-f1A" firstAttribute="centerX" secondItem="Q8C-C9-WpM" secondAttribute="centerX" id="kpt-PR-Cql"/>
+                            <constraint firstItem="ISQ-Fy-HkV" firstAttribute="trailing" secondItem="G58-Ex-tZW" secondAttribute="trailingMargin" id="mB0-NU-1H4"/>
+                            <constraint firstItem="KHA-1y-jt9" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" id="myb-CY-Ghq"/>
+                            <constraint firstItem="r2v-Vb-sMN" firstAttribute="top" secondItem="QlK-dj-B6W" secondAttribute="bottom" constant="4" id="nXv-qK-LPq"/>
+                            <constraint firstItem="QlK-dj-B6W" firstAttribute="leading" secondItem="r2v-Vb-sMN" secondAttribute="leading" id="uT2-e0-DVB"/>
+                            <constraint firstItem="QlK-dj-B6W" firstAttribute="trailing" secondItem="r2v-Vb-sMN" secondAttribute="trailing" id="xd2-4V-FRt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear.png" id="ASt-3d-tsP"/>
                     <navigationItem key="navigationItem" title="Settings" id="8xQ-zv-Rfe"/>
                     <connections>
+                        <outlet property="btnBackuptoiCloud" destination="gMT-rL-q43" id="hM8-LT-UcJ"/>
                         <outlet property="btnManageCOF" destination="Q8C-C9-WpM" id="e6N-5B-uV9"/>
                         <outlet property="btnManageDivision" destination="92v-EA-f1A" id="wwM-dI-Ze6"/>
+                        <outlet property="btnRestoreFromiCloud" destination="hhv-4w-coZ" id="h5U-jG-C36"/>
                         <outlet property="btniTunesBackup" destination="KwT-of-SaZ" id="TRx-FG-Nah"/>
                         <outlet property="lblAppVersion" destination="QlK-dj-B6W" id="yN0-PA-bxl"/>
                         <outlet property="lblDBVersion" destination="r2v-Vb-sMN" id="Qug-B5-G2R"/>

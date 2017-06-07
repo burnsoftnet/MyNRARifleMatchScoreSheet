@@ -6,6 +6,22 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>My NRA Rifle Match Score Sheet</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>Icon-Small@2x</string>
+				<string>Icon-76@2x</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>MNRMSS Database</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>net.burnsoft.My-NRA-Rifle-Match-Score-Sheet.db</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,13 +35,17 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>0</string>
+	<string>1</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

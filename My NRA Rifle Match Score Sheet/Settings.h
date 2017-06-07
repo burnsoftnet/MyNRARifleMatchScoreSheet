@@ -11,7 +11,7 @@
 #import "BurnSoftDatabase.h"
 #import "MySettings.h"
 #import "FormFunctions.h"
-//#import "DatabaseManagement.h"
+#import "DatabaseManagement.h"
 
 @interface Settings : UIViewController
 
@@ -21,6 +21,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *btniTunesBackup;
 @property (weak, nonatomic) IBOutlet UIButton *btnManageDivision;
 @property (weak, nonatomic) IBOutlet UIButton *btnManageCOF;
+@property (weak, nonatomic) IBOutlet UIButton *btnBackuptoiCloud;
+@property (weak, nonatomic) IBOutlet UIButton *btnRestoreFromiCloud;
+
+
 - (IBAction)updateSettings:(id)sender;
+- (IBAction)btnBackuptoiCloud:(id)sender;
+- (IBAction)btnRestoreFromiCloud:(id)sender;
 
 @end

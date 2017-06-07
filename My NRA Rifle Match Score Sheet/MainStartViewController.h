@@ -10,7 +10,7 @@
 #import "MYSettings.h"
 #import "BurnSoftDatabase.h"
 #import "DBUpgrade.h"
-//#import "DatabaseManagement.h"
+#import "DatabaseManagement.h"
 #import "FormFunctions.h"
 
 @interface MainStartViewController : UITabBarController

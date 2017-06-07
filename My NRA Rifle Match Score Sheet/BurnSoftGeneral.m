@@ -214,6 +214,9 @@
         FileClearedInDestination = [self DeleteFileByPath:sTo ErrorMessage:&deleteError];
     } else if (!FileExistsInFrom && FileExistsInTo) {
         FileClearedInDestination = YES;
+    } else if (FileExistsInFrom && !FileExistsInTo) {
+        //added this with the error getting from a new backup check
+        FileClearedInDestination = YES;
     } else if (!FileExistsInFrom && !FileExistsInTo) {
         FileClearedInDestination = NO;
         *errorMessage = @"File doesn't exist in source or destination!";
