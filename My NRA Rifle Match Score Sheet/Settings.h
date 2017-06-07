@@ -13,7 +13,7 @@
 #import "FormFunctions.h"
 #import "DatabaseManagement.h"
 
-@interface Settings : UIViewController
+@interface Settings : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNRANumber;
 @property (weak, nonatomic) IBOutlet UILabel *lblAppVersion;

@@ -24,6 +24,16 @@
     [super viewDidLoad];
     [self LoadSettings];
     [self loadVersioning];
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
+    [tapGestureRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
+-(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
+{
+    //Dissmiss the keyboard when the view is selected
+    [self.txtNRANumber resignFirstResponder];
 }
 
 #pragma mark Form Loads Again
