@@ -34,8 +34,9 @@
     [self loadData];
     
     //Create an Add Button in Nav Bat
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(AddMatch)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(AddMatch)];
+    //self.navigationItem.rightBarButtonItem = addButton;
+    //[self AddNavButton];
     
     // Initialize Refresh Control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -45,6 +46,28 @@
     
     // Configure View Controller
     [self setRefreshControl:refreshControl];
+}
+
+-(void) AddNavButton
+{
+    if (ISLITE)
+    {
+        NSInteger MatchCount = [myMatchListings count];
+        
+        if (MatchCount <= (LITE_LIMIT-1))
+        {
+            //Create an Add Button in Nav Bat
+            UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(AddMatch)];
+            self.navigationItem.rightBarButtonItem = addButton;
+        } else {
+            self.navigationItem.rightBarButtonItem = nil;
+            [FormFunctions AlertonLimitForViewController:self];
+        }
+    } else {
+        //Create an Add Button in Nav Bat
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(AddMatch)];
+        self.navigationItem.rightBarButtonItem = addButton;
+    }
 }
 
 #pragma mark View will reappear
@@ -66,6 +89,7 @@
     [self.myTableView reloadData];
     [self loadData];
     [sender endRefreshing];
+    [self AddNavButton];
 }
 #pragma mark Add New Match
 //add the details of a new match
@@ -79,6 +103,7 @@
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
+    [self AddNavButton];
 }
 
 #pragma mark Setup Global Variables
