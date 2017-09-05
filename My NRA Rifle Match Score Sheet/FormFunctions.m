@@ -83,7 +83,7 @@
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action)
                                 {
-                                    NSURL *AppStore = [NSURL URLWithString:@"https://itunes.apple.com/us/app/my-essential-oil-remedies/id1188303079?ls=1&mt=8"];
+                                    NSURL *AppStore = [NSURL URLWithString:@"https://itunes.apple.com/us/app/my-nra-rifle-match-score-sheet/id1241521195?ls=1&mt=8"];
                                     UIApplication *application = [UIApplication sharedApplication];
                                     [application openURL:AppStore options:@{} completionHandler:nil];
                                 }];
