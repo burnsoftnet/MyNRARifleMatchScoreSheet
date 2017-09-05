@@ -54,8 +54,76 @@
 		A57D6A671ED8EACC003BDBA6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */; };
 		A57D6A681ED8EACC003BDBA6 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */; };
 		A57D6A6B1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */; };
+		A5928AD51F5E1DBF00B73F6B /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57893E21EBE12AF00D2259B /* MainStartViewController.m */; };
+		A5928AD61F5E1DBF00B73F6B /* ManageCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.m */; };
+		A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.m */; };
+		A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */; };
+		A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E1F1EBF403900712CA4 /* Add_MatchViewController.m */; };
+		A5928ADA1F5E1DBF00B73F6B /* MatchLists.m in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.m */; };
+		A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E251EBF51BC00712CA4 /* LIST_Match_COF.m */; };
+		A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.m */; };
+		A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.m */; };
+		A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
+		A5928ADF1F5E1DBF00B73F6B /* MYSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A31EBD388100E6B0AC /* MYSettings.m */; };
+		A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */; };
+		A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.m */; };
+		A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE081ED9B64400253D11 /* ManageCOFTableViewController.m */; };
+		A5928AE31F5E1DBF00B73F6B /* LIST_Matches.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9941EBD197100E6B0AC /* LIST_Matches.m */; };
+		A5928AE41F5E1DBF00B73F6B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9971EBD1A6D00E6B0AC /* Settings.m */; };
+		A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */; };
+		A5928AE61F5E1DBF00B73F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9761EBD160000E6B0AC /* AppDelegate.m */; };
+		A5928AE71F5E1DBF00B73F6B /* DBUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DD1EE6DFF6009E8291 /* DBUpgrade.m */; };
+		A5928AE81F5E1DBF00B73F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9731EBD160000E6B0AC /* main.m */; };
+		A5928AE91F5E1DBF00B73F6B /* MatchListCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E221EBF4ACF00712CA4 /* MatchListCOF.m */; };
+		A5928AEA1F5E1DBF00B73F6B /* FormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A61EBD389900E6B0AC /* FormFunctions.m */; };
+		A5928AEC1F5E1DBF00B73F6B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C44D91EE7795200CC309C /* CloudKit.framework */; };
+		A5928AED1F5E1DBF00B73F6B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98F1EBD168200E6B0AC /* libsqlite3.0.tbd */; };
+		A5928AEE1F5E1DBF00B73F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98D1EBD167500E6B0AC /* Foundation.framework */; };
+		A5928AF01F5E1DBF00B73F6B /* MNRSS.db in Resources */ = {isa = PBXBuildFile; fileRef = A5CECBC41ECE3146003A6B91 /* MNRSS.db */; };
+		A5928AF11F5E1DBF00B73F6B /* Icon-Notifcation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9471EDA256B00B1576C /* Icon-Notifcation@3x.png */; };
+		A5928AF21F5E1DBF00B73F6B /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = A57894181EBE240E00D2259B /* document.png */; };
+		A5928AF41F5E1DBF00B73F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A557C9801EBD160000E6B0AC /* LaunchScreen.storyboard */; };
+		A5928AF51F5E1DBF00B73F6B /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A531ED8EACC003BDBA6 /* Icon-Small@2x.png */; };
+		A5928AF61F5E1DBF00B73F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A557C97E1EBD160000E6B0AC /* Assets.xcassets */; };
+		A5928AF71F5E1DBF00B73F6B /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = A557C9A81EBD38A200E6B0AC /* gear.png */; };
+		A5928AF81F5E1DBF00B73F6B /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4F1ED8EACC003BDBA6 /* Icon-76@2x.png */; };
+		A5928AF91F5E1DBF00B73F6B /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4B1ED8EACC003BDBA6 /* Icon-60.png */; };
+		A5928AFB1F5E1DBF00B73F6B /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A521ED8EACC003BDBA6 /* Icon-Small.png */; };
+		A5928AFC1F5E1DBF00B73F6B /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A561ED8EACC003BDBA6 /* Icon-Spotlight-40@2x.png */; };
+		A5928AFD1F5E1DBF00B73F6B /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4E1ED8EACC003BDBA6 /* Icon-76.png */; };
+		A5928AFF1F5E1DBF00B73F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A557C97B1EBD160000E6B0AC /* Main.storyboard */; };
+		A5928B001F5E1DBF00B73F6B /* Icon-Notifcation.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9451EDA256B00B1576C /* Icon-Notifcation.png */; };
+		A5928B011F5E1DBF00B73F6B /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4C1ED8EACC003BDBA6 /* Icon-60@2x.png */; };
+		A5928B021F5E1DBF00B73F6B /* Icon-Notifcation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */; };
+		A5928B031F5E1DBF00B73F6B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */; };
+		A5928B051F5E1DBF00B73F6B /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A551ED8EACC003BDBA6 /* Icon-Spotlight-40.png */; };
+		A5928B061F5E1DBF00B73F6B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */; };
 		A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
 		A5CECBC51ECE3164003A6B91 /* MNRSS.db in Resources */ = {isa = PBXBuildFile; fileRef = A5CECBC41ECE3146003A6B91 /* MNRSS.db */; };
+		A5EE50401F5E216800AE024F /* lite_Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50281F5E216800AE024F /* lite_Icon-60.png */; };
+		A5EE50411F5E216800AE024F /* lite_Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */; };
+		A5EE50421F5E216800AE024F /* lite_Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502A1F5E216800AE024F /* lite_Icon-60@3x.png */; };
+		A5EE50431F5E216800AE024F /* lite_Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502B1F5E216800AE024F /* lite_Icon-72.png */; };
+		A5EE50441F5E216800AE024F /* lite_Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502C1F5E216800AE024F /* lite_Icon-72@2x.png */; };
+		A5EE50451F5E216800AE024F /* lite_Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502D1F5E216800AE024F /* lite_Icon-76.png */; };
+		A5EE50461F5E216800AE024F /* lite_Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502E1F5E216800AE024F /* lite_Icon-76@2x.png */; };
+		A5EE50471F5E216800AE024F /* lite_Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE502F1F5E216800AE024F /* lite_Icon-76@3x.png */; };
+		A5EE50481F5E216800AE024F /* lite_Icon-iPadPro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50301F5E216800AE024F /* lite_Icon-iPadPro@2x.png */; };
+		A5EE50491F5E216800AE024F /* lite_Icon-Notification.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50311F5E216800AE024F /* lite_Icon-Notification.png */; };
+		A5EE504A1F5E216800AE024F /* lite_Icon-Notificationx2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50321F5E216800AE024F /* lite_Icon-Notificationx2.png */; };
+		A5EE504B1F5E216800AE024F /* lite_Icon-Notificationx3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50331F5E216800AE024F /* lite_Icon-Notificationx3.png */; };
+		A5EE504C1F5E216800AE024F /* lite_Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50341F5E216800AE024F /* lite_Icon-Small-50.png */; };
+		A5EE504D1F5E216800AE024F /* lite_Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50351F5E216800AE024F /* lite_Icon-Small-50@2x.png */; };
+		A5EE504E1F5E216800AE024F /* lite_Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50361F5E216800AE024F /* lite_Icon-Small.png */; };
+		A5EE504F1F5E216800AE024F /* lite_Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50371F5E216800AE024F /* lite_Icon-Small@2x.png */; };
+		A5EE50501F5E216800AE024F /* lite_Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50381F5E216800AE024F /* lite_Icon-Small@3x.png */; };
+		A5EE50511F5E216800AE024F /* lite_Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50391F5E216800AE024F /* lite_Icon-Spotlight-40.png */; };
+		A5EE50521F5E216800AE024F /* lite_Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503A1F5E216800AE024F /* lite_Icon-Spotlight-40@2x.png */; };
+		A5EE50531F5E216800AE024F /* lite_Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503B1F5E216800AE024F /* lite_Icon-Spotlight-40@3x.png */; };
+		A5EE50541F5E216800AE024F /* lite_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503C1F5E216800AE024F /* lite_Icon.png */; };
+		A5EE50551F5E216800AE024F /* lite_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503D1F5E216800AE024F /* lite_Icon@2x.png */; };
+		A5EE50561F5E216800AE024F /* lite_iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503E1F5E216800AE024F /* lite_iTunesArtwork.png */; };
+		A5EE50571F5E216800AE024F /* lite_iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503F1F5E216800AE024F /* lite_iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,9 +197,35 @@
 		A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		A57D6A691ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsiTunesBackupRestoreViewController.h; sourceTree = "<group>"; };
 		A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsiTunesBackupRestoreViewController.m; sourceTree = "<group>"; };
+		A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My NRA Rifle Match Score Sheet Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5928B0C1F5E1DC000B73F6B /* My NRA Rifle Match Score Sheet Lite.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "My NRA Rifle Match Score Sheet Lite.plist"; path = "/Users/burnsoft/Documents/Source_Code/xCode/BS_Projects/production/iOS/My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet Lite.plist"; sourceTree = "<absolute>"; };
 		A59486C41EC2A1520005BCF4 /* CourseOfFire_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseOfFire_ViewController.h; sourceTree = "<group>"; };
 		A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseOfFire_ViewController.m; sourceTree = "<group>"; };
 		A5CECBC41ECE3146003A6B91 /* MNRSS.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MNRSS.db; sourceTree = "<group>"; };
+		A5EE50281F5E216800AE024F /* lite_Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60.png"; sourceTree = "<group>"; };
+		A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60@2x.png"; sourceTree = "<group>"; };
+		A5EE502A1F5E216800AE024F /* lite_Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60@3x.png"; sourceTree = "<group>"; };
+		A5EE502B1F5E216800AE024F /* lite_Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-72.png"; sourceTree = "<group>"; };
+		A5EE502C1F5E216800AE024F /* lite_Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-72@2x.png"; sourceTree = "<group>"; };
+		A5EE502D1F5E216800AE024F /* lite_Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-76.png"; sourceTree = "<group>"; };
+		A5EE502E1F5E216800AE024F /* lite_Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-76@2x.png"; sourceTree = "<group>"; };
+		A5EE502F1F5E216800AE024F /* lite_Icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-76@3x.png"; sourceTree = "<group>"; };
+		A5EE50301F5E216800AE024F /* lite_Icon-iPadPro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-iPadPro@2x.png"; sourceTree = "<group>"; };
+		A5EE50311F5E216800AE024F /* lite_Icon-Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Notification.png"; sourceTree = "<group>"; };
+		A5EE50321F5E216800AE024F /* lite_Icon-Notificationx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Notificationx2.png"; sourceTree = "<group>"; };
+		A5EE50331F5E216800AE024F /* lite_Icon-Notificationx3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Notificationx3.png"; sourceTree = "<group>"; };
+		A5EE50341F5E216800AE024F /* lite_Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Small-50.png"; sourceTree = "<group>"; };
+		A5EE50351F5E216800AE024F /* lite_Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		A5EE50361F5E216800AE024F /* lite_Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Small.png"; sourceTree = "<group>"; };
+		A5EE50371F5E216800AE024F /* lite_Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Small@2x.png"; sourceTree = "<group>"; };
+		A5EE50381F5E216800AE024F /* lite_Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Small@3x.png"; sourceTree = "<group>"; };
+		A5EE50391F5E216800AE024F /* lite_Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Spotlight-40.png"; sourceTree = "<group>"; };
+		A5EE503A1F5E216800AE024F /* lite_Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
+		A5EE503B1F5E216800AE024F /* lite_Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
+		A5EE503C1F5E216800AE024F /* lite_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lite_Icon.png; sourceTree = "<group>"; };
+		A5EE503D1F5E216800AE024F /* lite_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon@2x.png"; sourceTree = "<group>"; };
+		A5EE503E1F5E216800AE024F /* lite_iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lite_iTunesArtwork.png; sourceTree = "<group>"; };
+		A5EE503F1F5E216800AE024F /* lite_iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +236,16 @@
 				A53C44DA1EE7795200CC309C /* CloudKit.framework in Frameworks */,
 				A557C9901EBD168200E6B0AC /* libsqlite3.0.tbd in Frameworks */,
 				A557C98E1EBD167500E6B0AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5928AEB1F5E1DBF00B73F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5928AEC1F5E1DBF00B73F6B /* CloudKit.framework in Frameworks */,
+				A5928AED1F5E1DBF00B73F6B /* libsqlite3.0.tbd in Frameworks */,
+				A5928AEE1F5E1DBF00B73F6B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +271,7 @@
 				A557C9711EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
 				A557C9701EBD160000E6B0AC /* Products */,
 				A557C98C1EBD167500E6B0AC /* Frameworks */,
+				A5928B0C1F5E1DC000B73F6B /* My NRA Rifle Match Score Sheet Lite.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				A557C96F1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet.app */,
+				A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +310,7 @@
 		A557C9891EBD161800E6B0AC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A5EE50271F5E216800AE024F /* lite */,
 				A57894181EBE240E00D2259B /* document.png */,
 				A547A9451EDA256B00B1576C /* Icon-Notifcation.png */,
 				A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */,
@@ -339,6 +446,37 @@
 			name = BurnSoftMath;
 			sourceTree = "<group>";
 		};
+		A5EE50271F5E216800AE024F /* lite */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE50281F5E216800AE024F /* lite_Icon-60.png */,
+				A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */,
+				A5EE502A1F5E216800AE024F /* lite_Icon-60@3x.png */,
+				A5EE502B1F5E216800AE024F /* lite_Icon-72.png */,
+				A5EE502C1F5E216800AE024F /* lite_Icon-72@2x.png */,
+				A5EE502D1F5E216800AE024F /* lite_Icon-76.png */,
+				A5EE502E1F5E216800AE024F /* lite_Icon-76@2x.png */,
+				A5EE502F1F5E216800AE024F /* lite_Icon-76@3x.png */,
+				A5EE50301F5E216800AE024F /* lite_Icon-iPadPro@2x.png */,
+				A5EE50311F5E216800AE024F /* lite_Icon-Notification.png */,
+				A5EE50321F5E216800AE024F /* lite_Icon-Notificationx2.png */,
+				A5EE50331F5E216800AE024F /* lite_Icon-Notificationx3.png */,
+				A5EE50341F5E216800AE024F /* lite_Icon-Small-50.png */,
+				A5EE50351F5E216800AE024F /* lite_Icon-Small-50@2x.png */,
+				A5EE50361F5E216800AE024F /* lite_Icon-Small.png */,
+				A5EE50371F5E216800AE024F /* lite_Icon-Small@2x.png */,
+				A5EE50381F5E216800AE024F /* lite_Icon-Small@3x.png */,
+				A5EE50391F5E216800AE024F /* lite_Icon-Spotlight-40.png */,
+				A5EE503A1F5E216800AE024F /* lite_Icon-Spotlight-40@2x.png */,
+				A5EE503B1F5E216800AE024F /* lite_Icon-Spotlight-40@3x.png */,
+				A5EE503C1F5E216800AE024F /* lite_Icon.png */,
+				A5EE503D1F5E216800AE024F /* lite_Icon@2x.png */,
+				A5EE503E1F5E216800AE024F /* lite_iTunesArtwork.png */,
+				A5EE503F1F5E216800AE024F /* lite_iTunesArtwork@2x.png */,
+			);
+			path = lite;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +495,23 @@
 			name = "My NRA Rifle Match Score Sheet";
 			productName = "My NRA Rifle Match Score Sheet";
 			productReference = A557C96F1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5928AD31F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5928B081F5E1DBF00B73F6B /* Build configuration list for PBXNativeTarget "My NRA Rifle Match Score Sheet Lite" */;
+			buildPhases = (
+				A5928AD41F5E1DBF00B73F6B /* Sources */,
+				A5928AEB1F5E1DBF00B73F6B /* Frameworks */,
+				A5928AEF1F5E1DBF00B73F6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My NRA Rifle Match Score Sheet Lite";
+			productName = "My NRA Rifle Match Score Sheet";
+			productReference = A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -384,6 +539,9 @@
 							};
 						};
 					};
+					A5928AD31F5E1DBF00B73F6B = {
+						DevelopmentTeam = MF94VYSKL4;
+					};
 				};
 			};
 			buildConfigurationList = A557C96A1EBD160000E6B0AC /* Build configuration list for PBXProject "My NRA Rifle Match Score Sheet" */;
@@ -400,6 +558,7 @@
 			projectRoot = "";
 			targets = (
 				A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
+				A5928AD31F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite */,
 			);
 		};
 /* End PBXProject section */
@@ -436,6 +595,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5928AEF1F5E1DBF00B73F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5928AF01F5E1DBF00B73F6B /* MNRSS.db in Resources */,
+				A5928AF11F5E1DBF00B73F6B /* Icon-Notifcation@3x.png in Resources */,
+				A5EE504E1F5E216800AE024F /* lite_Icon-Small.png in Resources */,
+				A5928AF21F5E1DBF00B73F6B /* document.png in Resources */,
+				A5EE504A1F5E216800AE024F /* lite_Icon-Notificationx2.png in Resources */,
+				A5EE50471F5E216800AE024F /* lite_Icon-76@3x.png in Resources */,
+				A5928AF41F5E1DBF00B73F6B /* LaunchScreen.storyboard in Resources */,
+				A5928AF51F5E1DBF00B73F6B /* Icon-Small@2x.png in Resources */,
+				A5EE50511F5E216800AE024F /* lite_Icon-Spotlight-40.png in Resources */,
+				A5EE50491F5E216800AE024F /* lite_Icon-Notification.png in Resources */,
+				A5928AF61F5E1DBF00B73F6B /* Assets.xcassets in Resources */,
+				A5EE50481F5E216800AE024F /* lite_Icon-iPadPro@2x.png in Resources */,
+				A5EE50431F5E216800AE024F /* lite_Icon-72.png in Resources */,
+				A5EE504F1F5E216800AE024F /* lite_Icon-Small@2x.png in Resources */,
+				A5EE50541F5E216800AE024F /* lite_Icon.png in Resources */,
+				A5EE50571F5E216800AE024F /* lite_iTunesArtwork@2x.png in Resources */,
+				A5928AF71F5E1DBF00B73F6B /* gear.png in Resources */,
+				A5928AF81F5E1DBF00B73F6B /* Icon-76@2x.png in Resources */,
+				A5EE50411F5E216800AE024F /* lite_Icon-60@2x.png in Resources */,
+				A5928AF91F5E1DBF00B73F6B /* Icon-60.png in Resources */,
+				A5EE50421F5E216800AE024F /* lite_Icon-60@3x.png in Resources */,
+				A5928AFB1F5E1DBF00B73F6B /* Icon-Small.png in Resources */,
+				A5928AFC1F5E1DBF00B73F6B /* Icon-Spotlight-40@2x.png in Resources */,
+				A5928AFD1F5E1DBF00B73F6B /* Icon-76.png in Resources */,
+				A5EE50561F5E216800AE024F /* lite_iTunesArtwork.png in Resources */,
+				A5EE50441F5E216800AE024F /* lite_Icon-72@2x.png in Resources */,
+				A5928AFF1F5E1DBF00B73F6B /* Main.storyboard in Resources */,
+				A5928B001F5E1DBF00B73F6B /* Icon-Notifcation.png in Resources */,
+				A5928B011F5E1DBF00B73F6B /* Icon-60@2x.png in Resources */,
+				A5EE50551F5E216800AE024F /* lite_Icon@2x.png in Resources */,
+				A5EE50531F5E216800AE024F /* lite_Icon-Spotlight-40@3x.png in Resources */,
+				A5EE504B1F5E216800AE024F /* lite_Icon-Notificationx3.png in Resources */,
+				A5EE50521F5E216800AE024F /* lite_Icon-Spotlight-40@2x.png in Resources */,
+				A5928B021F5E1DBF00B73F6B /* Icon-Notifcation@2x.png in Resources */,
+				A5928B031F5E1DBF00B73F6B /* iTunesArtwork@2x.png in Resources */,
+				A5EE504D1F5E216800AE024F /* lite_Icon-Small-50@2x.png in Resources */,
+				A5EE50401F5E216800AE024F /* lite_Icon-60.png in Resources */,
+				A5EE50451F5E216800AE024F /* lite_Icon-76.png in Resources */,
+				A5EE50461F5E216800AE024F /* lite_Icon-76@2x.png in Resources */,
+				A5928B051F5E1DBF00B73F6B /* Icon-Spotlight-40.png in Resources */,
+				A5928B061F5E1DBF00B73F6B /* iTunesArtwork.png in Resources */,
+				A5EE50501F5E216800AE024F /* lite_Icon-Small@3x.png in Resources */,
+				A5EE504C1F5E216800AE024F /* lite_Icon-Small-50.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -465,6 +674,35 @@
 				A557C9741EBD160000E6B0AC /* main.m in Sources */,
 				A5789E231EBF4ACF00712CA4 /* MatchListCOF.m in Sources */,
 				A557C9A71EBD389900E6B0AC /* FormFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5928AD41F5E1DBF00B73F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5928AD51F5E1DBF00B73F6B /* MainStartViewController.m in Sources */,
+				A5928AD61F5E1DBF00B73F6B /* ManageCOF.m in Sources */,
+				A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.m in Sources */,
+				A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.m in Sources */,
+				A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.m in Sources */,
+				A5928ADA1F5E1DBF00B73F6B /* MatchLists.m in Sources */,
+				A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.m in Sources */,
+				A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.m in Sources */,
+				A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.m in Sources */,
+				A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.m in Sources */,
+				A5928ADF1F5E1DBF00B73F6B /* MYSettings.m in Sources */,
+				A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.m in Sources */,
+				A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.m in Sources */,
+				A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.m in Sources */,
+				A5928AE31F5E1DBF00B73F6B /* LIST_Matches.m in Sources */,
+				A5928AE41F5E1DBF00B73F6B /* Settings.m in Sources */,
+				A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.m in Sources */,
+				A5928AE61F5E1DBF00B73F6B /* AppDelegate.m in Sources */,
+				A5928AE71F5E1DBF00B73F6B /* DBUpgrade.m in Sources */,
+				A5928AE81F5E1DBF00B73F6B /* main.m in Sources */,
+				A5928AE91F5E1DBF00B73F6B /* MatchListCOF.m in Sources */,
+				A5928AEA1F5E1DBF00B73F6B /* FormFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +846,36 @@
 			};
 			name = Release;
 		};
+		A5928B091F5E1DBF00B73F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Lite";
+				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet Lite.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet-Lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5928B0A1F5E1DBF00B73F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Lite";
+				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet Lite.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet-Lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -625,6 +893,15 @@
 			buildConfigurations = (
 				A557C9871EBD160000E6B0AC /* Debug */,
 				A557C9881EBD160000E6B0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5928B081F5E1DBF00B73F6B /* Build configuration list for PBXNativeTarget "My NRA Rifle Match Score Sheet Lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5928B091F5E1DBF00B73F6B /* Debug */,
+				A5928B0A1F5E1DBF00B73F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
