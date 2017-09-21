@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
-#import "MySettings.h"
+#import "MYSettings.h"
 #import "FormFunctions.h"
 #import "BurnSoftDatabase.h"
 #import "MatchLists.h"
