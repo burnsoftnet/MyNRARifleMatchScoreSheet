@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL7-Sd-M8E">
-                                <rect key="frame" x="-1" y="149" width="377" height="20.5"/>
+                                <rect key="frame" x="2" y="149" width="371" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Database" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IO-lB-3dh">
-                                <rect key="frame" x="-1" y="247.5" width="377" height="20.5"/>
+                                <rect key="frame" x="2" y="247.5" width="371" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,7 +172,7 @@
                             <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2IO-lB-3dh" secondAttribute="leading" id="f1e-pk-pxL"/>
                             <constraint firstItem="vUm-Rw-FCx" firstAttribute="centerX" secondItem="gMT-rL-q43" secondAttribute="centerX" id="fMC-QB-m2M"/>
                             <constraint firstItem="vUm-Rw-FCx" firstAttribute="baseline" secondItem="r2v-Vb-sMN" secondAttribute="firstBaseline" id="gDW-oP-eMg"/>
-                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-17" id="gSD-wa-vtG"/>
+                            <constraint firstItem="BL7-Sd-M8E" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-14" id="gSD-wa-vtG"/>
                             <constraint firstItem="ISQ-Fy-HkV" firstAttribute="leading" secondItem="yMl-Ri-OyU" secondAttribute="trailing" constant="8" symbolic="YES" id="hlm-9O-f6v"/>
                             <constraint firstItem="92v-EA-f1A" firstAttribute="centerX" secondItem="Q8C-C9-WpM" secondAttribute="centerX" id="kpt-PR-Cql"/>
                             <constraint firstItem="ISQ-Fy-HkV" firstAttribute="trailing" secondItem="G58-Ex-tZW" secondAttribute="trailingMargin" id="mB0-NU-1H4"/>
