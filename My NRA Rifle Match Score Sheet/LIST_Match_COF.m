@@ -196,11 +196,11 @@
      UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
          NSString *errorMsg;
          MatchListCOF *myObj = [MatchListCOF new];
-         MatchListCOF *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-         NSString *matchListcof = [myObj getCourseOfFireIDByName:displayMatches.cof_name DatabasePath:dbPathString ErrorMessage:&errorMsg];
+         MatchListCOF *displayMatches = [self->myMatchListings objectAtIndex:indexPath.row];
+         NSString *matchListcof = [myObj getCourseOfFireIDByName:displayMatches.cof_name DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
          NSString *cofid = [NSString stringWithFormat:@"%d",displayMatches.COFID];
          
-         if ([myObj deleteCMatchourseOfFire:cofid MatchID:self.MID MatchListCOF:matchListcof DatabasePath:dbPathString ErrorMessage:&errorMsg])
+         if ([myObj deleteCMatchourseOfFire:cofid MatchID:self.MID MatchListCOF:matchListcof DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
          {
              [self reloadData];
          } else {

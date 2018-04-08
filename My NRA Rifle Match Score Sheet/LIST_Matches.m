@@ -306,8 +306,8 @@
    //FormFunctions *myFunctions = [FormFunctions new];
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
-        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
         MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
         //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
@@ -321,12 +321,12 @@
         //insert your deleteAction here
         
         NSString *errorMsg;
-        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
         MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
         //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
-        if ([displayMatches deleteMatchListsByID:mid DatabasePath:dbPathString ErrorMessage:&errorMsg])
+        if ([displayMatches deleteMatchListsByID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {
             [self reloadData];
         } else {
@@ -338,13 +338,13 @@
     UITableViewRowAction *copyAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Copy" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         //Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
         NSString *errorMsg;
-        NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
         MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
         //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
         //NSLog(@"%@",mid);
-        [displayMatches copyMatchByMatchID:mid DatabasePath:dbPathString ErrorMessage:&errorMsg];
+        [displayMatches copyMatchByMatchID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
         [self reloadData];
         //destViewController.MID = mid;
         //[self.navigationController pushViewController:destViewController animated:YES];

@@ -106,7 +106,7 @@
         NSArray * textfields = alertController.textFields;
         UITextField * namefield = textfields[0];
         NSString *errorMsg;
-        if ([ManageDivisions addDivisionName:namefield.text DatabasePath:dbPathString ErrorMessage:&errorMsg])
+        if ([ManageDivisions addDivisionName:namefield.text DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {
             [self reloadData];
         } else {
@@ -159,14 +159,14 @@
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         
         NSString *errorMsg;
-        ManageDivisions *displayMatches = [myMatchDIV objectAtIndex:indexPath.row];
+        ManageDivisions *displayMatches = [self->myMatchDIV objectAtIndex:indexPath.row];
         NSString *cofID = [NSString stringWithFormat:@"%d",displayMatches.DIVID];
         ManageDivisions *myObj = [ManageDivisions new];
-        NSString *cofName = [myObj getDivisionbyID:cofID DatabasePath:dbPathString ErrorMessage:&errorMsg];
+        NSString *cofName = [myObj getDivisionbyID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
         NSString *sql = [NSString stringWithFormat:@"select * from match_list where MCID=%@",cofID];
-        if (![BurnSoftDatabase dataExistsbyQuery:sql DatabasePath:dbPathString MessageHandler:&errorMsg])
+        if (![BurnSoftDatabase dataExistsbyQuery:sql DatabasePath:self->dbPathString MessageHandler:&errorMsg])
         {
-            if ([ManageDivisions DeleteDivisionByID:cofID DatabasePath:dbPathString ErrorMessage:&errorMsg])
+            if ([ManageDivisions DeleteDivisionByID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
             {
                 [self reloadData];
             } else {
@@ -209,7 +209,7 @@
         UITextField * namefield = textfields[0];
         NSString *errorMsg;
 
-        if ([ManageDivisions updateDivisionName:namefield.text DivisionID:divID DatabasePath:dbPathString ErrorMessage:&errorMsg])
+        if ([ManageDivisions updateDivisionName:namefield.text DivisionID:divID DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {
             [self reloadData];
         } else {

@@ -116,7 +116,7 @@
         UITextField * namefield = textfields[0];
         //UITextField * passwordfiled = textfields[1];
         NSString *errorMsg;
-        if ([ManageCOF addCOFName:namefield.text DatabasePath:dbPathString ErrorMessage:&errorMsg])
+        if ([ManageCOF addCOFName:namefield.text DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {
             [self reloadData];
         } else {
@@ -171,14 +171,14 @@
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
     
         NSString *errorMsg;
-        ManageCOF *displayMatches = [myMatchCOF objectAtIndex:indexPath.row];
+        ManageCOF *displayMatches = [self->myMatchCOF objectAtIndex:indexPath.row];
         NSString *cofID = [NSString stringWithFormat:@"%d",displayMatches.COFID];
         ManageCOF *myObj = [ManageCOF new];
-        NSString *cofName = [myObj getCourseOfFirebyID:cofID DatabasePath:dbPathString ErrorMessage:&errorMsg];
+        NSString *cofName = [myObj getCourseOfFirebyID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
         NSString *sql = [NSString stringWithFormat:@"select * from match_list_cof_details where MCOFID=%@",cofID];
-        if (![BurnSoftDatabase dataExistsbyQuery:sql DatabasePath:dbPathString MessageHandler:&errorMsg])
+        if (![BurnSoftDatabase dataExistsbyQuery:sql DatabasePath:self->dbPathString MessageHandler:&errorMsg])
         {
-            if ([ManageCOF DeleteCOFByID:cofID DatabasePath:dbPathString ErrorMessage:&errorMsg])
+            if ([ManageCOF DeleteCOFByID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
             {
                 [self reloadData];
             } else {
@@ -219,7 +219,7 @@
         NSArray * textfields = alertController.textFields;
         UITextField * namefield = textfields[0];
         NSString *errorMsg;
-        if ([ManageCOF  updateCOFName:namefield.text CourseOfFireID:cofID DatabasePath:dbPathString ErrorMessage:&errorMsg])
+        if ([ManageCOF  updateCOFName:namefield.text CourseOfFireID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {
             [self reloadData];
         } else {
