@@ -317,6 +317,7 @@
     myObj = nil;
 }
 
+//Add up all the fields to produce the final results
 - (void) AddallFields
 {
     
