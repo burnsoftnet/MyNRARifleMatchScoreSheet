@@ -128,7 +128,7 @@
                                     <action selector="btnBackuptoiCloud:" destination="F0w-DN-10k" eventType="touchUpInside" id="GYr-gc-Qsp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-4w-coZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-4w-coZ">
                                 <rect key="frame" x="193" y="329" width="145" height="30"/>
                                 <state key="normal" title=" Restore from iCloud ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,7 +147,7 @@
                             <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="KHA-1y-jt9" secondAttribute="centerX" id="8mc-l9-9cp"/>
                             <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="ISQ-Fy-HkV" secondAttribute="bottom" constant="14" id="Aw2-2n-TkC"/>
                             <constraint firstItem="KwT-of-SaZ" firstAttribute="centerX" secondItem="KHA-1y-jt9" secondAttribute="centerX" constant="187.5" id="DhA-NY-HIb"/>
-                            <constraint firstItem="hhv-4w-coZ" firstAttribute="leading" secondItem="gMT-rL-q43" secondAttribute="trailing" constant="-282" id="FIh-fa-4eN"/>
+                            <constraint firstItem="hhv-4w-coZ" firstAttribute="leading" secondItem="gMT-rL-q43" secondAttribute="trailing" constant="46.5" id="FIh-fa-4eN"/>
                             <constraint firstItem="2IO-lB-3dh" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" constant="-1" id="Fsk-0e-afb"/>
                             <constraint firstItem="gMT-rL-q43" firstAttribute="baseline" secondItem="hhv-4w-coZ" secondAttribute="baseline" id="Gum-4F-Ivl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QlK-dj-B6W" secondAttribute="trailing" constant="53" id="J9r-9s-3aY"/>
