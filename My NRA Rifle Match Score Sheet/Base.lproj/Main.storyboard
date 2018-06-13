@@ -62,7 +62,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwT-of-SaZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwT-of-SaZ">
                                 <rect key="frame" x="25" y="282" width="325" height="30"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="  Use iTunes File Sharing for Backup &amp; Restore  ">
@@ -146,24 +146,24 @@
                             <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leading" id="3Mk-gZ-49T"/>
                             <constraint firstItem="czp-xf-K8u" firstAttribute="leading" secondItem="KHA-1y-jt9" secondAttribute="centerX" id="8mc-l9-9cp"/>
                             <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="ISQ-Fy-HkV" secondAttribute="bottom" constant="14" id="Aw2-2n-TkC"/>
-                            <constraint firstItem="KwT-of-SaZ" firstAttribute="centerX" secondItem="KHA-1y-jt9" secondAttribute="centerX" id="DhA-NY-HIb"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="centerX" secondItem="KHA-1y-jt9" secondAttribute="centerX" constant="187.5" id="DhA-NY-HIb"/>
                             <constraint firstItem="hhv-4w-coZ" firstAttribute="leading" secondItem="gMT-rL-q43" secondAttribute="trailing" constant="-282" id="FIh-fa-4eN"/>
                             <constraint firstItem="2IO-lB-3dh" firstAttribute="centerX" secondItem="92v-EA-f1A" secondAttribute="centerX" constant="-1" id="Fsk-0e-afb"/>
                             <constraint firstItem="gMT-rL-q43" firstAttribute="baseline" secondItem="hhv-4w-coZ" secondAttribute="baseline" id="Gum-4F-Ivl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QlK-dj-B6W" secondAttribute="trailing" constant="53" id="J9r-9s-3aY"/>
                             <constraint firstItem="BL7-Sd-M8E" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2IO-lB-3dh" secondAttribute="trailing" id="K4t-T3-G1V"/>
-                            <constraint firstItem="KwT-of-SaZ" firstAttribute="top" secondItem="2IO-lB-3dh" secondAttribute="bottom" constant="16" id="Kc4-ws-QBT"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="top" secondItem="2IO-lB-3dh" secondAttribute="bottom" constant="14" id="Kc4-ws-QBT"/>
                             <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" constant="-1" id="KvI-j2-QuN"/>
                             <constraint firstItem="BL7-Sd-M8E" firstAttribute="top" secondItem="yMl-Ri-OyU" secondAttribute="bottom" constant="20" id="LLc-iM-QGL"/>
                             <constraint firstItem="yMl-Ri-OyU" firstAttribute="top" secondItem="czp-xf-K8u" secondAttribute="bottom" constant="16" id="LLu-e3-0Fh"/>
                             <constraint firstItem="vUm-Rw-FCx" firstAttribute="top" secondItem="DOH-z8-gLl" secondAttribute="bottom" constant="7" id="Pfq-Tu-34I"/>
                             <constraint firstItem="KHA-1y-jt9" firstAttribute="top" secondItem="gMT-rL-q43" secondAttribute="bottom" constant="21" id="RIv-ZW-qeh"/>
-                            <constraint firstItem="KwT-of-SaZ" firstAttribute="trailing" secondItem="hhv-4w-coZ" secondAttribute="trailing" constant="90" id="SNP-CI-tTE"/>
+                            <constraint firstItem="KwT-of-SaZ" firstAttribute="trailing" secondItem="hhv-4w-coZ" secondAttribute="trailing" constant="12" id="SNP-CI-tTE"/>
                             <constraint firstItem="r2v-Vb-sMN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUm-Rw-FCx" secondAttribute="trailing" id="Sa5-0T-7va"/>
                             <constraint firstItem="DOH-z8-gLl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUm-Rw-FCx" secondAttribute="leading" id="Xlf-Zx-uXK"/>
                             <constraint firstItem="yMl-Ri-OyU" firstAttribute="leading" secondItem="G58-Ex-tZW" secondAttribute="leadingMargin" id="aFP-Rk-kFo"/>
                             <constraint firstItem="2IO-lB-3dh" firstAttribute="top" secondItem="vUm-Rw-FCx" secondAttribute="bottom" constant="15" id="aZH-UL-HVq"/>
-                            <constraint firstItem="gMT-rL-q43" firstAttribute="top" secondItem="KwT-of-SaZ" secondAttribute="bottom" constant="15" id="b6F-Zh-ovj"/>
+                            <constraint firstItem="gMT-rL-q43" firstAttribute="top" secondItem="KwT-of-SaZ" secondAttribute="bottom" constant="17" id="b6F-Zh-ovj"/>
                             <constraint firstItem="92v-EA-f1A" firstAttribute="top" secondItem="KHA-1y-jt9" secondAttribute="bottom" constant="17" id="bhv-GZ-Bd0"/>
                             <constraint firstItem="czp-xf-K8u" firstAttribute="top" secondItem="TCN-et-hrD" secondAttribute="bottom" constant="8" symbolic="YES" id="cif-Pe-BCC"/>
                             <constraint firstItem="Q8C-C9-WpM" firstAttribute="top" secondItem="92v-EA-f1A" secondAttribute="bottom" constant="8" symbolic="YES" id="e7j-3o-4L4"/>
