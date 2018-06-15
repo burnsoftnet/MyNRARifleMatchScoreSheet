@@ -442,6 +442,7 @@
 - (IBAction)btnApply:(id)sender {
     MatchListCOF *myObj = [MatchListCOF new];
     NSString *errorMessage;
+    [self AddallFields];
     
     NSString *CourseOfFire = self.txtCourseOfFire.text;
     NSString *MCOFID = [myObj getCourseOfFireIDByName:CourseOfFire DatabasePath:dbPathString ErrorMessage:&errorMessage];
