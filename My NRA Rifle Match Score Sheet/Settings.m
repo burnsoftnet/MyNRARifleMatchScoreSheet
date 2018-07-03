@@ -67,6 +67,7 @@
     [FormFunctions setBorderButton:self.btnRestoreFromiCloud];
     
     self.txtNRANumber.text=[self getNRANumber];
+    self.txtNRAExpiration.text=[self getNRAExpiration];
     
     myObj = nil;
 }
@@ -99,11 +100,47 @@
         int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
         if (ret == SQLITE_OK) {
             while (sqlite3_step(statement)==SQLITE_ROW) {
-                sAns = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                if (sqlite3_column_type(statement,0) != SQLITE_NULL)
+                {
+                    sAns = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                    if ([sAns isEqualToString:@"N/A"]){
+                        sAns=@"";
+                    }
+                }
             }
             sqlite3_close(MatchDB);
         } else {
-            errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getMatchIDbyName . '%s'", sqlite3_errmsg(MatchDB)];
+            errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getNRANumber . '%s'", sqlite3_errmsg(MatchDB)];
+        }
+        sqlite3_finalize(statement);
+    }
+    
+    return sAns;
+}
+
+#pragma mark Get NRA Expiration
+//Get the NRA Expiration from the user settings table to display on the UI.
+-(NSString *) getNRAExpiration
+{
+    NSString *sAns = @"";
+    NSString *errorMsg;
+    sqlite3_stmt *statement;
+    if (sqlite3_open([dbPathString UTF8String],&MatchDB) == SQLITE_OK) {
+        NSString *querySQL = [NSString stringWithFormat:@"select setting_value2 from user_settings where setting='NRA#'"];
+        int ret = sqlite3_prepare_v2(MatchDB,[querySQL UTF8String],-1,&statement,NULL);
+        if (ret == SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                if (sqlite3_column_type(statement,0) != SQLITE_NULL)
+                {
+                    sAns = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement,0)];
+                    if ([sAns isEqualToString:@"N/A"]){
+                        sAns=@"";
+                    }
+                }
+            }
+            sqlite3_close(MatchDB);
+        } else {
+            errorMsg = [NSString stringWithFormat:@"Error while creating select statement for getNRAExpiration . '%s'", sqlite3_errmsg(MatchDB)];
         }
         sqlite3_finalize(statement);
     }
@@ -114,7 +151,7 @@
 -(void) updateNRANumber
 {
     NSString *errorMsg;
-    NSString *SQL = [NSString stringWithFormat:@"update user_settings set setting_value='%@' where setting='NRA#'", self.txtNRANumber.text];
+    NSString *SQL = [NSString stringWithFormat:@"update user_settings set setting_value='%@',setting_value2='%@' where setting='NRA#'", self.txtNRANumber.text, self.txtNRAExpiration.text];
     [BurnSoftDatabase runQuery:SQL DatabasePath:dbPathString MessageHandler:&errorMsg];
     //[FormFunctions checkForError:errorMsg MyTitle:@"Update NRA Number" ViewController:self];
 }
