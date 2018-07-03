@@ -16,6 +16,7 @@
 @interface Settings : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNRANumber;
+@property (weak, nonatomic) IBOutlet UITextField *txtNRAExpiration;
 @property (weak, nonatomic) IBOutlet UILabel *lblAppVersion;
 @property (weak, nonatomic) IBOutlet UILabel *lblDBVersion;
 @property (weak, nonatomic) IBOutlet UIButton *btniTunesBackup;

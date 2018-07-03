@@ -28,9 +28,8 @@
         [myObjFF doBuggermeMessage:@"DEBUG: DBVersion is less than expected!!!" FromSubFunction:@"DBUpgrade"];
         if ([@MYDBVERSION doubleValue] == 1.1) {
             [self dbupgrade11];
-        //} else if ([@MYDBVERSION doubleValue] == 1.2) {
-        //    [self dbupgrade11];
-        //    [self dbupgrade12];
+        } else if ([@MYDBVERSION doubleValue] == 1.2) {
+            [self dbupgrade12];
         }
     } else {
         [myObjFF doBuggermeMessage:@"DEBUG: DBVersion is equal to or greater than expected." FromSubFunction:@"DBUpgrade"];
@@ -119,7 +118,43 @@
     }
     
 }
+//ALTER TABLE "user_settings" ADD "setting_value2" STRING(255);
 
+#pragma mark DB Upgrade Version 1.2
+//NOTE: PRIVATE - Update Database to version x.x
+//USEDBY: checkDBVersionAgainstExpectedVersion
+-(void) dbupgrade12
+{
+    BurnSoftDatabase *myObj = [BurnSoftDatabase new];
+    FormFunctions *myObjFF = [FormFunctions new];
+    dbPathString = [myObj getDatabasePath:@MYDBNAME];
+    double newDBVersion = 0;
+    NSString *msg;
+    NSString *sqlstmt = [NSString new];
+    newDBVersion = 1.2;
+    if (![myObj VersionExists:[NSString stringWithFormat:@"%f",newDBVersion] VersionTable:@"DB_Version" DatabasePath:dbPathString ErrorMessage:&msg])
+    {
+        // Send to doBuggermeMessage if enabled, that the database upgrade is begining
+        msg = [NSString stringWithFormat:@"DEBUG: Start DBVersion Upgrade to version %.01f", newDBVersion];
+        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
+        
+        //-------------START UPGRADE PROCESS-----------------//
+        
+        sqlstmt=@"ALTER TABLE user_settings ADD setting_value2 STRING(255);";
+        [myObj runQuery:sqlstmt DatabasePath:dbPathString MessageHandler:&msg];
+        [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
+        
+        //-------------END UPGRADE PROCESS-----------------//
+        
+        // Send to doBuggermeMessage if enabled that the database was upgraded
+        msg = [NSString stringWithFormat:@"DEBUG: End DBVersion Upgrade to version %.01f", newDBVersion];
+        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
+    } else {
+        msg = [NSString stringWithFormat:@"DEBUG: Database has already had %.01f patch applied!",newDBVersion];
+        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
+    }
+}
+/*
 #pragma mark DB Upgrade Version x.x
 //NOTE: PRIVATE - Update Database to version x.x
 //USEDBY: checkDBVersionAgainstExpectedVersion
@@ -154,4 +189,5 @@
         [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
     }
 }
+ */
 @end

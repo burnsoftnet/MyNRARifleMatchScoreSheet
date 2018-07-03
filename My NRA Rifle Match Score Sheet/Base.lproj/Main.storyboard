@@ -180,6 +180,7 @@
                         <outlet property="btniTunesBackup" destination="KwT-of-SaZ" id="TRx-FG-Nah"/>
                         <outlet property="lblAppVersion" destination="QlK-dj-B6W" id="yN0-PA-bxl"/>
                         <outlet property="lblDBVersion" destination="r2v-Vb-sMN" id="Qug-B5-G2R"/>
+                        <outlet property="txtNRAExpiration" destination="10o-7j-bnt" id="vVf-j4-mJ0"/>
                         <outlet property="txtNRANumber" destination="ISQ-Fy-HkV" id="Q30-KI-Xlh"/>
                     </connections>
                 </viewController>
