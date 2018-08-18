@@ -115,7 +115,7 @@
                                 <rect key="frame" x="129" y="143" width="230" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="updateSettings:" destination="F0w-DN-10k" eventType="editingDidEnd" id="P1C-33-fhb"/>
                                 </connections>
