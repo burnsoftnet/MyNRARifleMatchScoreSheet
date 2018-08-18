@@ -145,6 +145,10 @@
         [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
         
         //-------------END UPGRADE PROCESS-----------------//
+        //Update Database to current Version
+        sqlstmt=[NSString stringWithFormat:@"INSERT INTO DB_Version (version) VALUES('%.01f')", newDBVersion];
+        [myObj runQuery:sqlstmt DatabasePath:dbPathString MessageHandler:&msg];
+        [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
         
         // Send to doBuggermeMessage if enabled that the database was upgraded
         msg = [NSString stringWithFormat:@"DEBUG: End DBVersion Upgrade to version %.01f", newDBVersion];
@@ -180,6 +184,11 @@
         [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
         
         //-------------END UPGRADE PROCESS-----------------//
+ 
+         //Update Database to current Version
+         sqlstmt=[NSString stringWithFormat:@"INSERT INTO DB_Version (version) VALUES('%.01f')", newDBVersion];
+         [myObj runQuery:sqlstmt DatabasePath:dbPathString MessageHandler:&msg];
+         [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
         
         // Send to doBuggermeMessage if enabled that the database was upgraded
         msg = [NSString stringWithFormat:@"DEBUG: End DBVersion Upgrade to version %.01f", newDBVersion];
