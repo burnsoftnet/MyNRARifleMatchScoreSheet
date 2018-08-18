@@ -34,6 +34,7 @@
 {
     //Dissmiss the keyboard when the view is selected
     [self.txtNRANumber resignFirstResponder];
+    [self.txtNRAExpiration resignFirstResponder];
 }
 
 #pragma mark Form Loads Again
