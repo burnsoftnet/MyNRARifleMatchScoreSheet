@@ -18,7 +18,9 @@
     sqlite3 *MatchDB;
 }
 #pragma mark On Form Load
-//When form first loads
+/*!
+ @brief When form first loads
+ */
 -(void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +32,10 @@
     [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
+#pragma mark When Tap is Recieved
+/*!
+ @brief when somewere else on the form is clicked to retire the keyboard
+ */
 -(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
 {
     //Dissmiss the keyboard when the view is selected
@@ -38,7 +44,9 @@
 }
 
 #pragma mark Form Loads Again
-// When the view reloads itself
+/*!
+ @brief When the view reloads itself
+ */
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -46,7 +54,9 @@
 }
 
 #pragma mark Reload Data
-// Reload the settings and information as if the form first load.
+/*!
+ @brief Reload the settings and information as if the form first load.
+ */
 -(void) reloadData
 {
     [self LoadSettings];
@@ -54,7 +64,9 @@
 }
 
 #pragma mark Load Settings
-// Load the Database Path
+/*!
+ @brief Load the Database Path
+ */
 -(void) LoadSettings;
 {
     [DatabaseManagement startiCloudSync];
@@ -74,7 +86,9 @@
 }
 
 #pragma mark Load Version
-// Get the version of the App and the Database to view in the label boxes
+/*!
+ @brief Get the version of the App and the Database to view in the label boxes
+ */
 -(void) loadVersioning
 {
     BurnSoftDatabase *myObj = [BurnSoftDatabase new];
@@ -90,7 +104,9 @@
     
 }
 #pragma mark Get NRA Number
-//Get the NRA number from the user settings table to display on the UI.
+/*!
+ @brief Get the NRA number from the user settings table to display on the UI.
+ */
 -(NSString *) getNRANumber
 {
     NSString *sAns = @"0";
@@ -120,7 +136,9 @@
 }
 
 #pragma mark Get NRA Expiration
-//Get the NRA Expiration from the user settings table to display on the UI.
+/*!
+ @brief Get the NRA Expiration from the user settings table to display on the UI.
+ */
 -(NSString *) getNRAExpiration
 {
     NSString *sAns = @"";
@@ -149,29 +167,29 @@
     return sAns;
 }
 
+#pragma mark Update NRA Number Function
+/*!
+ @brief Update the NRA Number that was entered in the txt field in the database.
+ */
 -(void) updateNRANumber
 {
     NSString *errorMsg;
     NSString *SQL = [NSString stringWithFormat:@"update user_settings set setting_value='%@',setting_value2='%@' where setting='NRA#'", self.txtNRANumber.text, self.txtNRAExpiration.text];
     [BurnSoftDatabase runQuery:SQL DatabasePath:dbPathString MessageHandler:&errorMsg];
-    //[FormFunctions checkForError:errorMsg MyTitle:@"Update NRA Number" ViewController:self];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+#pragma mark Action to Update Settings
+/*!
+ @brief  Action to update the NRANumber
+ */
 - (IBAction)updateSettings:(id)sender {
     [self updateNRANumber];
 }
 
 #pragma mark Backup to iCloud Button
-// Action to start the backup to iCloud Drive
+/*!
+ @brief Action to start the backup to iCloud Drive
+ */
 - (IBAction)btnBackuptoiCloud:(id)sender {
     DatabaseManagement *myObjDM = [DatabaseManagement new];
     FormFunctions *myObjFF = [FormFunctions new];
@@ -191,7 +209,9 @@
 }
 
 #pragma mark Restore from iCloud Button
-// Action to start the restore from iCloud Drive
+/*!
+ @brief Action to start the restore from iCloud Drive
+ */
 - (IBAction)btnRestoreFromiCloud:(id)sender {
     [DatabaseManagement startiCloudSync];
     DatabaseManagement *myObjDM = [DatabaseManagement new];
