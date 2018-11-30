@@ -25,6 +25,9 @@
 @implementation LIST_Matches
 
 #pragma mark View Did Load
+/*!
+    @brief load settings and data when the form loads
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -47,7 +50,9 @@
     // Configure View Controller
     [self setRefreshControl:refreshControl];
 }
-
+/*!
+ @brief Add navigation button to the top to allow an add button
+ */
 -(void) AddNavButton
 {
     if (ISLITE)
@@ -71,20 +76,26 @@
 }
 
 #pragma mark View will reappear
-//Sub when the form reloads
+/*!
+ @brief Sub when the form reloads
+ */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self reloadData];
 }
 
 #pragma mark Did Recieve Memory Warning
+/*!
+ @brief Dispose of any resources that can be recreated.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark Refresh Table Data
-// when you swipe down on the table, it will reload the data
+/*!
+ @brief when you swipe down on the table, it will reload the data
+ */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.myTableView reloadData];
     [self loadData];
@@ -92,14 +103,18 @@
     [self AddNavButton];
 }
 #pragma mark Add New Match
-//add the details of a new match
+/*!
+ @brief dd the details of a new match
+ */
 -(void) AddMatch
 {
     [self performSegueWithIdentifier:@"sequeAddNewMatch" sender:self];
 }
 
 #pragma mark Reload Data
-//  Reload the data as is the for first appeared
+/*!
+ @brief Reload the data as is the for first appeared
+ */
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
@@ -107,7 +122,9 @@
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
+/*!
+ @brief Setup the global variablies like the database path
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -120,6 +137,9 @@
 }
 
 #pragma mark Load Data from Database
+/*!
+ @brief Load the database from the database into a MSMutabeArray to be used in the table
+ */
 -(void) loadData
 {
     ArrayCount = 0;
@@ -140,7 +160,9 @@
     
     [[self myTableView] reloadData];
 }
-
+/*!
+ @brief Setup the Match Classes
+ */
 -(void)setupDictionary
 {
     NSString *errorMsg;
@@ -154,7 +176,9 @@
 }
 
 #pragma mark Prepare for Segue
-//Actions to take before switching to the next window
+/*!
+ @brief Actions to take before switching to the next window
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"segueShowCourseOfFire"]) {
         LIST_Match_COF *destViewController = (LIST_Match_COF *)segue.destinationViewController;
@@ -170,14 +194,18 @@
 }
 
 #pragma mark Table set Edit Mode
-// Set if you can edit the table by swiping left to view options.
+/*!
+ @brief Set if you can edit the table by swiping left to view options.
+ */
 -(BOOL)tableView:(UITableView *) tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     return YES;
 }
 
 #pragma mark Table Set Sections
-//set the sections in the table
+/*!
+ @brief set the sections in the table
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (USEGROUPING)
     {
@@ -204,7 +232,9 @@
         return 1;
     }
 }
-
+/*!
+ @brief Get the number of rows for the table section
+ */
 -(NSInteger)getRowsForSection:(NSInteger)section
 {
     NSInteger iRow = 0;
@@ -224,7 +254,9 @@
 }
 
 #pragma mark Table Set Number of Rows
-//set the number of rows int he table
+/*!
+ @brief set the number of rows int he table
+ */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (USEGROUPING)
@@ -237,7 +269,9 @@
         return [myMatchListings count];
     }
 }
-
+/*!
+ @brief the title for the header in the section
+ */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (USEGROUPING)
@@ -250,7 +284,9 @@
 
 
 #pragma mark Table Set Cell Data
-//set the cell data by use of an array
+/*!
+ @brief set the cell data by use of an array
+ */
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (USEGROUPING)
@@ -289,7 +325,9 @@
 
  
 #pragma mark Table Row Selected
-//actions to take when a row has been selected.
+/*!
+ @brief actions to take when a row has been selected.
+ */
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -299,7 +337,9 @@
 }
 
 #pragma mark Table Edit actions
-//actions to take when a row has been selected for editing.
+/*!
+ @brief actions to take when a row has been selected for editing.
+ */
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     
