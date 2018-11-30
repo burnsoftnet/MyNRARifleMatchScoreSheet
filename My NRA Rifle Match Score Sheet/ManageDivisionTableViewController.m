@@ -17,6 +17,9 @@
     NSString *dbPathString;
     NSMutableArray *myMatchDIV;
 }
+/*!
+    @brief Load Data and settings when the form first loads
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,26 +43,33 @@
 }
 
 #pragma mark Refresh Table Data
-// when you swipe down on the table, it will reload the data
+/*!
+ @brief when you swipe down on the table, it will reload the data
+ */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.myTableView reloadData];
     [self loadData];
     [sender endRefreshing];
 }
-
+/*!
+ @brief Dispose of any resources that can be recreated.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 #pragma mark Reload Data
-//  Reload the data as is the for first appeared
+/*!
+ @brief Reload the data as is the for first appeared
+ */
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
+/*!
+ @brief Setup the global variablies like the database path
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -72,6 +82,9 @@
 }
 
 #pragma mark Load Data from Database
+/*!
+ @brief Load the data from the database into a NSMutableArray to be used in the table.
+ */
 -(void) loadData
 {
     [myMatchDIV removeAllObjects];
@@ -87,7 +100,9 @@
 }
 
 #pragma mark Add New Match
-//add the details of a new match
+/*!
+ @brief add the details of a new match
+ */
 -(void) AddCOF
 {
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Divisions"
@@ -119,15 +134,21 @@
 
 
 #pragma mark - Table view data source
-
+/*!
+ @brief Number of sections in table view
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-
+/*!
+ @brief number of rows in the section of the table
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [myMatchDIV count];
 }
-
+/*!
+ @brief Load the cells of the table
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -144,7 +165,9 @@
 }
 
 #pragma mark Table set Edit Mode
-// Set if you can edit the table by swiping left to view options.
+/*!
+ @brief Set if you can edit the table by swiping left to view options.
+ */
 -(BOOL)tableView:(UITableView *) tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     return YES;
@@ -152,7 +175,9 @@
 
 
 #pragma mark Table Edit actions
-//actions to take when a row has been selected for editing.
+/*!
+ @brief actions to take when a row has been selected for editing.
+ */
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     
@@ -182,7 +207,9 @@
 }
 
 #pragma mark Table Row Selected
-//actions to take when a row has been selected.
+/*!
+ @brief actions to take when a row has been selected.
+ */
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
