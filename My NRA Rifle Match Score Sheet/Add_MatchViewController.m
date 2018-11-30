@@ -20,7 +20,9 @@
 @implementation Add_MatchViewController
 
 @synthesize pvClass;
-
+/*!
+    @brief
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -29,7 +31,9 @@
     [self initClassPicker];
     
 }
-
+/*!
+ @brief
+ */
 -(void) initClassPicker
 {
     // Calculate the screen's width.
@@ -68,7 +72,9 @@
     [self.txtClass setInputAccessoryView:toolBar];
 
 }
-
+/*!
+ @brief
+ */
 -(void) SelectMatchClass
 {
     
@@ -78,7 +84,9 @@
     }
      [self.txtClass resignFirstResponder];
 }
-
+/*!
+ @brief
+ */
 -(void) initDatePicker
 {
     datePicker = [[UIDatePicker alloc]init];
@@ -102,6 +110,9 @@
 
 #pragma mark View will reappear
 //Sub when the form reloads
+/*!
+ @brief
+ */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self reloadData];
@@ -114,6 +125,9 @@
 
 #pragma mark Make Keyboard Dissapear
 //Dissmiss the keyboard when the view is selected
+/*!
+ @brief
+ */
 -(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
 {
     //[self.txtClass resignFirstResponder];
@@ -127,6 +141,9 @@
 }
 
 #pragma mark Did Recieve Memory Warning
+/*!
+ @brief
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -134,6 +151,9 @@
 
 #pragma mark Refresh Table Data
 // when you swipe down on the table, it will reload the data
+/*!
+ @brief
+ */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     //[self.myTableView reloadData];
     [self loadData];
@@ -142,6 +162,9 @@
 
 #pragma mark Reload Data
 //  Reload the data as is the for first appeared
+/*!
+ @brief
+ */
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
@@ -149,6 +172,9 @@
 
 #pragma mark Setup Global Variables
 // Setup the global variablies like the database path
+/*!
+ @brief
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -162,6 +188,9 @@
 }
 
 #pragma mark Load Data from Database
+/*!
+ @brief
+ */
 -(void) loadData
 {
     NSString *errorMsg = [NSString new];
@@ -207,25 +236,33 @@
 }
 
 #pragma mark PickerView DataSource
-
+/*!
+ @brief
+ */
 - (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView
 {
     return 1;
 }
-
+/*!
+ @brief
+ */
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 
 {
     return _pickerDataSource.count;
 }
-
+/*!
+ @brief
+ */
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return _pickerDataSource[row];
 }
 
 #pragma mark PickerView Delegate
-
+/*!
+ @brief
+ */
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.txtClass.text = _pickerDataSource[row];
@@ -233,12 +270,16 @@
     //_txtClass.text = resultString;
     //if (_pvClassPicker) _pvClassPicker.hidden = !_pvClassPicker.hidden;
 }
-
+/*!
+ @brief
+ */
 - (void)onDatePickerValueChanged:(UIDatePicker *)datePicker
 {
     self.txtDate.text = [NSString stringWithFormat:@"%@", _dpMatchOfDate.date];
 }
-
+/*!
+ @brief
+ */
 - (IBAction)btnAddMatch:(id)sender
 {
     MatchLists *myObj = [MatchLists new];
