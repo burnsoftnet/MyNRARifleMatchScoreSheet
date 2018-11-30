@@ -21,7 +21,7 @@
 
 @synthesize pvClass;
 /*!
-    @brief
+    @brief Load the data and settings when the form loads
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +32,7 @@
     
 }
 /*!
- @brief
+ @brief Create the inital class Picker and cacluate the size of the screen
  */
 -(void) initClassPicker
 {
@@ -73,7 +73,7 @@
 
 }
 /*!
- @brief
+ @brief Pass the Class that was selected
  */
 -(void) SelectMatchClass
 {
@@ -85,7 +85,7 @@
      [self.txtClass resignFirstResponder];
 }
 /*!
- @brief
+ @brief  Initialize the Data Picker
  */
 -(void) initDatePicker
 {
@@ -101,6 +101,9 @@
     [self.txtDate setInputAccessoryView:toolBar];
 }
 
+/*!
+ @brief Pass the date selected to the form
+ */
 -(void)ShowSelectedDate
 {   NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"YYYY-MM-dd"];
@@ -109,9 +112,8 @@
 }
 
 #pragma mark View will reappear
-//Sub when the form reloads
 /*!
- @brief
+ @brief Sub when the form reloads
  */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -124,9 +126,8 @@
 }
 
 #pragma mark Make Keyboard Dissapear
-//Dissmiss the keyboard when the view is selected
 /*!
- @brief
+ @brief Dissmiss the keyboard when the view is selected
  */
 -(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
 {
@@ -142,17 +143,15 @@
 
 #pragma mark Did Recieve Memory Warning
 /*!
- @brief
+ @brief Dispose of any resources that can be recreated.
  */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark Refresh Table Data
-// when you swipe down on the table, it will reload the data
 /*!
- @brief
+ @brief when you swipe down on the table, it will reload the data
  */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     //[self.myTableView reloadData];
@@ -161,9 +160,8 @@
 }
 
 #pragma mark Reload Data
-//  Reload the data as is the for first appeared
 /*!
- @brief
+ @brief Reload the data as is the for first appeared
  */
 -(void) reloadData {
     [self setupGlobalVars];
@@ -171,9 +169,8 @@
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
 /*!
- @brief
+ @brief Setup the global variablies like the database path
  */
 -(void) setupGlobalVars
 {
@@ -189,7 +186,7 @@
 
 #pragma mark Load Data from Database
 /*!
- @brief
+ @brief Load the data from the database to be displayed on the form when editing
  */
 -(void) loadData
 {
@@ -237,14 +234,14 @@
 
 #pragma mark PickerView DataSource
 /*!
- @brief
+ @brief number of componetns in the picker view
  */
 - (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView
 {
     return 1;
 }
 /*!
- @brief
+ @brief number of rows in componenets
  */
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 
@@ -252,7 +249,7 @@
     return _pickerDataSource.count;
 }
 /*!
- @brief
+ @brief title for the row of the component
  */
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
@@ -261,7 +258,7 @@
 
 #pragma mark PickerView Delegate
 /*!
- @brief
+ @brief when the row is selected from the picker
  */
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
@@ -271,14 +268,14 @@
     //if (_pvClassPicker) _pvClassPicker.hidden = !_pvClassPicker.hidden;
 }
 /*!
- @brief
+ @brief when the date picker value changed
  */
 - (void)onDatePickerValueChanged:(UIDatePicker *)datePicker
 {
     self.txtDate.text = [NSString stringWithFormat:@"%@", _dpMatchOfDate.date];
 }
 /*!
- @brief
+ @brief when the button to add the match was clicked
  */
 - (IBAction)btnAddMatch:(id)sender
 {
