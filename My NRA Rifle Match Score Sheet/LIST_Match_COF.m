@@ -20,6 +20,9 @@
 @implementation LIST_Match_COF
 
 #pragma mark View Did Load
+/*!
+    @brief
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,12 +47,18 @@
 
 #pragma mark View will reappear
 //Sub when the form reloads
+/*!
+ @brief
+ */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self reloadData];
 }
 
 #pragma mark Did Recieve Memory Warning
+/*!
+ @brief
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -57,6 +66,9 @@
 
 #pragma mark Refresh Table Data
 // when you swipe down on the table, it will reload the data
+/*!
+ @brief
+ */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.myTableView reloadData];
     [self loadData];
@@ -64,6 +76,9 @@
 }
 #pragma mark Add New Match
 //add the details of a new match
+/*!
+ @brief
+ */
 -(void) AddMatch
 {
     [self performSegueWithIdentifier:@"sequeAddNewMatch" sender:self];
@@ -71,6 +86,9 @@
 
 #pragma mark Reload Data
 //  Reload the data as is the for first appeared
+/*!
+ @brief
+ */
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
@@ -78,6 +96,9 @@
 
 #pragma mark Setup Global Variables
 // Setup the global variablies like the database path
+/*!
+ @brief
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -90,6 +111,9 @@
 }
 
 #pragma mark Load Data from Database
+/*!
+ @brief
+ */
 -(void) loadData
 {
     [myMatchListings removeAllObjects];
@@ -105,6 +129,9 @@
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
+/*!
+ @brief
+ */
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
@@ -124,6 +151,9 @@
 
 #pragma mark Table set Edit Mode
 // Set if you can edit the table by swiping left to view options.
+/*!
+ @brief
+ */
 -(BOOL)tableView:(UITableView *) tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     return YES;
@@ -131,12 +161,18 @@
 
 #pragma mark Table Set Sections
 //set the sections in the table
+/*!
+ @brief
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 #pragma mark Table Set Number of Rows
 //set the number of rows int he table
+/*!
+ @brief
+ */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([myMatchListings count] > 0)
@@ -163,6 +199,9 @@
 
 #pragma mark Table Set Cell Data
 //set the cell data by use of an array
+/*!
+ @brief
+ */
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -180,6 +219,9 @@
 
 #pragma mark Table Row Selected
 //actions to take when a row has been selected.
+/*!
+ @brief
+ */
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -190,6 +232,9 @@
 
  #pragma mark Table Edit actions
  //actions to take when a row has been selected for editing.
+/*!
+ @brief
+ */
  -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
  {
      //FormFunctions *myFunctions = [FormFunctions new];
