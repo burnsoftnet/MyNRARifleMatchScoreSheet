@@ -17,6 +17,9 @@
     NSString *dbPathString;
     NSMutableArray *myMatchCOF;
 }
+/*!
+    @brief When the form loads, Create an Add Button in Nav Bat, Initialize Refresh Control, Configure Refresh Control, Configure View Controller
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,26 +43,33 @@
 }
 
 #pragma mark Refresh Table Data
-// when you swipe down on the table, it will reload the data
+/*!
+ @brief when you swipe down on the table, it will reload the data
+ */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.myTableView reloadData];
     [self loadData];
     [sender endRefreshing];
 }
-
+/*!
+ @brief Dispose of any resources that can be recreated.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 #pragma mark Reload Data
-//  Reload the data as is the for first appeared
+/*!
+ @brief Reload the data as is the for first appeared
+ */
 -(void) reloadData {
     [self setupGlobalVars];
     [self loadData];
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
+/*!
+ @brief Setup the global variablies like the database path
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -72,6 +82,9 @@
 }
 
 #pragma mark Load Data from Database
+/*!
+ @brief Load the database from the database to a NSMUtableArray to be use in the table.
+ */
 -(void) loadData
 {
     [myMatchCOF removeAllObjects];
@@ -86,7 +99,9 @@
 }
 
 #pragma mark Add New Match
-//add the details of a new match
+/*!
+ @brief add the details of a new match
+ */
 -(void) AddCOF
 {
     //preferredStyle:UIAlertControllerStyleAlert
@@ -131,15 +146,21 @@
 
 
 #pragma mark - Table view data source
-
+/*!
+ @brief Set the Number of section in the table
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-
+/*!
+ @brief Set the number of rows in Section
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [myMatchCOF count];
 }
-
+/*!
+ @brief Set the data for the cell of the table view
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -156,7 +177,9 @@
 }
 
 #pragma mark Table set Edit Mode
-// Set if you can edit the table by swiping left to view options.
+/*!
+ @brief Set if you can edit the table by swiping left to view options.
+ */
 -(BOOL)tableView:(UITableView *) tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     return YES;
@@ -164,7 +187,9 @@
 
 
 #pragma mark Table Edit actions
-//actions to take when a row has been selected for editing.
+/*!
+ @brief actions to take when a row has been selected for editing.
+ */
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     
@@ -194,7 +219,9 @@
 }
 
 #pragma mark Table Row Selected
-//actions to take when a row has been selected.
+/*!
+ @brief actions to take when a row has been selected.
+ */
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
