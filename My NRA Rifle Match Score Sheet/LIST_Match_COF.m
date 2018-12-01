@@ -21,7 +21,8 @@
 
 #pragma mark View Did Load
 /*!
-    @brief
+    @brief Load settings and data when the form loads, Create an Add Button in Nav Bat, Initialize Refresh Control
+        Configure Refresh Control, Configure View Controller
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,9 +47,8 @@
 }
 
 #pragma mark View will reappear
-//Sub when the form reloads
 /*!
- @brief
+ @brief Sub when the form reloads
  */
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -57,17 +57,15 @@
 
 #pragma mark Did Recieve Memory Warning
 /*!
- @brief
+ @brief Dispose of any resources that can be recreated.
  */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark Refresh Table Data
-// when you swipe down on the table, it will reload the data
 /*!
- @brief
+ @brief when you swipe down on the table, it will reload the data
  */
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.myTableView reloadData];
@@ -75,9 +73,8 @@
     [sender endRefreshing];
 }
 #pragma mark Add New Match
-//add the details of a new match
 /*!
- @brief
+ @brief add the details of a new match
  */
 -(void) AddMatch
 {
@@ -85,9 +82,8 @@
 }
 
 #pragma mark Reload Data
-//  Reload the data as is the for first appeared
 /*!
- @brief
+ @brief Reload the data as is the for first appeared
  */
 -(void) reloadData {
     [self setupGlobalVars];
@@ -95,9 +91,8 @@
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
 /*!
- @brief
+ @brief Setup the global variablies like the database path
  */
 -(void) setupGlobalVars
 {
@@ -112,7 +107,7 @@
 
 #pragma mark Load Data from Database
 /*!
- @brief
+ @brief Load Data from the database into a NSMutableArry to be used in the table
  */
 -(void) loadData
 {
@@ -127,10 +122,8 @@
 }
 
  #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
 /*!
- @brief
+ @brief In a storyboard-based application, you will often want to do a little preparation before navigation
  */
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
@@ -150,9 +143,8 @@
  }
 
 #pragma mark Table set Edit Mode
-// Set if you can edit the table by swiping left to view options.
 /*!
- @brief
+ @brief Set if you can edit the table by swiping left to view options.
  */
 -(BOOL)tableView:(UITableView *) tableView canEditRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
@@ -160,18 +152,16 @@
 }
 
 #pragma mark Table Set Sections
-//set the sections in the table
 /*!
- @brief
+ @brief set the sections in the table
  */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 #pragma mark Table Set Number of Rows
-//set the number of rows int he table
 /*!
- @brief
+ @brief set the number of rows int he table
  */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -198,9 +188,8 @@
 }
 
 #pragma mark Table Set Cell Data
-//set the cell data by use of an array
 /*!
- @brief
+ @brief set the cell data by use of an array
  */
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -218,9 +207,8 @@
 }
 
 #pragma mark Table Row Selected
-//actions to take when a row has been selected.
 /*!
- @brief
+ @brief actions to take when a row has been selected.
  */
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
@@ -231,13 +219,11 @@
 }
 
  #pragma mark Table Edit actions
- //actions to take when a row has been selected for editing.
 /*!
- @brief
+ @brief actions to take when a row has been selected for editing.
  */
  -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
  {
-     //FormFunctions *myFunctions = [FormFunctions new];
      UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
          NSString *errorMsg;
          MatchListCOF *myObj = [MatchListCOF new];
