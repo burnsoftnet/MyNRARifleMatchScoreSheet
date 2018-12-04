@@ -21,6 +21,9 @@
 @synthesize pvCourseOfFire;
 
 #pragma mark View Did Load
+/*!
+    @brief Load the settings and database when the form loads
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -33,9 +36,12 @@
     [tapGestureRecognizer setDelegate:self];
     [self.view addGestureRecognizer:tapGestureRecognizer];
 }
+#pragma mark Keyboard Tapped
+/*!
+ @brief Dissmiss the keyboard when the view is selected
+ */
 -(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
 {
-    //Dissmiss the keyboard when the view is selected
     [self.txtS1 resignFirstResponder];
     [self.txtS2 resignFirstResponder];
     
@@ -60,7 +66,11 @@
     [self.txtR19 resignFirstResponder];
     [self.txtR20 resignFirstResponder];
 }
-
+#pragma mark Start Picker
+/*!
+ @brief Start the Date Picker, Calculate the screen's width.,  Calculate the starting x coordinate. Init the picker view.
+        Set the picker's frame. We set the y coordinate to 50px.
+ */
 -(void) startPicker
 {
     // Calculate the screen's width.
@@ -98,7 +108,10 @@
     [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn, nil]];
     [self.txtCourseOfFire setInputAccessoryView:toolBar];
 }
-
+#pragma mark Select COF
+/*!
+ @brief  Select the Course of Fire from the Database
+ */
 -(void) SelectCourseOfFireDataSource
 {
     [self.txtCourseOfFire resignFirstResponder];
@@ -106,13 +119,18 @@
 
 
 #pragma mark Did Recieve Memory Warning
+/*!
+ @brief Dispose of any resources that can be recreated.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark Setup Global Variables
-// Setup the global variablies like the database path
+/*!
+ @brief Setup the global variablies like the database path
+ */
 -(void) setupGlobalVars
 {
     BurnSoftDatabase *myPath = [BurnSoftDatabase new];
@@ -125,8 +143,9 @@
     myPath = nil;
 }
 #pragma mark Set The Hit Factory Value
-//Used when Loading data, pass the value that is stored in the database, if it is an x it will flip the switch on and set the text value to 10
-//otherwise it will set the textbox to the value and turn the switch off.
+/*!
+ @brief Used when Loading data, pass the value that is stored in the database, if it is an x it will flip the switch on and set the text value to 10 otherwise it will set the textbox to the value and turn the switch off.
+ */
 -(void) SetHitFactoryByValue:(NSString *) sValue TextBox:(UITextField *) myBox XSwitch:(UISwitch *) mySwitch
 {
     if ([sValue isEqualToString:@"x"])
@@ -139,7 +158,9 @@
     }
 }
 #pragma mark Get Value from TextBox or Switch
-//Get the value from the textbox unless the value is an x then return x
+/*!
+ @brief Get the value from the textbox unless the value is an x then return x
+ */
 -(NSString *) getValueFromTextBox:(UITextField *) myBox xSwitch:(UISwitch *) mySwitch
 {
     NSString *sAns = myBox.text;
@@ -156,7 +177,10 @@
     
     return sAns;
 }
-
+#pragma mark Add Value from TextBox
+/*!
+ @brief  Add Value from Text Box
+ */
 -(NSString *) AddValueFromTextBox:(UITextField *) myBox xSwitch:(UISwitch *) mySwitch AddSwitch:(NSString **) addswitch
 {
     NSString *sAns = myBox.text;
@@ -171,7 +195,9 @@
 }
 
 #pragma mark Load Data
-//If this is not a new form, it will run this sub to load the data from the database based on the Course Of Fire ID ( COFID )
+/*!
+ @brief If this is not a new form, it will run this sub to load the data from the database based on the Course Of Fire ID ( COFID )
+ */
 -(void) loadData
 {
     NSString *errorMsg;
@@ -317,7 +343,10 @@
     myObj = nil;
 }
 
-//Add up all the fields to produce the final results
+#pragma mark Add All Fields
+/*!
+ @brief Add up all the fields to produce the final results
+ */
 - (void) AddallFields
 {
     
@@ -422,6 +451,10 @@
     
     self.lblCOFTotal.text = [BurnSoftMath AddTwoItemsAsIntegerString:string1total :string2total];
 }
+#pragma mark Button Update
+/*!
+    @brief When the Update Status button is clicked or touched
+ */
 - (IBAction)btnUpdateStatus:(id)sender
 {
      [self AddallFields];
@@ -438,7 +471,9 @@
 */
 
 #pragma mark Button Apply
-//Called Applied because it can be used in both adding new or updating existing.
+/*!
+ @brief Called Applied because it can be used in both adding new or updating existing.
+ */
 - (IBAction)btnApply:(id)sender {
     MatchListCOF *myObj = [MatchListCOF new];
     NSString *errorMessage;
@@ -506,22 +541,34 @@
     
 }
 
-// Number of components.
+#pragma mark Number of Compents in Picker
+/*!
+ @brief Number of components.
+ */
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
-// Total rows in our component.
+#pragma mark Number of Rows in Picker
+/*!
+ @brief Total rows in our component.
+ */
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [_CourseOfFireDataSource count];
 }
 
-// Display each row's data.
+#pragma mark Title For Row
+/*!
+ @brief Display each row's data.
+ */
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [_CourseOfFireDataSource objectAtIndex: row];
 }
 
-// Do something with the selected row.
+#pragma mark Picker Did Select
+/*!
+ @brief Do something with the selected row.
+ */
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     self.txtCourseOfFire.text =[_CourseOfFireDataSource objectAtIndex: row];
     //NSLog(@"You selected this: %@", [_CourseOfFireDataSource objectAtIndex: row]);
