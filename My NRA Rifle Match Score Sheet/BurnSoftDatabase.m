@@ -23,8 +23,9 @@
 }
 
 #pragma mark Error Handling
-//NOTE: Translate Errors from SQLITE integer to English
-//USEDBY: GENERAL
+/*!
+ @brief:Translate Errors from SQLITE integer to English
+ */
 -(NSString *) dbErrorsIDtoEnglish :(int)ret
 {
     NSString *msg;
@@ -126,8 +127,9 @@
     return msg;
 }
 #pragma mark Get Database Path
-//NOTE: Pass the Database Name to find the Path of the database
-//USEDBY: GENERAL, copyDbIfNeeded
+/*!
+ @brief:Pass the Database Name to find the Path of the database
+ */
 -(NSString *) getDatabasePath :(NSString *) DBNAME
 {
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -135,8 +137,9 @@
     return [docPath stringByAppendingPathComponent:DBNAME];
 }
 #pragma mark Copy DB if Needed
-//NOTE: Pass the name of the database to see if we need to copy the database from the application directory to the documents directory
-//USEDBY: GENERAL & restoreFactoryDB
+/*!
+ @brief:Pass the name of the database to see if we need to copy the database from the application directory to the documents directory
+ */
 -(void) copyDbIfNeeded :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinAppPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DBNAME];
@@ -155,8 +158,9 @@
     fileManager = nil;
 }
 #pragma mark Restory Factory Database
-//NOTE: Retore the Factory Database by deleting the database in the user docs and copying it back over.
-//USEDBBY: GENERAL
+/*!
+ @brief:Retore the Factory Database by deleting the database in the user docs and copying it back over.
+ */
 -(void) restoreFactoryDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *myDBinDocsPath = [self getDatabasePath:DBNAME];
@@ -175,8 +179,9 @@
     fileManager = nil;
 }
 #pragma mark Check Database
-//NOTE: Pass the Database name to see if the database is in the path that we need it to be in
-//USEDBY: GENERAL
+/*!
+ @brief:Pass the Database name to see if the database is in the path that we need it to be in
+ */
 -(void)checkDB :(NSString *) DBNAME MessageHandler:(NSString **) msg
 {
     NSString *dbPathString = [self getDatabasePath:DBNAME];
@@ -189,8 +194,9 @@
     fileManager = nil;
 }
 #pragma mark Execute Statements
-//NOTE: Pass a SQL statement, and the database path to execute a statement, if it passes ok, then it will return true
-//USEDBY: GENERAL
+/*!
+ @brief:Pass a SQL statement, and the database path to execute a statement, if it passes ok, then it will return true
+ */
 -(BOOL) runQuery :(NSString *) mysql DatabasePath:(NSString *) DBPath MessageHandler:(NSString **) msg
 {
     char *error;
@@ -215,8 +221,9 @@
     return bAns;
 }
 #pragma mark Execute Statements - METHOD
-//NOTE: Pass a SQL statement, and the database path to execute a statement, if it passes ok, then it will return true
-//USEDBY: GENERAL
+/*!
+ @brief:Pass a SQL statement, and the database path to execute a statement, if it passes ok, then it will return true
+ */
 +(BOOL) runQuery :(NSString *) mysql DatabasePath:(NSString *) DBPath MessageHandler:(NSString **) msg
 {
     BOOL bAns = NO;
@@ -227,8 +234,9 @@
 }
 
 #pragma mark METHOD - See if Data Exists
-//NOTE: METHOD - Pass a SQL statement and the database path to see if any rows are returned from that statement, if there is something it will return true
-//USEDBY: GENERAL
+/*!
+ @brief:METHOD - Pass a SQL statement and the database path to see if any rows are returned from that statement, if there is something it will return true
+ */
 +(BOOL) dataExistsbyQuery :(NSString *) sql DatabasePath:(NSString *)dbPath MessageHandler:(NSString **) msg
 {
     BOOL bAns = NO;
@@ -239,8 +247,9 @@
 }
 
 #pragma mark See if Data Exists
-//NOTE: Pass a SQL statement and the database path to see if any rows are returned from that statement, if there is something it will return true
-//USEDBY: GENERAL
+/*!
+ @brief:Pass a SQL statement and the database path to see if any rows are returned from that statement, if there is something it will return true
+ */
 -(BOOL) dataExistsbyQuery :(NSString *) sql DatabasePath:(NSString *)dbPath MessageHandler:(NSString **) msg
 {
     sqlite3_stmt *statement;
@@ -280,8 +289,9 @@
     return bAns;
 }
 #pragma mark Get Data from Database
-//NOTE: Pass the Name/Value that you are looking for, the column name that it would be in, the Column that that Would Contain an ID that you want, the name of the table, and the database path to get the ID value,  Used to Look up ID of a value in the table to be referenced in your code.
-//USEDBY: GENERAL
+/*!
+ @brief:Pass the Name/Value that you are looking for, the column name that it would be in, the Column that that Would Contain an ID that you want, the name of the table, and the database path to get the ID value,  Used to Look up ID of a value in the table to be referenced in your code.
+ */
 -(NSNumber *) getLastOneEntryIDbyName :(NSString *) name LookForColumnName:(NSString *) searchcolumn GetIDFomColumn:(NSString *) getfromcolumn InTable:(NSString *) tablename DatabasePath:(NSString *) dbPath MessageHandler:(NSString **) msg
 {
     NSNumber *iAns = 0;
@@ -310,8 +320,9 @@
     return iAns;
 }
 #pragma mark Get Current Database Version
-//NOTE: Get the current Database Version, usualy used for letting the application/user/tech support know if the two version match up
-//USEDBY: GENERAL
+/*!
+ @brief:Get the current Database Version, usualy used for letting the application/user/tech support know if the two version match up
+ */
 -(NSString *) getCurrentDatabaseVersionfromTable:(NSString *) myTable DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **)errorMsg
 {
     NSString *sAns = @"0";
@@ -341,8 +352,9 @@
     return sAns;
 }
 #pragma mark Version Exists
-// This will check to see if a previouc version exists of the hotfix, if it exists it will skip updating the database.
-//USEDBY: DBUpgrade.m
+/*!
+ @brief:This will check to see if a previouc version exists of the hotfix, if it exists it will skip updating the database.
+ */
 -(BOOL) VersionExists:(NSString *) myCurrentVersion VersionTable:(NSString *) myTable DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -370,6 +382,11 @@
     }
     return bAns;
 }
+
+#pragma mark Get Number of Rows in Table
+/*!
+ @brief: Get the Total Number of Rows in the selected Table.
+ */
 -(int) getTotalNumberofRowsInTable:(NSString *) myTable DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     int iAns = 0;
