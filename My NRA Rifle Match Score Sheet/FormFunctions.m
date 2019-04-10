@@ -10,8 +10,9 @@
 
 @implementation FormFunctions
 #pragma mark Textbox View Layouts
-//NOTE: Creates a border around a Textview
-//USEBD: GENERAL
+/*!
+ @brief: Creates a border around a Textview
+ */
 +(void) setBordersTextView :(UITextView *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -20,8 +21,9 @@
 }
 
 #pragma mark Textbox Layout
-//NOTE: Creates a border around a regular text box
-//USEBD: GENERAL
+/*!
+ @brief: Creates a border around a regular text box
+ */
 +(void) setBorderTextBox :(UITextField *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -30,8 +32,9 @@
 }
 
 #pragma mark Label Borders
-//NOTE: Creates a border around the label
-//USEBD: GENERAL
+/*!
+ @brief:Creates a border around the label
+ */
 +(void) setBorderLabel :(UILabel *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -39,8 +42,9 @@
     [[myObj layer] setCornerRadius:2];
 }
 #pragma mark Button Border
-//NOTE: Breates a border around the label
-//USEDBY: GENERAL
+/*!
+ @brief:Breates a border around the label
+ */
 +(void) setBorderButton :(UIButton *) myObj
 {
     [[myObj layer] setBorderColor:[[UIColor grayColor] CGColor]];
@@ -51,8 +55,9 @@
 }
 
 #pragma mark Common Alert/Message Handling
-//NOTE: Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
-//USEBD: GENERAL
+/*!
+ @brief:Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
+ */
 -(void)sendMessage:(NSString *) msg MyTitle:(NSString *) mytitle ViewController:(UIViewController *) MyViewController
 {
     //Send MessageBox Alert message to screen
@@ -63,8 +68,9 @@
 }
 
 #pragma mark Common Alert/Message Handling
-//NOTE: Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
-//USEBD: GENERAL
+/*!
+ @brief:Send a Message box from the View controller that you are currently on. It's easier then copying this function all over the place
+ */
 +(void)sendMessage:(NSString *) msg MyTitle:(NSString *) mytitle ViewController:(UIViewController *) MyViewController;
 {
     FormFunctions *myObj = [FormFunctions new];
@@ -72,7 +78,9 @@
 }
 
 #pragma mark Alert on Limit
-//Alert on limit reached and give the option to buy the full verion from the app sotre.
+/*!
+ @brief:Alert on limit reached and give the option to buy the full verion from the app sotre.
+ */
 +(void) AlertonLimitForViewController:(UIViewController *) MyVewController
 {
     UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Limit Reached!"
@@ -103,8 +111,9 @@
 
 
 #pragma mark Check For Error in Message via MessageBog
-//NOTE: This will check the message to see if something is in it, if not it will not alert via MessageBox
-//USEBD: GENERAL
+/*!
+ @brief:This will check the message to see if something is in it, if not it will not alert via MessageBox
+ */
 -(void)checkForError :(NSString *) errorMsg MyTitle:(NSString *) errTitle ViewController:(UIViewController *) MyViewController
 {
     if (![errorMsg  isEqual: @""])
@@ -118,8 +127,9 @@
 }
 
 #pragma mark Check For Error in Message via MessageBox Method
-//NOTE: This will check the message to see if something is in it, if not it will not alert via MessageBox
-//USEBD: GENERAL
+/*!
+ @brief:This will check the message to see if something is in it, if not it will not alert via MessageBox
+ */
 +(void)checkForError :(NSString *) errorMsg MyTitle:(NSString *) errTitle ViewController:(UIViewController *) MyViewController
 {
     FormFunctions *myObj = [FormFunctions new];
@@ -128,8 +138,9 @@
 }
 
 #pragma mark Check for Error in Message via NSLOG
-//NOTE: his will check the message to see if something is in it, if not it will not alert via NSLog
-//USEBD: GENERAL
+/*!
+ @brief: This will check the message to see if something is in it, if not it will not alert via NSLog
+ */
 -(void)checkForErrorLogOnly :(NSString *) errorMsg MyTitle:(NSString *) errTitle
 {
     if (![errorMsg  isEqual: @""])
@@ -141,9 +152,10 @@
 }
 
 #pragma mark NSLog Debug Message
-//NOTE: Mostly used for runtime debugging by sending message of information back to the output window.
-//      Only when the Global Var BUGGERME is true will it write out message
-//USEBD: GENERAL
+/*!
+ @brief: Mostly used for runtime debugging by sending message of information back to the output window.
+        Only when the Global Var BUGGERME is true will it write out message
+ */
 -(void)doBuggermeMessage :(NSString *) msg FromSubFunction:(NSString *) fromlocation
 {
     if (BUGGERME) {
@@ -152,9 +164,10 @@
 }
 
 #pragma mark NSLog Debug Message
-//NOTE: Mostly used for runtime debugging by sending message of information back to the output window.
-//      Only when the Global Var BUGGERME is true will it write out message
-//USEBD: GENERAL
+/*!
+ @brief:Mostly used for runtime debugging by sending message of information back to the output window.
+        Only when the Global Var BUGGERME is true will it write out message
+ */
 +(void)doBuggermeMessage :(NSString *) msg FromSubFunction:(NSString *) fromlocation
 {
     if (BUGGERME) {
