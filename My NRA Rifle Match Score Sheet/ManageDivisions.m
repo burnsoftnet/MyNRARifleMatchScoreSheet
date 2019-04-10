@@ -15,7 +15,9 @@
 }
 
 #pragma mark Get All Division Listing Array
-//Get the id and mclass of division for TableView Controller
+/*!
+ @brief:Get the id and mclass of division for TableView Controller
+ */
 -(NSMutableArray *) getAllDivsionsByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     matchDIV = [NSMutableArray new];
@@ -54,7 +56,9 @@
 }
 
 #pragma mark Add Division
-//Add a Division to be used in the spinner
+/*!
+ @brief:Add a Division to be used in the spinner
+ */
 +(BOOL) addDivisionName:(NSString *) name DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -66,7 +70,9 @@
 }
 
 #pragma mark Update Division
-//Update a Division to be used in the spinner
+/*!
+ @brief:Update a Division to be used in the spinner
+ */
 +(BOOL) updateDivisionName:(NSString *) name DivisionID:(NSString *) divid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -78,7 +84,9 @@
 }
 
 #pragma mark Delete Division
-//Delete a Division
+/*!
+ @brief:Delete a Division
+ */
 +(BOOL) DeleteDivisionByID:(NSString *) divid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -90,7 +98,9 @@
 }
 
 #pragma mark Get the Division by ID
-//return the name of the cDivision based on the ID that is passed
+/*!
+ @brief:return the name of the cDivision based on the ID that is passed
+ */
 -(NSString *) getDivisionbyID:(NSString *) divid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSString *sAns = @"";
