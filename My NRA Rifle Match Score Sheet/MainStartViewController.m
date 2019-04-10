@@ -14,6 +14,9 @@
 
 @implementation MainStartViewController
 
+/*!
+    @brief - Main Application Startup
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -47,7 +50,9 @@
     myDB = nil;
 
 }
-
+/*!
+    @brief - Main Application memory wraning handler
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
