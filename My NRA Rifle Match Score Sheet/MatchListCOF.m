@@ -15,7 +15,9 @@
 }
 
 #pragma mark Get All Match Course of Fire Listing Array
-//Get the cof, scoredetails  and ID of match for TableView Controller
+/*!
+ @brief:Get the cof, scoredetails  and ID of match for TableView Controller
+ */
 -(NSMutableArray *) getAllMatchListCOFByMatchID:(NSString *) MID DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     matchLists = [NSMutableArray new];
@@ -64,7 +66,9 @@
 }
 
 #pragma mark Get All Match Course of Fire Types
-//Put all the match Course of Fire types in a array
+/*!
+ @brief:Put all the match Course of Fire types in a array
+ */
 -(NSArray *) getAllMatchCourseOfFireTypesByDatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSArray *myClass = [NSArray new];
@@ -90,7 +94,9 @@
 }
 
 #pragma mark Get the Match Course of Fire ID by Name
-//pass the name and get the ID of the Course of Fire ( match_cof )
+/*!
+ @brief:pass the name and get the ID of the Course of Fire ( match_cof )
+ */
 -(NSString *) getCourseOfFireIDByName:(NSString *) cof DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSString *sAns = [NSString new];
@@ -113,7 +119,9 @@
 }
 
 #pragma mark Get match_list_cof ID
-// pass the MatchID and Course of Fire ID to get the match_list_cof.ID
+/*!
+ @brief:pass the MatchID and Course of Fire ID to get the match_list_cof.ID
+ */
 -(NSString *) getCourseOfFireIDfromListByMatchID:(NSString *) mid COFID:(NSString *) cofid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     NSString *sAns = [NSString new];
@@ -136,7 +144,9 @@
 }
 
 #pragma mark Insert match_list_cof ID
-// pass the MatchID and Course of Fire ID to get the match_list_cof.ID
+/*!
+ @brief:pass the MatchID and Course of Fire ID to get the match_list_cof.ID
+ */
 -(NSString *) InsertCourseOfFireIDfromListByMatchID:(NSString *) mid COFID:(NSString *) cofid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     NSString *sAns = @"";
@@ -149,7 +159,9 @@
 }
 
 #pragma mark  Delete Course Of Fire
-//Delete the selected details from the match_list_cof then the match_list_cof_details
+/*!
+ @brief:Delete the selected details from the match_list_cof then the match_list_cof_details
+ */
 -(BOOL) deleteCMatchourseOfFire:(NSString *) mcofid MatchID:(NSString *)mid MatchListCOF:(NSString *) cofid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bANS = NO;
