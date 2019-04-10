@@ -15,7 +15,9 @@
 }
 
 #pragma mark Get All Match Listing Array
-//Get the formated matchname, matchdetails and ID of match for TableView Controller
+/*!
+ @brief:Get the formated matchname, matchdetails and ID of match for TableView Controller
+ */
 -(NSMutableArray *) getAllMatchListsByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     matchLists = [NSMutableArray new];
@@ -72,7 +74,9 @@
 }
 
 #pragma mark Get All Match Listing by Division Array
-//Get the formated matchname, matchdetails and ID of match by Division for TableView Controller
+/*!
+ @brief:Get the formated matchname, matchdetails and ID of match by Division for TableView Controller
+ */
 -(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     matchLists = [NSMutableArray new];
@@ -129,6 +133,9 @@
 }
 
 #pragma mark Get All Match Listing by Division Array METHOD
+/*!
+ @brief: Get All Match Listings by Division
+ */
 +(NSMutableArray *) getAllMatchListsByMatchDivision:(NSString *) mclass  DatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     MatchLists *myObj = [MatchLists new];
@@ -136,7 +143,9 @@
 }
 
 #pragma mark Get Distinct Match Classes Array
-//Get the distinct match class of match for TableView Controller
+/*!
+ @brief:Get the distinct match class of match for TableView Controller
+ */
 -(NSArray *) getDistinctMatchClassesByDatabasePath:(NSString *) dbPath ErrorMessage: (NSString **) errorMsg;
 {
     matchLists = [NSMutableArray new];
@@ -172,7 +181,9 @@
 }
 
 #pragma mark Get All Match Class Types
-//Put all the match class types in a array
+/*!
+ @brief:Put all the match class types in a array
+ */
 -(NSArray *) getAllMatchClassTypesByDatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSArray *myClass = [NSArray new];
@@ -197,7 +208,9 @@
     return myList;
 }
 #pragma mark Insert Match Data
-//Create a new match to start recording your courses of fire.
+/*!
+ @brief:Create a new match to start recording your courses of fire.
+ */
 -(BOOL) InsertNewMatchbyName:(NSString *) matchName MatchClassID:(NSString *) MCID Location:(NSString *) location Relay:(NSString *) relay Target:(NSString *) target DateOfMatch:(NSString *) dateofmatch DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -208,7 +221,9 @@
 }
 
 #pragma mark Update Match Data
-//UPdate match to start recording your courses of fire.
+/*!
+ @brief:UPdate match to start recording your courses of fire.
+ */
 -(BOOL) updateMatchbyID:(NSString *) mid MatchName:(NSString *) matchName MatchClassID:(NSString *) MCID Location:(NSString *) location Relay:(NSString *) relay Target:(NSString *) target DateOfMatch:(NSString *) dateofmatch DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bAns = NO;
@@ -219,7 +234,9 @@
 }
 
 #pragma mark Get Match Class ID from Name
-//Pass the name of the class to get the Match Class ID back
+/*!
+ @brief:Pass the name of the class to get the Match Class ID back
+ */
 -(NSString *) getMatchClassIDByName:(NSString *) className DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     NSString *sAns = @"";
@@ -243,7 +260,9 @@
 }
 
 #pragma mark Get Match Class Name from ID
-//Pass the id of the class to get the Match Class Name back
+/*!
+ @brief:Pass the id of the class to get the Match Class Name back
+ */
 -(NSString *) getMatchClassNameByID:(NSString *) cid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     NSString *sAns = @"";
@@ -267,7 +286,9 @@
 }
 
 #pragma mark Delete Match List
-//Delete the Match and all the courses of fire and the data relating to that match
+/*!
+ @brief:Delete the Match and all the courses of fire and the data relating to that match
+ */
 -(BOOL) deleteMatchListsByID:(NSString *) mid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg
 {
     BOOL bANS = NO;
@@ -288,7 +309,9 @@
 }
 
 #pragma Get Match ID by values
-//find the match that has all the values peassed
+/*!
+ @brief:find the match that has all the values peassed
+ */
 -(NSString *) getMatchIDbyName:(NSString *) matchName MatchClassID:(NSString *) MCID Location:(NSString *) location Relay:(NSString *) relay Target:(NSString *) target DateOfMatch:(NSString *) dateofmatch DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSString *sAns = @"0";
@@ -312,7 +335,9 @@
 }
 
 #pragma mark Copy Match ANd Details
-//copy the match and the course of fires in order and add all zeros for the course of fire.
+/*!
+ @brief:copy the match and the course of fires in order and add all zeros for the course of fire.
+ */
 -(void) copyMatchByMatchID:(NSString *) mid DatabasePath:(NSString *) dbPath ErrorMessage:(NSString **) errorMsg;
 {
     NSString *name = [NSString new];
