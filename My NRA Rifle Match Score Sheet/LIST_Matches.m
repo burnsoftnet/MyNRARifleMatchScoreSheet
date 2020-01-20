@@ -55,7 +55,7 @@
  */
 -(void) AddNavButton
 {
-    if (ISLITE)
+    if ([MYSettings IsLiteVersion])
     {
         NSInteger MatchCount = [myMatchListings count];
         

@@ -10,13 +10,17 @@
 
 #define MYDBNAME "MNRSS.db"       //Database Name
 #define MYDBVERSION 1.2        //Expected Database Version for the current version of this app
+#define FULLVERSIONNAME "My NRA Rifle Match Score Sheet"
 //extern BOOL * const BUGGERME;   //Enable the Debug Functions for additional information during run time.
+#ifndef NDEBUG
+static BOOL BUGGERME = YES;
+#else
 static BOOL BUGGERME = NO;
-//#warning set islist to YES for Lite Version
-static BOOL ISLITE = NO;
+#endif
+
 static int LITE_LIMIT = 10;
 
 @interface MYSettings : NSObject
-
++(BOOL) IsLiteVersion;
 
 @end

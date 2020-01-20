@@ -9,5 +9,20 @@
 #import "MYSettings.h"
 
 @implementation MYSettings
+/*!
+ @brief  Check to see if the application is the full or lite version, if it is the lite version it will restrict the number of items that can be entered into the application.
+ @return return <#description#>True if it is the Lite version and False if it is the full version
+ */
++(BOOL) IsLiteVersion
+{
+    //NSString *targetName = [[NSProcessInfo processInfo] environment][@"TARGET_NAME"];
+    NSString *targetName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
+    if ([targetName isEqualToString: @FULLVERSIONNAME])
+    {
+        return NO;
+    } else {
+        return YES;
+    }
+}
 @end
