@@ -71,4 +71,6 @@
 //      Only when the Global Var BUGGERME is true will it write out message
 //USEBD: GENERAL
 +(void)doBuggermeMessage :(NSString *) msg FromSubFunction:(NSString *) fromlocation;
+
++(void)LogExceptionErrorfromLocation:(NSString *) location ErrorMessage:(NSException *) ex;
 @end

@@ -175,5 +175,14 @@
     }
 
 }
-#pragma mark
+#pragma mark Log Exception Error from Location
+/*!
+ @brief  General Method on catching and displaying errors
+ @param location - the location of the function that it came from
+ @param ex - the exception that occured
+ */
++(void)LogExceptionErrorfromLocation:(NSString *) location ErrorMessage:(NSException *) ex
+{
+    NSLog(@"Exception Error from %@  - %@", location, [ex reason]);
+}
 @end
