@@ -571,6 +571,5 @@
  */
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     self.txtCourseOfFire.text =[_CourseOfFireDataSource objectAtIndex: row];
-    //NSLog(@"You selected this: %@", [_CourseOfFireDataSource objectAtIndex: row]);
 }
 @end

@@ -137,9 +137,6 @@
         } else {
             [FormFunctions checkForError:errorMsg MyTitle:@"Error Adding" ViewController:self];
         }
-        
-        //NSLog(@"%@",namefield.text);
-        
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }

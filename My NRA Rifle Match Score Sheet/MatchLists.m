@@ -369,7 +369,6 @@
     
     [self InsertNewMatchbyName:name MatchClassID:MCID Location:location Relay:relay Target:target DateOfMatch:dateOfMatch DatabasePath:dbPath ErrorMessage:errorMsg];
     NSString *matchID = [self getMatchIDbyName:name MatchClassID:MCID Location:location Relay:relay Target:target DateOfMatch:dateOfMatch DatabasePath:dbPath ErrorMessage:errorMsg];
-    //NSLog(@"match id is %@",matchID);
 
     MatchListCOF *myObj = [MatchListCOF new];
     
