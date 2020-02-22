@@ -11,6 +11,11 @@
 
 @interface FormFunctions : UIViewController
 
++(UIColor *) setHighlightColor;
++(UIColor *) setTextColor;
++(UIColor *) setEditColor;
++(UIColor *) setDeleteColor;
++(UIColor *) setCartColor;
 #pragma mark Textbox View Layouts
 //NOTE: Creates a border around a Textview
 //USEBD: GENERAL
