@@ -91,7 +91,8 @@
     // Before we add the picker view to our view, let's do a couple more
     // things. First, let the selection indicator (that line inside the
     // picker view that highlights your selection) to be shown.
-    pvCourseOfFire.showsSelectionIndicator = YES;
+    //TESTING: #38 Commented out depreciated line of code and this function seems to ne working
+    //pvCourseOfFire.showsSelectionIndicator = YES;
     
     // Allow us to pre-select the third option in the pickerView.
     [pvCourseOfFire selectRow:2 inComponent:0 animated:YES];
