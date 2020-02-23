@@ -339,7 +339,7 @@
 #pragma mark Table Edit actions
 /*!
  @brief actions to take when a row has been selected for editing.
- */
+ *//*
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     
@@ -394,4 +394,74 @@
     
     return  @[editAction,deleteAction,copyAction];
 }
+    */
+
+#pragma mark New Table Handlers on Swipe
+/*!
+ @discussion This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ @brief  trailing swipe action configuration for table row
+ @return return UISwipeActionsConfiguration
+ */
+-(id)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self getRowActions:tableView indexPath:indexPath];
+}
+
+#pragma mark Get Ro Actions
+/*!
+ @brief  Contains the action to perform when you swipe on the table
+ @param indexPath of table
+ @return return UISwipeActionConfiguration
+ @remark This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ */
+-(id)getRowActions:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
+{
+    
+    UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        NSString *errorMsg;
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
+        if ([displayMatches deleteMatchListsByID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
+        {
+            [self reloadData];
+        } else {
+            [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting Match" ViewController:self];
+        }
+    }];
+    
+    UIContextualAction *editAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Edit" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+
+        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
+        
+        destViewController.MID = mid;
+        [self.navigationController pushViewController:destViewController animated:YES];
+    }];
+    
+    UIContextualAction *copyAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        NSString *errorMsg;
+        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
+        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
+        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
+
+        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
+
+        [displayMatches copyMatchByMatchID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
+        [self reloadData];
+    }];
+#pragma WARNING "37 Convert Color to formfunctions"
+    deleteAction.backgroundColor = [FormFunctions setDeleteColor];
+    editAction.backgroundColor = [UIColor blueColor];
+    editAction.backgroundColor = [UIColor greenColor];
+    
+    UISwipeActionsConfiguration *swipeActions = [UISwipeActionsConfiguration configurationWithActions:@[editAction,deleteAction,copyAction]];
+       swipeActions.performsFirstActionWithFullSwipe = NO;
+       return swipeActions;
+}
+
 @end
