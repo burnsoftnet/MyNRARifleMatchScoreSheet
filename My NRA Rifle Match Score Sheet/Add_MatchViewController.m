@@ -54,7 +54,8 @@
     // Before we add the picker view to our view, let's do a couple more
     // things. First, let the selection indicator (that line inside the
     // picker view that highlights your selection) to be shown.
-    pvClass.showsSelectionIndicator = YES;
+    //pvClass.showsSelectionIndicator = YES;
+    //TESTING: #45 Commented out depreciated line of code and this function seems to ne working
     
     // Allow us to pre-select the third option in the pickerView.
     [pvClass selectRow:2 inComponent:0 animated:YES];
