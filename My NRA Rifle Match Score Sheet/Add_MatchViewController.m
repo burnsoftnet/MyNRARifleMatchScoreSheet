@@ -54,14 +54,11 @@
     // Before we add the picker view to our view, let's do a couple more
     // things. First, let the selection indicator (that line inside the
     // picker view that highlights your selection) to be shown.
-    //pvClass.showsSelectionIndicator = YES;
-    //TESTING: #45 Commented out depreciated line of code and this function seems to ne working
+
     
     // Allow us to pre-select the third option in the pickerView.
     [pvClass selectRow:2 inComponent:0 animated:YES];
     
-    // OK, we are ready. Add the picker in our view.
-    //[self.view addSubview: pvCourseOfFire];
     
     [self.txtClass setInputView:pvClass];
     
@@ -121,9 +118,6 @@
     [self reloadData];
     [[self pvClassPicker] setDelegate:self];
     [[self pvClassPicker] setDataSource:self];
-    //self.txtClass.inputView = _pvClassPicker;
-    //if (_pvClassPicker) _pvClassPicker.hidden = !_pvClassPicker.hidden;
-    
 }
 
 #pragma mark Make Keyboard Dissapear
@@ -132,7 +126,6 @@
  */
 -(void)tapReceived:(UITapGestureRecognizer *)tapGestureRecognizer
 {
-    //[self.txtClass resignFirstResponder];
     [self.txtDate resignFirstResponder];
     [self.txtRelay resignFirstResponder];
     [self.txtTarget resignFirstResponder];
@@ -196,7 +189,6 @@
     MatchLists *objML = [MatchLists new];
     _pickerDataSource = [objML getAllMatchClassTypesByDatabasePath:dbPathString ErrorMessage:&errorMsg];
     
-    //[self.pvClassPicker selectRow:2 inComponent:0 animated:YES];
     if (!_isNew)
     {
         sqlite3_stmt * statement;

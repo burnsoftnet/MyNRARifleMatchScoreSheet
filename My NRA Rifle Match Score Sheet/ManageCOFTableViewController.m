@@ -104,7 +104,7 @@
  */
 -(void) AddCOF
 {
-    //preferredStyle:UIAlertControllerStyleAlert
+
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Course of Fire"
                                                                               message: @"Add Course of Fire"
                                                                        preferredStyle:UIAlertControllerStyleAlert];
@@ -114,16 +114,7 @@
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
     }];
-    /*
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = @"password";
-        textField.textColor = [UIColor blueColor];
-        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        textField.borderStyle = UITextBorderStyleRoundedRect;
-        textField.secureTextEntry = YES;
-    }];
-     */
-    //UIAlertActionStyleDefault
+
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){}]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"ADD" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -181,40 +172,6 @@
 {
     return YES;
 }
-
-
-#pragma mark Table Edit actions
-/*!
- @brief actions to take when a row has been selected for editing.
- *//*
--(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-    
-        NSString *errorMsg;
-        ManageCOF *displayMatches = [self->myMatchCOF objectAtIndex:indexPath.row];
-        NSString *cofID = [NSString stringWithFormat:@"%d",displayMatches.COFID];
-        ManageCOF *myObj = [ManageCOF new];
-        NSString *cofName = [myObj getCourseOfFirebyID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
-        NSString *sql = [NSString stringWithFormat:@"select * from match_list_cof_details where MCOFID=%@",cofID];
-        if (![BurnSoftDatabase dataExistsbyQuery:sql DatabasePath:self->dbPathString MessageHandler:&errorMsg])
-        {
-            if ([ManageCOF DeleteCOFByID:cofID DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
-            {
-                [self reloadData];
-            } else {
-                [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting COF" ViewController:self];
-            }
-        } else {
-            [FormFunctions sendMessage:[NSString stringWithFormat:@"Can't Delete %@, Course of Fire is in Use!",cofName] MyTitle:@"Can't Delete!" ViewController:self];
-        }
-        
-    }];
-    deleteAction.backgroundColor = [UIColor redColor];
-    return  @[deleteAction];
-}
-*/
 
 #pragma mark New Table Handlers on Swipe
 /*!

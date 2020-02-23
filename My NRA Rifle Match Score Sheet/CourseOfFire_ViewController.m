@@ -91,14 +91,9 @@
     // Before we add the picker view to our view, let's do a couple more
     // things. First, let the selection indicator (that line inside the
     // picker view that highlights your selection) to be shown.
-    //TESTING: #38 Commented out depreciated line of code and this function seems to ne working
-    //pvCourseOfFire.showsSelectionIndicator = YES;
     
     // Allow us to pre-select the third option in the pickerView.
     [pvCourseOfFire selectRow:2 inComponent:0 animated:YES];
-    
-    // OK, we are ready. Add the picker in our view.
-    //[self.view addSubview: pvCourseOfFire];
 
     [self.txtCourseOfFire setInputView:pvCourseOfFire];
     
@@ -461,16 +456,6 @@
      [self AddallFields];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark Button Apply
 /*!
  @brief Called Applied because it can be used in both adding new or updating existing.
@@ -524,7 +509,6 @@
         
         SQLquery = [NSString stringWithFormat:@"INSERT INTO match_list_cof_details(MLCID,MLID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,x_count_1,x_count_2,xtotal) VALUES(%@,%@,%@,'%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@','%@',%@,%@,%@,%@,%@,%@);",MLCID,self.MID,MCOFID,s1,s2,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,total1,total2,endtotal,X_Total1,X_Total2,X_Total];
     } else {
-        //MLCID = [myObj getCourseOfFireIDfromListByMatchID:self.MID COFID:MCOFID DatabasePath:dbPathString ErrorMessage:&errorMessage];
         MLCID = matchListCOFList;
         SQLquery = [NSString stringWithFormat:@"update match_list_cof set MCOFID=%@ where ID=%@",MCOFID ,matchListCOFList];
         [BurnSoftDatabase runQuery:SQLquery DatabasePath:dbPathString MessageHandler:&errorMessage];
@@ -537,7 +521,6 @@
    } else {
        UINavigationController *navController = self.navigationController;
        [navController popViewControllerAnimated:NO];
-       //[navController popViewControllerAnimated:YES];
    }
     
 }

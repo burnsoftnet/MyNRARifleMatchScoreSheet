@@ -36,11 +36,6 @@
     [[self myTableView]setDataSource:self];
     [self loadData];
     
-    //Create an Add Button in Nav Bat
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(AddMatch)];
-    //self.navigationItem.rightBarButtonItem = addButton;
-    //[self AddNavButton];
-    
     // Initialize Refresh Control
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     
@@ -299,7 +294,6 @@
 
         NSString *sectionTitle = [myMatchClasses objectAtIndex:indexPath.section];
         NSArray *sectionMatches = [DictionaryMatchClass objectForKey:sectionTitle];
-        //NSString *MatchName = [sectionMatches objectAtIndex:indexPath.row];
         MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
         
         cell.tag = displayMatches.MID;
@@ -336,66 +330,6 @@
     [self performSegueWithIdentifier:@"segueShowCourseOfFire" sender:self];
 }
 
-#pragma mark Table Edit actions
-/*!
- @brief actions to take when a row has been selected for editing.
- *//*
--(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    
-   //FormFunctions *myFunctions = [FormFunctions new];
-    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        Add_MatchViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"sbAddMatch"];
-        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
-        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
-        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
-        
-        destViewController.MID = mid;
-        [self.navigationController pushViewController:destViewController animated:YES];
-    }];
-    
-    
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        //insert your deleteAction here
-        
-        NSString *errorMsg;
-        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
-        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
-        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
-        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
-        if ([displayMatches deleteMatchListsByID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
-        {
-            [self reloadData];
-        } else {
-            [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting Match" ViewController:self];
-        }
-        
-    }];
-    
-    UITableViewRowAction *copyAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Copy" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        NSString *errorMsg;
-        NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
-        NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
-        MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
-
-        NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
-
-        [displayMatches copyMatchByMatchID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
-        [self reloadData];
-
-    }];
-
-    editAction.backgroundColor = [UIColor blueColor];
-    deleteAction.backgroundColor = [UIColor redColor];
-    editAction.backgroundColor = [UIColor greenColor];
-    
-    return  @[editAction,deleteAction,copyAction];
-}
-    */
-
 #pragma mark New Table Handlers on Swipe
 /*!
  @discussion This is the new section that is used in iOS 13 or greater to get rid of the warnings.
@@ -421,7 +355,7 @@
         NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
         NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
         MatchLists *displayMatches = [sectionMatches objectAtIndex:indexPath.row];
-        //MatchLists *displayMatches = [myMatchListings objectAtIndex:indexPath.row];
+
         NSString *mid = [NSString stringWithFormat:@"%d",displayMatches.MID];
         if ([displayMatches deleteMatchListsByID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
         {

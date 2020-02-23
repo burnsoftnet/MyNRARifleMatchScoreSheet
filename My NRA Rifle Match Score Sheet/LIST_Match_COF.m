@@ -218,30 +218,6 @@
     [self performSegueWithIdentifier:@"segueCOFDetails" sender:self];
 }
 
- #pragma mark Table Edit actions
-/*!
- @brief actions to take when a row has been selected for editing.
- *//*
- -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
- {
-     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-         NSString *errorMsg;
-         MatchListCOF *myObj = [MatchListCOF new];
-         MatchListCOF *displayMatches = [self->myMatchListings objectAtIndex:indexPath.row];
-         NSString *matchListcof = [myObj getCourseOfFireIDByName:displayMatches.cof_name DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
-         NSString *cofid = [NSString stringWithFormat:@"%d",displayMatches.COFID];
-         
-         if ([myObj deleteCMatchourseOfFire:cofid MatchID:self.MID MatchListCOF:matchListcof DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
-         {
-             [self reloadData];
-         } else {
-             [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting COF" ViewController:self];
-         }
-     }];
-     deleteAction.backgroundColor = [UIColor redColor];
-     return  @[deleteAction];
- }*/
-
 #pragma mark New Table Handlers on Swipe
 /*!
  @discussion This is the new section that is used in iOS 13 or greater to get rid of the warnings.
