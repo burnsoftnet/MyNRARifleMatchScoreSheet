@@ -443,7 +443,7 @@
         [self.navigationController pushViewController:destViewController animated:YES];
     }];
     
-    UIContextualAction *copyAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+    UIContextualAction *copyAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Copy" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
         NSString *errorMsg;
         NSString *sectionTitle = [self->myMatchClasses objectAtIndex:indexPath.section];
         NSArray *sectionMatches = [self->DictionaryMatchClass objectForKey:sectionTitle];
@@ -457,7 +457,7 @@
 #pragma WARNING "37 Convert Color to formfunctions"
     deleteAction.backgroundColor = [FormFunctions setDeleteColor];
     editAction.backgroundColor = [UIColor blueColor];
-    editAction.backgroundColor = [UIColor greenColor];
+    copyAction.backgroundColor = [UIColor greenColor];
     
     UISwipeActionsConfiguration *swipeActions = [UISwipeActionsConfiguration configurationWithActions:@[editAction,deleteAction,copyAction]];
        swipeActions.performsFirstActionWithFullSwipe = NO;
