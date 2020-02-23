@@ -454,10 +454,10 @@
         [displayMatches copyMatchByMatchID:mid DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
         [self reloadData];
     }];
-#pragma WARNING "37 Convert Color to formfunctions"
+
     deleteAction.backgroundColor = [FormFunctions setDeleteColor];
-    editAction.backgroundColor = [UIColor blueColor];
-    copyAction.backgroundColor = [UIColor greenColor];
+    editAction.backgroundColor = [FormFunctions setEditColor];
+    copyAction.backgroundColor = [FormFunctions setEditColor];
     
     UISwipeActionsConfiguration *swipeActions = [UISwipeActionsConfiguration configurationWithActions:@[editAction,deleteAction,copyAction]];
        swipeActions.performsFirstActionWithFullSwipe = NO;

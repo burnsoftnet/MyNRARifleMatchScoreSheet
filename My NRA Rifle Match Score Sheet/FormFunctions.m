@@ -15,7 +15,7 @@
  */
 +(UIColor *) setHighlightColor
 {
-    return [UIColor greenColor];
+    return [UIColor systemGreenColor];
 }
 #pragma mark Set Text Color
 /*! @brief  Set the color of what you want the text to be
@@ -24,7 +24,14 @@
 {
     return [UIColor whiteColor];
 }
-
++(UIColor *) setCopyColor
+{
+    return [UIColor systemGreenColor];
+}
++(UIColor *) setRestoreColor
+{
+    return [UIColor systemBlueColor];
+}
 /*!
  @brief Set the color of the edit button
  */

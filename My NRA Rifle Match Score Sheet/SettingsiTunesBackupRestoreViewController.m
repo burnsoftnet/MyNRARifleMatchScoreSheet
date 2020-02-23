@@ -288,8 +288,8 @@
         }
         [self reloadData];
     }];
-#pragma WARNING "37 Convert Color to formfunctions"
-    restoreAction.backgroundColor = [UIColor blueColor];
+
+    restoreAction.backgroundColor = [FormFunctions setRestoreColor];
     
     UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
         if ([self DeleteFileByName:cellTag])
