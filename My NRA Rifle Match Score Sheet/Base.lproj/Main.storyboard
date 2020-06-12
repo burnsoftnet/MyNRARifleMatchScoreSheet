@@ -426,7 +426,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ro-Ow-yRU">
                                 <rect key="frame" x="-24" y="0.0" width="423" height="822"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-fp-Whg">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-fp-Whg">
                                         <rect key="frame" x="20" y="-60" width="383" height="1029"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course of Fire:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGZ-qw-XDW">
@@ -1186,38 +1186,36 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-Eu-mP6">
+                                                <rect key="frame" x="167" y="630" width="56" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="  Apply  "/>
+                                                <connections>
+                                                    <action selector="btnApply:" destination="Lrj-mh-hec" eventType="touchUpInside" id="MKa-AM-2fL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1029" id="kEu-lZ-toX"/>
-                                            <constraint firstAttribute="width" constant="383" id="ull-gK-rhs"/>
+                                            <constraint firstAttribute="height" constant="1029" id="wWi-n7-UGd"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrG-Eu-mP6">
-                                        <rect key="frame" x="183.5" y="570" width="56" height="30"/>
-                                        <state key="normal" title="  Apply  "/>
-                                        <connections>
-                                            <action selector="btnApply:" destination="Lrj-mh-hec" eventType="touchUpInside" id="MKa-AM-2fL"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rMo-fp-Whg" secondAttribute="trailing" constant="20" id="2dY-bZ-S0k"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-60" id="5Wa-XD-lhJ"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="leading" secondItem="1Ro-Ow-yRU" secondAttribute="leading" constant="20" id="88Z-Lb-TzR"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="DrG-Eu-mP6" secondAttribute="centerX" id="KTx-H8-5BR"/>
-                                    <constraint firstItem="DrG-Eu-mP6" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="570" id="aq8-kH-YP5"/>
-                                    <constraint firstAttribute="bottom" secondItem="rMo-fp-Whg" secondAttribute="bottom" constant="-143" id="cZa-rk-vzD"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="1Ro-Ow-yRU" secondAttribute="centerX" id="ljf-xs-vPi"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="leading" secondItem="1Ro-Ow-yRU" secondAttribute="leading" constant="20" id="4xA-vW-40f"/>
+                                    <constraint firstAttribute="trailing" secondItem="rMo-fp-Whg" secondAttribute="trailing" constant="20" id="BT8-bz-7kg"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-16" id="FaX-DB-eWg"/>
+                                    <constraint firstAttribute="bottom" secondItem="rMo-fp-Whg" secondAttribute="bottom" constant="-191" id="K9P-5y-75Z"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="1Ro-Ow-yRU" secondAttribute="centerX" id="s1i-sJ-6B3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="centerX" secondItem="Du6-fn-Z5N" secondAttribute="centerX" id="chH-Fx-Ouf"/>
-                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="top" secondItem="Du6-fn-Z5N" secondAttribute="top" id="ebB-wB-uQn"/>
-                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="leading" secondItem="Du6-fn-Z5N" secondAttribute="leadingMargin" constant="-40" id="jKB-Sd-Ds7"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="1Ro-Ow-yRU" secondAttribute="bottom" constant="29" id="rQ4-3X-Ltg"/>
+                            <constraint firstItem="7Ak-9O-R4C" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="bottom" constant="29" id="3rH-Kw-TUi"/>
+                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="leading" secondItem="Du6-fn-Z5N" secondAttribute="leadingMargin" constant="-40" id="5eP-tZ-4fD"/>
+                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="centerX" secondItem="Du6-fn-Z5N" secondAttribute="centerX" id="9Tf-KS-vhx"/>
+                            <constraint firstItem="1Ro-Ow-yRU" firstAttribute="top" secondItem="Du6-fn-Z5N" secondAttribute="topMargin" constant="-44" id="AvV-Px-4zm"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
