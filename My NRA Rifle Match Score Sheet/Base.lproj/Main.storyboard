@@ -427,7 +427,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ro-Ow-yRU">
                                 <rect key="frame" x="-24" y="0.0" width="423" height="822"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-fp-Whg">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-fp-Whg">
                                         <rect key="frame" x="20" y="-60" width="383" height="1029"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course of Fire:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGZ-qw-XDW">
@@ -1205,7 +1205,7 @@
                                 <constraints>
                                     <constraint firstItem="rMo-fp-Whg" firstAttribute="leading" secondItem="1Ro-Ow-yRU" secondAttribute="leading" constant="20" id="4xA-vW-40f"/>
                                     <constraint firstAttribute="trailing" secondItem="rMo-fp-Whg" secondAttribute="trailing" constant="20" id="BT8-bz-7kg"/>
-                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-16" id="FaX-DB-eWg"/>
+                                    <constraint firstItem="rMo-fp-Whg" firstAttribute="top" secondItem="1Ro-Ow-yRU" secondAttribute="top" constant="-60" id="FaX-DB-eWg"/>
                                     <constraint firstAttribute="bottom" secondItem="rMo-fp-Whg" secondAttribute="bottom" constant="-191" id="K9P-5y-75Z"/>
                                     <constraint firstItem="rMo-fp-Whg" firstAttribute="centerX" secondItem="1Ro-Ow-yRU" secondAttribute="centerX" id="s1i-sJ-6B3"/>
                                 </constraints>
