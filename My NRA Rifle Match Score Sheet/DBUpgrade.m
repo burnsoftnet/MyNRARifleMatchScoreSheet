@@ -164,45 +164,4 @@
         [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
     }
 }
-/*
-#pragma mark DB Upgrade Version x.x
-//NOTE: PRIVATE - Update Database to version x.x
-//USEDBY: checkDBVersionAgainstExpectedVersion
--(void) dbupgradexx
-{
-    BurnSoftDatabase *myObj = [BurnSoftDatabase new];
-    FormFunctions *myObjFF = [FormFunctions new];
-    dbPathString = [myObj getDatabasePath:@MYDBNAME];
-    double newDBVersion = 0;
-    NSString *msg;
-    NSString *sqlstmt = [NSString new];
-    newDBVersion = 0.0;
-    if (![myObj VersionExists:[NSString stringWithFormat:@"%f",newDBVersion] VersionTable:@"DB_Version" DatabasePath:dbPathString ErrorMessage:&msg])
-    {
-        // Send to doBuggermeMessage if enabled, that the database upgrade is begining
-        msg = [NSString stringWithFormat:@"DEBUG: Start DBVersion Upgrade to version %.01f", newDBVersion];
-        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
-        
-         //-------------START UPGRADE PROCESS-----------------//
-        
-        sqlstmt=@"";
-        [myObj runQuery:sqlstmt DatabasePath:dbPathString MessageHandler:&msg];
-        [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
-        
-        //-------------END UPGRADE PROCESS-----------------//
- 
-         //Update Database to current Version
-         sqlstmt=[NSString stringWithFormat:@"INSERT INTO DB_Version (version) VALUES('%.01f')", newDBVersion];
-         [myObj runQuery:sqlstmt DatabasePath:dbPathString MessageHandler:&msg];
-         [myObjFF checkForErrorLogOnly:msg MyTitle:[NSString stringWithFormat:@"DB Version %.01f",newDBVersion]];
-        
-        // Send to doBuggermeMessage if enabled that the database was upgraded
-        msg = [NSString stringWithFormat:@"DEBUG: End DBVersion Upgrade to version %.01f", newDBVersion];
-        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
-    } else {
-        msg = [NSString stringWithFormat:@"DEBUG: Database has already had %.01f patch applied!",newDBVersion];
-        [myObjFF doBuggermeMessage:msg FromSubFunction:@"DBUpgrade"];
-    }
-}
- */
 @end

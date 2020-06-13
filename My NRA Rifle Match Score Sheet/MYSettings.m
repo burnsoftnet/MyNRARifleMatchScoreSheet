@@ -15,7 +15,6 @@
  */
 +(BOOL) IsLiteVersion
 {
-    //NSString *targetName = [[NSProcessInfo processInfo] environment][@"TARGET_NAME"];
     NSString *targetName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
     if ([targetName isEqualToString: @FULLVERSIONNAME])

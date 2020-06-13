@@ -218,29 +218,46 @@
     [self performSegueWithIdentifier:@"segueCOFDetails" sender:self];
 }
 
- #pragma mark Table Edit actions
+#pragma mark New Table Handlers on Swipe
 /*!
- @brief actions to take when a row has been selected for editing.
+ @discussion This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ @brief  trailing swipe action configuration for table row
+ @return return UISwipeActionsConfiguration
  */
- -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
- {
-     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-         NSString *errorMsg;
-         MatchListCOF *myObj = [MatchListCOF new];
-         MatchListCOF *displayMatches = [self->myMatchListings objectAtIndex:indexPath.row];
-         NSString *matchListcof = [myObj getCourseOfFireIDByName:displayMatches.cof_name DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
-         NSString *cofid = [NSString stringWithFormat:@"%d",displayMatches.COFID];
-         
-         if ([myObj deleteCMatchourseOfFire:cofid MatchID:self.MID MatchListCOF:matchListcof DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
-         {
-             [self reloadData];
-         } else {
-             [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting COF" ViewController:self];
-         }
-     }];
-     deleteAction.backgroundColor = [UIColor redColor];
-     return  @[deleteAction];
- }
+-(id)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self getRowActions:tableView indexPath:indexPath];
+}
+
+#pragma mark Get Ro Actions
+/*!
+ @brief  Contains the action to perform when you swipe on the table
+ @param indexPath of table
+ @return return UISwipeActionConfiguration
+ @remark This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ */
+-(id)getRowActions:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+    UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+        NSString *errorMsg;
+        MatchListCOF *myObj = [MatchListCOF new];
+        MatchListCOF *displayMatches = [self->myMatchListings objectAtIndex:indexPath.row];
+        NSString *matchListcof = [myObj getCourseOfFireIDByName:displayMatches.cof_name DatabasePath:self->dbPathString ErrorMessage:&errorMsg];
+        NSString *cofid = [NSString stringWithFormat:@"%d",displayMatches.COFID];
+        
+        if ([myObj deleteCMatchourseOfFire:cofid MatchID:self.MID MatchListCOF:matchListcof DatabasePath:self->dbPathString ErrorMessage:&errorMsg])
+        {
+            [self reloadData];
+        } else {
+            [FormFunctions checkForError:errorMsg MyTitle:@"Error Deleting COF" ViewController:self];
+        }
+    }];
+    
+    deleteAction.backgroundColor = [FormFunctions setDeleteColor];
+    
+    UISwipeActionsConfiguration *swipeActions = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction]];
+       swipeActions.performsFirstActionWithFullSwipe = NO;
+       return swipeActions;
+}
+
 
 
 @end

@@ -9,6 +9,51 @@
 #import "FormFunctions.h"
 
 @implementation FormFunctions
+
+#pragma mark Set Highlite color
+/*! @brief  Set the color of the highlight that you want to use
+ */
++(UIColor *) setHighlightColor
+{
+    return [UIColor systemGreenColor];
+}
+#pragma mark Set Text Color
+/*! @brief  Set the color of what you want the text to be
+ */
++(UIColor *) setTextColor
+{
+    return [UIColor whiteColor];
+}
++(UIColor *) setCopyColor
+{
+    return [UIColor systemGreenColor];
+}
++(UIColor *) setRestoreColor
+{
+    return [UIColor systemBlueColor];
+}
+/*!
+ @brief Set the color of the edit button
+ */
++(UIColor *) setEditColor
+{
+    return [UIColor systemBlueColor];
+}
+/*!
+@brief Set the color of the delete button
+*/
++(UIColor *) setDeleteColor
+{
+    return [UIColor systemRedColor];
+}
+/*!
+@brief Set the color of the Cart button
+*/
++(UIColor *) setCartColor
+{
+    return [UIColor systemGrayColor];
+}
+
 #pragma mark Textbox View Layouts
 /*!
  @brief: Creates a border around a Textview

@@ -104,7 +104,7 @@
  */
 -(void) AddCOF
 {
-    //preferredStyle:UIAlertControllerStyleAlert
+
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Course of Fire"
                                                                               message: @"Add Course of Fire"
                                                                        preferredStyle:UIAlertControllerStyleAlert];
@@ -114,16 +114,7 @@
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
     }];
-    /*
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = @"password";
-        textField.textColor = [UIColor blueColor];
-        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        textField.borderStyle = UITextBorderStyleRoundedRect;
-        textField.secureTextEntry = YES;
-    }];
-     */
-    //UIAlertActionStyleDefault
+
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){}]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"ADD" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -182,16 +173,26 @@
     return YES;
 }
 
-
-#pragma mark Table Edit actions
+#pragma mark New Table Handlers on Swipe
 /*!
- @brief actions to take when a row has been selected for editing.
+ @discussion This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ @brief  trailing swipe action configuration for table row
+ @return return UISwipeActionsConfiguration
  */
--(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
+-(id)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self getRowActions:tableView indexPath:indexPath];
+}
+
+#pragma mark Get Ro Actions
+/*!
+ @brief  Contains the action to perform when you swipe on the table
+ @param indexPath of table
+ @return return UISwipeActionConfiguration
+ @remark This is the new section that is used in iOS 13 or greater to get rid of the warnings.
+ */
+-(id)getRowActions:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
     
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-    
+    UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
         NSString *errorMsg;
         ManageCOF *displayMatches = [self->myMatchCOF objectAtIndex:indexPath.row];
         NSString *cofID = [NSString stringWithFormat:@"%d",displayMatches.COFID];
@@ -209,10 +210,13 @@
         } else {
             [FormFunctions sendMessage:[NSString stringWithFormat:@"Can't Delete %@, Course of Fire is in Use!",cofName] MyTitle:@"Can't Delete!" ViewController:self];
         }
-        
     }];
-    deleteAction.backgroundColor = [UIColor redColor];
-    return  @[deleteAction];
+    
+    deleteAction.backgroundColor = [FormFunctions setDeleteColor];
+    
+    UISwipeActionsConfiguration *swipeActions = [UISwipeActionsConfiguration configurationWithActions:@[deleteAction]];
+       swipeActions.performsFirstActionWithFullSwipe = NO;
+       return swipeActions;
 }
 
 #pragma mark Table Row Selected

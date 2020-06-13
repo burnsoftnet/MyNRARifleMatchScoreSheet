@@ -39,13 +39,6 @@
     //Start iCloud sync for backups
     [DatabaseManagement startiCloudSync];
     
-     //Used for airdrop
-    //[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(checkInBox) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-
-    //[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(checkInBox) userInfo:nil repeats:YES];
-    //END AIRDROP
-    
     myObj = nil;
     myDB = nil;
 
