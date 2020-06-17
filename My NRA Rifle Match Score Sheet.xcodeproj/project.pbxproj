@@ -142,6 +142,8 @@
 		A547A9451EDA256B00B1576C /* Icon-Notifcation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation.png"; sourceTree = "<group>"; };
 		A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation@2x.png"; sourceTree = "<group>"; };
 		A547A9471EDA256B00B1576C /* Icon-Notifcation@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation@3x.png"; sourceTree = "<group>"; };
+		A54F0B6B249AC5BF00C93C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54F0B79249AC67F00C93C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A553E9DA1EE6DFF6009E8291 /* DatabaseManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManagement.h; sourceTree = "<group>"; };
 		A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManagement.m; sourceTree = "<group>"; };
 		A553E9DC1EE6DFF6009E8291 /* DBUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUpgrade.h; sourceTree = "<group>"; };
@@ -265,10 +267,28 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		A54F0B6A249AC5BF00C93C3D /* My Rifle Match Score Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				A54F0B6B249AC5BF00C93C3D /* Info.plist */,
+			);
+			path = "My Rifle Match Score Sheet";
+			sourceTree = "<group>";
+		};
+		A54F0B78249AC67F00C93C3D /* AppKitGlue */ = {
+			isa = PBXGroup;
+			children = (
+				A54F0B79249AC67F00C93C3D /* Info.plist */,
+			);
+			path = AppKitGlue;
+			sourceTree = "<group>";
+		};
 		A557C9661EBD160000E6B0AC = {
 			isa = PBXGroup;
 			children = (
 				A557C9711EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
+				A54F0B6A249AC5BF00C93C3D /* My Rifle Match Score Sheet */,
+				A54F0B78249AC67F00C93C3D /* AppKitGlue */,
 				A557C9701EBD160000E6B0AC /* Products */,
 				A557C98C1EBD167500E6B0AC /* Frameworks */,
 				A5928B0C1F5E1DC000B73F6B /* My NRA Rifle Match Score Sheet Lite.plist */,

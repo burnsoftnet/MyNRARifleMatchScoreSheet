@@ -25,7 +25,6 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self loadData];
     [self initDatePicker];
     [self initClassPicker];
@@ -248,7 +247,7 @@
 {
     return _pickerDataSource[row];
 }
-
+#if iOS
 #pragma mark PickerView Delegate
 /*!
  @brief when the row is selected from the picker
@@ -260,6 +259,7 @@
     //_txtClass.text = resultString;
     //if (_pvClassPicker) _pvClassPicker.hidden = !_pvClassPicker.hidden;
 }
+#endif
 /*!
  @brief when the date picker value changed
  */
