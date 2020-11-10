@@ -86,8 +86,15 @@
  */
 -(void) initDatePicker
 {
-    datePicker = [[UIDatePicker alloc]init];
-    datePicker.datePickerMode=UIDatePickerModeDate;
+    if (@available(macCatalyst 13.4, *)) {
+        datePicker.preferredDatePickerStyle = kCGEventScrollWheel;
+        datePicker.datePickerMode = datePicker;
+    } else {
+        datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode=UIDatePickerModeDate;
+    }
+    
+    
     [self.txtDate setInputView:datePicker];
     
     UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
