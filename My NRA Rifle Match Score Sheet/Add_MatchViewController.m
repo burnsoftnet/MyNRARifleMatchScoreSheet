@@ -42,6 +42,7 @@
     // Calculate the starting x coordinate.
     float xPoint = screenWidth / 2 - pickerWidth / 2;
     
+    
     // Init the picker view.
     pvClass = [[UIPickerView alloc] init];
     [pvClass setDataSource:self];
@@ -49,6 +50,15 @@
     
     // Set the picker's frame. We set the y coordinate to 50px.
     [pvClass setFrame: CGRectMake(xPoint, 50.0f, pickerWidth, 200.0f)];
+    /*
+     if (@available(macCatalyst 13.4, *)) {
+         datePicker.preferredDatePickerStyle = kCGEventScrollWheel;
+         datePicker.datePickerMode = UIDatePickerModeDate;
+     } else {
+         datePicker = [[UIDatePicker alloc]init];
+         datePicker.datePickerMode=UIDatePickerModeDate;
+     }
+     */
     
     // Before we add the picker view to our view, let's do a couple more
     // things. First, let the selection indicator (that line inside the
@@ -86,14 +96,17 @@
  */
 -(void) initDatePicker
 {
+    /*
     if (@available(macCatalyst 13.4, *)) {
         datePicker.preferredDatePickerStyle = kCGEventScrollWheel;
-        datePicker.datePickerMode = datePicker;
+        datePicker.datePickerMode = UIDatePickerModeDate;
     } else {
         datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode=UIDatePickerModeDate;
     }
-    
+     */
+    datePicker = [[UIDatePicker alloc]init];
+    datePicker.datePickerMode=UIDatePickerModeDate;
     
     [self.txtDate setInputView:datePicker];
     
