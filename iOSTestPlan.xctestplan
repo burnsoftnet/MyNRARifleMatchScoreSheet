@@ -12,7 +12,13 @@
 
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:My NRA Rifle Match Score Sheet.xcodeproj",
+        "identifier" : "A59E7D722594DAD600A673CE",
+        "name" : "iOSUITests"
+      }
+    }
   ],
   "version" : 1
 }
