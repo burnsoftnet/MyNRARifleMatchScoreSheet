@@ -101,6 +101,7 @@
 		A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
 		A59E7D762594DAD600A673CE /* iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D752594DAD600A673CE /* iOSUITests.m */; };
 		A59E7D822594DB2200A673CE /* iOSViewApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D812594DB2200A673CE /* iOSViewApp.m */; };
+		A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */; };
 		A5CECBC51ECE3164003A6B91 /* MNRSS.db in Resources */ = {isa = PBXBuildFile; fileRef = A5CECBC41ECE3146003A6B91 /* MNRSS.db */; };
 		A5EE50401F5E216800AE024F /* lite_Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50281F5E216800AE024F /* lite_Icon-60.png */; };
 		A5EE50411F5E216800AE024F /* lite_Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */; };
@@ -228,6 +229,7 @@
 		A59E7D752594DAD600A673CE /* iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUITests.m; sourceTree = "<group>"; };
 		A59E7D772594DAD600A673CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59E7D812594DB2200A673CE /* iOSViewApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSViewApp.m; sourceTree = "<group>"; };
+		A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSManageCourseOfFire.m; sourceTree = "<group>"; };
 		A5CECBC41ECE3146003A6B91 /* MNRSS.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MNRSS.db; sourceTree = "<group>"; };
 		A5EE50281F5E216800AE024F /* lite_Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60.png"; sourceTree = "<group>"; };
 		A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 		A59E7D742594DAD600A673CE /* iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */,
 				A59E7D812594DB2200A673CE /* iOSViewApp.m */,
 				A59E7D752594DAD600A673CE /* iOSUITests.m */,
 				A59E7D772594DAD600A673CE /* Info.plist */,
@@ -855,6 +858,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59E7D822594DB2200A673CE /* iOSViewApp.m in Sources */,
+				A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.m in Sources */,
 				A59E7D762594DAD600A673CE /* iOSUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
