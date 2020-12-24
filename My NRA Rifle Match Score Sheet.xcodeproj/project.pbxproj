@@ -99,6 +99,7 @@
 		A5928B051F5E1DBF00B73F6B /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A551ED8EACC003BDBA6 /* Icon-Spotlight-40.png */; };
 		A5928B061F5E1DBF00B73F6B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */; };
 		A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
+		A59E7D652594D73400A673CE /* ViewMatchesUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D642594D73400A673CE /* ViewMatchesUITest.m */; };
 		A5CECBC51ECE3164003A6B91 /* MNRSS.db in Resources */ = {isa = PBXBuildFile; fileRef = A5CECBC41ECE3146003A6B91 /* MNRSS.db */; };
 		A5EE50401F5E216800AE024F /* lite_Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50281F5E216800AE024F /* lite_Icon-60.png */; };
 		A5EE50411F5E216800AE024F /* lite_Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */; };
@@ -125,6 +126,16 @@
 		A5EE50561F5E216800AE024F /* lite_iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503E1F5E216800AE024F /* lite_iTunesArtwork.png */; };
 		A5EE50571F5E216800AE024F /* lite_iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE503F1F5E216800AE024F /* lite_iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A59E7D672594D73400A673CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A557C9671EBD160000E6B0AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A557C96E1EBD160000E6B0AC;
+			remoteInfo = "My NRA Rifle Match Score Sheet";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A516DE071ED9B64400253D11 /* ManageCOFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCOFTableViewController.h; sourceTree = "<group>"; };
@@ -203,6 +214,10 @@
 		A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My NRA Rifle Match Score Sheet Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59486C41EC2A1520005BCF4 /* CourseOfFire_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseOfFire_ViewController.h; sourceTree = "<group>"; };
 		A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseOfFire_ViewController.m; sourceTree = "<group>"; };
+		A59E7D5B2594D6B800A673CE /* iOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iOSTestPlan.xctestplan; sourceTree = "<group>"; };
+		A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewMatchesUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59E7D642594D73400A673CE /* ViewMatchesUITest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewMatchesUITest.m; sourceTree = "<group>"; };
+		A59E7D662594D73400A673CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5CECBC41ECE3146003A6B91 /* MNRSS.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MNRSS.db; sourceTree = "<group>"; };
 		A5EE50281F5E216800AE024F /* lite_Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60.png"; sourceTree = "<group>"; };
 		A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -251,6 +266,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A59E7D5F2594D73400A673CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -287,9 +309,11 @@
 		A557C9661EBD160000E6B0AC = {
 			isa = PBXGroup;
 			children = (
+				A59E7D5B2594D6B800A673CE /* iOSTestPlan.xctestplan */,
 				A557C9711EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
 				A54F0B6A249AC5BF00C93C3D /* My Rifle Match Score Sheet */,
 				A54F0B78249AC67F00C93C3D /* AppKitGlue */,
+				A59E7D632594D73400A673CE /* ViewMatchesUITest */,
 				A557C9701EBD160000E6B0AC /* Products */,
 				A557C98C1EBD167500E6B0AC /* Frameworks */,
 			);
@@ -300,6 +324,7 @@
 			children = (
 				A557C96F1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet.app */,
 				A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */,
+				A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,6 +491,15 @@
 			name = BurnSoftMath;
 			sourceTree = "<group>";
 		};
+		A59E7D632594D73400A673CE /* ViewMatchesUITest */ = {
+			isa = PBXGroup;
+			children = (
+				A59E7D642594D73400A673CE /* ViewMatchesUITest.m */,
+				A59E7D662594D73400A673CE /* Info.plist */,
+			);
+			path = ViewMatchesUITest;
+			sourceTree = "<group>";
+		};
 		A5EE50271F5E216800AE024F /* lite */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +568,24 @@
 			productReference = A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A59E7D612594D73400A673CE /* ViewMatchesUITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A59E7D692594D73400A673CE /* Build configuration list for PBXNativeTarget "ViewMatchesUITest" */;
+			buildPhases = (
+				A59E7D5E2594D73400A673CE /* Sources */,
+				A59E7D5F2594D73400A673CE /* Frameworks */,
+				A59E7D602594D73400A673CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A59E7D682594D73400A673CE /* PBXTargetDependency */,
+			);
+			name = ViewMatchesUITest;
+			productName = ViewMatchesUITest;
+			productReference = A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -562,6 +614,12 @@
 					A5928AD31F5E1DBF00B73F6B = {
 						DevelopmentTeam = MF94VYSKL4;
 					};
+					A59E7D612594D73400A673CE = {
+						CreatedOnToolsVersion = 12.3;
+						DevelopmentTeam = MF94VYSKL4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A557C96E1EBD160000E6B0AC;
+					};
 				};
 			};
 			buildConfigurationList = A557C96A1EBD160000E6B0AC /* Build configuration list for PBXProject "My NRA Rifle Match Score Sheet" */;
@@ -579,6 +637,7 @@
 			targets = (
 				A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
 				A5928AD31F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite */,
+				A59E7D612594D73400A673CE /* ViewMatchesUITest */,
 			);
 		};
 /* End PBXProject section */
@@ -665,6 +724,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A59E7D602594D73400A673CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -726,7 +792,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A59E7D5E2594D73400A673CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59E7D652594D73400A673CE /* ViewMatchesUITest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A59E7D682594D73400A673CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */;
+			targetProxy = A59E7D672594D73400A673CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A557C97B1EBD160000E6B0AC /* Main.storyboard */ = {
@@ -936,6 +1018,49 @@
 			};
 			name = Release;
 		};
+		A59E7D6A2594D73400A673CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ViewMatchesUITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.ViewMatchesUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "My NRA Rifle Match Score Sheet";
+			};
+			name = Debug;
+		};
+		A59E7D6B2594D73400A673CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MF94VYSKL4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ViewMatchesUITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.ViewMatchesUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "My NRA Rifle Match Score Sheet";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -962,6 +1087,15 @@
 			buildConfigurations = (
 				A5928B091F5E1DBF00B73F6B /* Debug */,
 				A5928B0A1F5E1DBF00B73F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A59E7D692594D73400A673CE /* Build configuration list for PBXNativeTarget "ViewMatchesUITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A59E7D6A2594D73400A673CE /* Debug */,
+				A59E7D6B2594D73400A673CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
