@@ -97,23 +97,128 @@
     
 }
 
+-(void)testAddCOF {
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app launch];
+
+    [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"Unit Test Match on 2020-12-24"]/*[[".cells.staticTexts[@\"Unit Test Match on 2020-12-24\"]",".staticTexts[@\"Unit Test Match on 2020-12-24\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [app.navigationBars[@"Course of Fire"].buttons[@"Add"] tap];
+    
+    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+    XCUIElementQuery *courseOfFireElementsQuery = [scrollViewsQuery.otherElements containingType:XCUIElementTypeStaticText identifier:@"Course of Fire:"];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:0] tap];
+    
+    [app/*@START_MENU_TOKEN@*/.pickerWheels[@"100 Yards Rapid Fire (Standing to Prone)"]/*[[".pickers.pickerWheels[@\"100 Yards Rapid Fire (Standing to Prone)\"]",".pickerWheels[@\"100 Yards Rapid Fire (Standing to Prone)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];
+    [app.toolbars[@"Toolbar"].buttons[@"Done"] tap];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:1] tap];
+    
+    XCUIElement *key9 = app/*@START_MENU_TOKEN@*/.keys[@"9"]/*[[".keyboards.keys[@\"9\"]",".keys[@\"9\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:2] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:3] tap];
+    
+    XCUIElement *key1 = app/*@START_MENU_TOKEN@*/.keys[@"1"]/*[[".keyboards.keys[@\"1\"]",".keys[@\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [key1 tap];
+
+    
+    XCUIElement *key0 = app/*@START_MENU_TOKEN@*/.keys[@"0"]/*[[".keyboards.keys[@\"0\"]",".keys[@\"0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [key0 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:5] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:4] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:6] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:8] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:7] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:9] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:10] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:11] tap];
+    [key1 tap];
+    [key0 tap];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:12] tap];
+    [key1 tap];
+    [key0 tap];
+    
+    XCUIElement *courseOfFireElement = [scrollViewsQuery.otherElements containingType:XCUIElementTypeStaticText identifier:@"Course of Fire:"].element;
+    [courseOfFireElement swipeUp];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:13] tap];
+    [key1 tap];
+    [key0 tap];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:14] tap];
+    [key1 tap];
+    [key0 tap];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:15] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:16] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:17] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:18] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:19] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:20] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:21] tap];
+    [key9 tap];
+
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:22] tap];
+    [key9 tap];
+
+    [courseOfFireElement swipeUp];
+    
+    XCUIElementQuery *elementsQuery = scrollViewsQuery.otherElements;
+    /*@START_MENU_TOKEN@*/[elementsQuery.staticTexts[@"93"] pressForDuration:1.1];/*[["elementsQuery.staticTexts[@\"93\"]","["," tap];"," pressForDuration:1.1];"],[[[-1,0,1]],[[1,3],[1,2]]],[0,0]]@END_MENU_TOKEN@*/
+    /*@START_MENU_TOKEN@*/[elementsQuery.staticTexts[@"92"] pressForDuration:0.6];/*[["elementsQuery.staticTexts[@\"92\"]","["," tap];"," pressForDuration:0.6];"],[[[-1,0,1]],[[1,3],[1,2]]],[0,0]]@END_MENU_TOKEN@*/
+    /*@START_MENU_TOKEN@*/[elementsQuery.staticTexts[@"185"] pressForDuration:0.6];/*[["elementsQuery.staticTexts[@\"185\"]","["," tap];"," pressForDuration:0.6];"],[[[-1,0,1]],[[1,3],[1,2]]],[0,0]]@END_MENU_TOKEN@*/
+    [app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts[@"  Apply  "]/*[[".buttons[@\"  Apply  \"].staticTexts[@\"  Apply  \"]",".staticTexts[@\"  Apply  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    
+}
+
 -(void)testDeleteMatch {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
     
     XCUIElementQuery *tablesQuery = app.tables;
     NSString *tableName = [NSString stringWithFormat:@"%@ on %@",MatchName, MatchOnDate];
-    XCUIElement *uniitTestOn20201224StaticText = tablesQuery.staticTexts[tableName];
+    XCUIElement *selectedMatchToDelete = tablesQuery.staticTexts[tableName];
     
-    [uniitTestOn20201224StaticText swipeLeft];
-    XCUIElement *uniitTestOn20201224StaticTexte = tablesQuery.staticTexts[@"  Delete  "];
-    [uniitTestOn20201224StaticTexte tap];
-    //[uniitTestOn20201224StaticText.buttons[@"trailing1"] tap];
-//    XCUIElement *trailing1Button = uniitTestOn20201224StaticText.buttons[@"Delete"];
-//    [trailing1Button tap];
+    [selectedMatchToDelete swipeLeft];
+    //Above functions work fine, need to have the delete button activate.
+    //TODO: Get Delete button working.
     
-    
-
+    XCUIElement *test = tablesQuery.staticTexts[tableName].menuButtons[@"Delete"];
+//    XCUIElement *myAss = selectedMatchToDelete.buttons[@"Delete"];
+//    [myAss tap];
+    NSLog(@"Break point holder");
 }
 
+-(void)testScratch {
+    //[[[XCUIApplication alloc] init]/*@START_MENU_TOKEN@*/.windows[@"SceneWindow"].buttons[@"trailing1"]/*[[".windows[@\"My NRA Rifle Match Score Sheet\"]",".groups",".buttons[@\"Delete\"]",".buttons[@\"trailing1\"]",".windows[@\"SceneWindow\"]"],[[[-1,4,1],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0,0]]@END_MENU_TOKEN@*/ click];
+    
+}
 @end
