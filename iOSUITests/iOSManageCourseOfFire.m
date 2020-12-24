@@ -50,7 +50,7 @@
     
     for(int i = 0; i < len; ++i) {
        char current = buffer[i];
-        NSString *myKey = [NSString stringWithUTF8String:&current];
+        NSString *myKey = [[NSString alloc] stringWithUTF8String:&current];
         if ([myKey length] > 0)
         {
             //XCUIElement *autoKey = [XCUIElement alloc];

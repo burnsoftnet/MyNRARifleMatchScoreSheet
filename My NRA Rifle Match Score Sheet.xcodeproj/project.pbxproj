@@ -130,13 +130,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A59E7D672594D73400A673CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A557C9671EBD160000E6B0AC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A557C96E1EBD160000E6B0AC;
-			remoteInfo = "My NRA Rifle Match Score Sheet";
-		};
 		A59E7D782594DAD600A673CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A557C9671EBD160000E6B0AC /* Project object */;
@@ -224,7 +217,6 @@
 		A59486C41EC2A1520005BCF4 /* CourseOfFire_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseOfFire_ViewController.h; sourceTree = "<group>"; };
 		A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseOfFire_ViewController.m; sourceTree = "<group>"; };
 		A59E7D5B2594D6B800A673CE /* iOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iOSTestPlan.xctestplan; sourceTree = "<group>"; };
-		A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewMatchesUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E7D732594DAD600A673CE /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E7D752594DAD600A673CE /* iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUITests.m; sourceTree = "<group>"; };
 		A59E7D772594DAD600A673CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -275,13 +267,6 @@
 				A5928AEC1F5E1DBF00B73F6B /* CloudKit.framework in Frameworks */,
 				A5928AED1F5E1DBF00B73F6B /* libsqlite3.0.tbd in Frameworks */,
 				A5928AEE1F5E1DBF00B73F6B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A59E7D5F2594D73400A673CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +328,6 @@
 			children = (
 				A557C96F1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet.app */,
 				A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */,
-				A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */,
 				A59E7D732594DAD600A673CE /* iOSUITests.xctest */,
 			);
 			name = Products;
@@ -590,24 +574,6 @@
 			productReference = A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A59E7D612594D73400A673CE /* ViewMatchesUITest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A59E7D692594D73400A673CE /* Build configuration list for PBXNativeTarget "ViewMatchesUITest" */;
-			buildPhases = (
-				A59E7D5E2594D73400A673CE /* Sources */,
-				A59E7D5F2594D73400A673CE /* Frameworks */,
-				A59E7D602594D73400A673CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A59E7D682594D73400A673CE /* PBXTargetDependency */,
-			);
-			name = ViewMatchesUITest;
-			productName = ViewMatchesUITest;
-			productReference = A59E7D622594D73400A673CE /* ViewMatchesUITest.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		A59E7D722594DAD600A673CE /* iOSUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A59E7D7A2594DAD600A673CE /* Build configuration list for PBXNativeTarget "iOSUITests" */;
@@ -654,12 +620,6 @@
 					A5928AD31F5E1DBF00B73F6B = {
 						DevelopmentTeam = MF94VYSKL4;
 					};
-					A59E7D612594D73400A673CE = {
-						CreatedOnToolsVersion = 12.3;
-						DevelopmentTeam = MF94VYSKL4;
-						ProvisioningStyle = Automatic;
-						TestTargetID = A557C96E1EBD160000E6B0AC;
-					};
 					A59E7D722594DAD600A673CE = {
 						CreatedOnToolsVersion = 12.3;
 						DevelopmentTeam = MF94VYSKL4;
@@ -683,7 +643,6 @@
 			targets = (
 				A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */,
 				A5928AD31F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite */,
-				A59E7D612594D73400A673CE /* ViewMatchesUITest */,
 				A59E7D722594DAD600A673CE /* iOSUITests */,
 			);
 		};
@@ -771,13 +730,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A59E7D602594D73400A673CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A59E7D712594DAD600A673CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -846,13 +798,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A59E7D5E2594D73400A673CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A59E7D6F2594DAD600A673CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -866,11 +811,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A59E7D682594D73400A673CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */;
-			targetProxy = A59E7D672594D73400A673CE /* PBXContainerItemProxy */;
-		};
 		A59E7D792594DAD600A673CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A557C96E1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet */;
@@ -1086,49 +1026,6 @@
 			};
 			name = Release;
 		};
-		A59E7D6A2594D73400A673CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF94VYSKL4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ViewMatchesUITest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.ViewMatchesUITest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "My NRA Rifle Match Score Sheet";
-			};
-			name = Debug;
-		};
-		A59E7D6B2594D73400A673CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF94VYSKL4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ViewMatchesUITest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.ViewMatchesUITest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "My NRA Rifle Match Score Sheet";
-			};
-			name = Release;
-		};
 		A59E7D7B2594DAD600A673CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1198,15 +1095,6 @@
 			buildConfigurations = (
 				A5928B091F5E1DBF00B73F6B /* Debug */,
 				A5928B0A1F5E1DBF00B73F6B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A59E7D692594D73400A673CE /* Build configuration list for PBXNativeTarget "ViewMatchesUITest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A59E7D6A2594D73400A673CE /* Debug */,
-				A59E7D6B2594D73400A673CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
