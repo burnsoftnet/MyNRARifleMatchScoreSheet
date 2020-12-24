@@ -43,48 +43,24 @@
     [app.navigationBars[@"Match Lists"].buttons[@"Add"] tap];
     [app.textFields[@"Monthly / CMP / etc."] tap];
     
-    unsigned short len = [MatchName length];
-    char buffer[len];
+    NSUInteger len = [MatchName length];
+    unichar buffer[len+1];
 
     [MatchName getCharacters:buffer range:NSMakeRange(0, len)];
-    
-    for(int i = 0; i < len; ++i) {
-       char current = buffer[i];
-        NSString *myKey = [[NSString alloc] stringWithUTF8String:&current];
-        if ([myKey length] > 0)
+
+    NSLog(@"getCharacters:range: with unichar buffer");
+    for(int i = 0; i < len; i++) {
+        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
+
+        if ([newValue length] > 0)
         {
-            //XCUIElement *autoKey = [XCUIElement alloc];
-            [app.keys[myKey] tap];
-            //autoKey = app.keys[myKey];
-            //[autoKey tap];
+            if ([newValue isEqual:@" "])
+            {
+                newValue = @"space";
+            }
+            [app.keys[newValue] tap];
         }
     }
-    
-//    XCUIElement *uKey = app/*@START_MENU_TOKEN@*/.keys[@"U"]/*[[".keyboards.keys[@\"U\"]",".keys[@\"U\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [uKey tap];
-//
-//    XCUIElement *nKey = app/*@START_MENU_TOKEN@*/.keys[@"n"]/*[[".keyboards.keys[@\"n\"]",".keys[@\"n\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [nKey tap];
-//
-//    XCUIElement *iKey = app/*@START_MENU_TOKEN@*/.keys[@"i"]/*[[".keyboards.keys[@\"i\"]",".keys[@\"i\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [iKey tap];
-//
-//    XCUIElement *tKey = app/*@START_MENU_TOKEN@*/.keys[@"t"]/*[[".keyboards.keys[@\"t\"]",".keys[@\"t\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [tKey tap];
-//
-//    XCUIElement *spaceKey = app/*@START_MENU_TOKEN@*/.keys[@"space"]/*[[".keyboards.keys[@\"space\"]",".keys[@\"space\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [spaceKey tap];
-//
-//    XCUIElement *tKey2 = app/*@START_MENU_TOKEN@*/.keys[@"T"]/*[[".keyboards.keys[@\"T\"]",".keys[@\"T\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [tKey2 tap];
-//
-//    XCUIElement *eKey = app/*@START_MENU_TOKEN@*/.keys[@"e"]/*[[".keyboards.keys[@\"e\"]",".keys[@\"e\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [eKey tap];
-//
-//    XCUIElement *sKey = app/*@START_MENU_TOKEN@*/.keys[@"s"]/*[[".keyboards.keys[@\"s\"]",".keys[@\"s\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [sKey tap];
-//    [tKey tap];
-    
     
     [app.textFields[@"Service Rifle/ F-Class etc."] tap];
     [app/*@START_MENU_TOKEN@*/.pickerWheels[@"Any"]/*[[".pickers.pickerWheels[@\"Any\"]",".pickerWheels[@\"Any\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];
