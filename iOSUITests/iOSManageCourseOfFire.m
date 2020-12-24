@@ -199,6 +199,46 @@
     
 }
 
+-(void)testAddCOFMathTest {
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app launch];
+
+    [app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"Unit Test Match on 2020-12-24"]/*[[".cells.staticTexts[@\"Unit Test Match on 2020-12-24\"]",".staticTexts[@\"Unit Test Match on 2020-12-24\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [app.navigationBars[@"Course of Fire"].buttons[@"Add"] tap];
+    
+    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+    XCUIElementQuery *courseOfFireElementsQuery = [scrollViewsQuery.otherElements containingType:XCUIElementTypeStaticText identifier:@"Course of Fire:"];
+    [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:0] tap];
+    
+    [app/*@START_MENU_TOKEN@*/.pickerWheels[@"100 Yards Rapid Fire (Standing to Prone)"]/*[[".pickers.pickerWheels[@\"100 Yards Rapid Fire (Standing to Prone)\"]",".pickerWheels[@\"100 Yards Rapid Fire (Standing to Prone)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];
+    [app.toolbars[@"Toolbar"].buttons[@"Done"] tap];
+    
+    //XCUIElement *key9 = app.keys[@"9"];
+    XCUIElement *key1 = app/*@START_MENU_TOKEN@*/.keys[@"1"]/*[[".keyboards.keys[@\"1\"]",".keys[@\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    XCUIElement *key0 = app.keys[@"0"];
+    
+    
+    for(int i = 1; i < 22; i++) {
+        [[[courseOfFireElementsQuery childrenMatchingType:XCUIElementTypeTextField] elementBoundByIndex:i] tap];
+        [key1 tap];
+        [key0 tap];
+    }
+    
+    
+    XCUIElement *courseOfFireElement = [scrollViewsQuery.otherElements containingType:XCUIElementTypeStaticText identifier:@"Course of Fire:"].element;
+    [courseOfFireElement swipeUp];
+    
+    
+    XCUIElementQuery *elementsQuery = scrollViewsQuery.otherElements;
+    [elementsQuery.staticTexts[@"100"] pressForDuration:1.1];
+    [elementsQuery.staticTexts[@"100"] pressForDuration:0.6];
+    [elementsQuery.staticTexts[@"200"] pressForDuration:0.6];
+    [app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts[@"  Apply  "]/*[[".buttons[@\"  Apply  \"].staticTexts[@\"  Apply  \"]",".staticTexts[@\"  Apply  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    
+}
+
 -(void)testDeleteMatch {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
