@@ -15,13 +15,17 @@
 @implementation iOSManageCourseOfFire
 {
     NSString *MatchName;
+    NSString *MatchOnDate;
 }
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
+    
     MatchName = @"Unit Test Match";
+    MatchOnDate = @"2020-12-24";
+    
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
     //[[[XCUIApplication alloc] init] launch];
 
@@ -98,10 +102,16 @@
     [app launch];
     
     XCUIElementQuery *tablesQuery = app.tables;
-    XCUIElement *uniitTestOn20201224StaticText = tablesQuery.staticTexts[@"Unit Test on 2020-12-24"];
-    [uniitTestOn20201224StaticText swipeLeft];
+    NSString *tableName = [NSString stringWithFormat:@"%@ on %@",MatchName, MatchOnDate];
+    XCUIElement *uniitTestOn20201224StaticText = tablesQuery.staticTexts[tableName];
     
-    //[uniitTestOn20201224StaticText.staticTexts[@"Delete"] tap];
+    [uniitTestOn20201224StaticText swipeLeft];
+    XCUIElement *uniitTestOn20201224StaticTexte = tablesQuery.staticTexts[@"  Delete  "];
+    [uniitTestOn20201224StaticTexte tap];
+    //[uniitTestOn20201224StaticText.buttons[@"trailing1"] tap];
+//    XCUIElement *trailing1Button = uniitTestOn20201224StaticText.buttons[@"Delete"];
+//    [trailing1Button tap];
+    
     
 
 }
