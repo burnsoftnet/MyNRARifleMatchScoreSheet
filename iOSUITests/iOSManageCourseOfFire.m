@@ -102,6 +102,7 @@
     [uniitTestOn20201224StaticText swipeLeft];
     
     //[uniitTestOn20201224StaticText.staticTexts[@"Delete"] tap];
+    
 
 }
 
