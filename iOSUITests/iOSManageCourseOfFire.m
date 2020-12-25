@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "General.h"
 
 @interface iOSManageCourseOfFire : XCTestCase
 
@@ -47,26 +48,7 @@
     [app.navigationBars[@"Match Lists"].buttons[@"Add"] tap];
     [app.textFields[@"Monthly / CMP / etc."] tap];
     
-    //Start code section for string diesect and send
-    NSUInteger len = [MatchName length];
-    unichar buffer[len+1];
-
-    [MatchName getCharacters:buffer range:NSMakeRange(0, len)];
-
-    NSLog(@"getCharacters:range: with unichar buffer");
-    for(int i = 0; i < len; i++) {
-        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
-
-        if ([newValue length] > 0)
-        {
-            if ([newValue isEqual:@" "])
-            {
-                newValue = @"space";
-            }
-            [app.keys[newValue] tap];
-        }
-    }
-    //END String disect
+    [General sendTextToKeyBoard:app :MatchName];
     
     [app.textFields[@"Service Rifle/ F-Class etc."] tap];
     [app/*@START_MENU_TOKEN@*/.pickerWheels[@"Any"]/*[[".pickers.pickerWheels[@\"Any\"]",".pickerWheels[@\"Any\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];

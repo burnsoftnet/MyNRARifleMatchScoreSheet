@@ -175,41 +175,17 @@
     
     XCUIElement *manageCourseOfFireNavigationBar = app.navigationBars[@"Manage Course of Fire"];
     [manageCourseOfFireNavigationBar.buttons[@"Add"] tap];
-    [General sendTextToKeyBoard:app :COFName];
+    //[General sendTextToKeyBoard:app :COFName];
     
-    //[sendTextToKeyBoard: app: COFName];
-    //Start code section for string diesect and send
-//    NSUInteger len = [COFName length];
-//    unichar buffer[len+1];
-//
-//    [COFName getCharacters:buffer range:NSMakeRange(0, len)];
-//
-//    NSLog(@"getCharacters:range: with unichar buffer");
-//    for(int i = 0; i < len; i++) {
-//        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
-//
-//        if ([newValue length] > 0)
-//        {
-//            if ([newValue isEqual:@" "])
-//            {
-//                newValue = @"space";
-//            }
-//            [app.keys[newValue] tap];
-//        }
-//    }
-    //END String disect
     
-//    XCUIElement *cKey = app/*@START_MENU_TOKEN@*/.keys[@"c"]/*[[".keyboards.keys[@\"c\"]",".keys[@\"c\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [cKey tap];
-//    [cKey tap];
-//
-//    XCUIElement *oKey = app/*@START_MENU_TOKEN@*/.keys[@"o"]/*[[".keyboards.keys[@\"o\"]",".keys[@\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [oKey tap];
-//    [oKey tap];
-//
-//    XCUIElement *fKey = app/*@START_MENU_TOKEN@*/.keys[@"f"]/*[[".keyboards.keys[@\"f\"]",".keys[@\"f\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
-//    [fKey tap];
-//    [fKey tap];
+    XCUIElement *cKey = app/*@START_MENU_TOKEN@*/.keys[@"c"]/*[[".keyboards.keys[@\"c\"]",".keys[@\"c\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [cKey tap];
+
+    XCUIElement *oKey = app/*@START_MENU_TOKEN@*/.keys[@"o"]/*[[".keyboards.keys[@\"o\"]",".keys[@\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [oKey tap];
+
+    XCUIElement *fKey = app/*@START_MENU_TOKEN@*/.keys[@"f"]/*[[".keyboards.keys[@\"f\"]",".keys[@\"f\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [fKey tap];
     
     /*@START_MENU_TOKEN@*/[app.alerts[@"Course of Fire"].scrollViews.otherElements.buttons[@"ADD"] pressForDuration:0.6];/*[["app.alerts[@\"Course of Fire\"].scrollViews.otherElements.buttons[@\"ADD\"]","["," tap];"," pressForDuration:0.6];"],[[[-1,0,1]],[[1,3],[1,2]]],[0,0]]@END_MENU_TOKEN@*/
     [manageCourseOfFireNavigationBar.buttons[@"Settings"] tap];
