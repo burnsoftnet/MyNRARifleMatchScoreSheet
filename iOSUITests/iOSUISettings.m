@@ -25,7 +25,7 @@
     DivisionName=@"Unit Test";
     COFName=@"COF Unit Test";
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
+   //[[[XCUIApplication alloc] init] launch];
 
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
@@ -37,11 +37,11 @@
 - (void)testAddInformation {
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    //app launch];
+    [app launch];
     XCUIElement *tabBar = app.tabBars[@"Tab Bar"];
     [tabBar.buttons[@"Settings"] tap];
     [app.textFields[@"1234567"] tap];
-    [app/*@START_MENU_TOKEN@*/.buttons[@"Clear text"]/*[[".textFields[@\"MM\/YYYY or LIFE\"].buttons[@\"Clear text\"]",".buttons[@\"Clear text\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    //[app/*@START_MENU_TOKEN@*/.buttons[@"Clear text"]/*[[".textFields[@\"MM\/YYYY or LIFE\"].buttons[@\"Clear text\"]",".buttons[@\"Clear text\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
     
     XCUIElement *key5 = app/*@START_MENU_TOKEN@*/.keys[@"5"]/*[[".keyboards.keys[@\"5\"]",".keys[@\"5\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
     XCUIElement *key6 = app.keys[@"6"];
@@ -90,6 +90,7 @@
 - (void)testAddiTunesBackup {
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app launch];
     XCUIElement *tabBar = app.tabBars[@"Tab Bar"];
     [tabBar.buttons[@"Settings"] tap];
     [app/*@START_MENU_TOKEN@*/.staticTexts[@"  Use iTunes File Sharing for Backup & Restore  "]/*[[".buttons[@\"  Use iTunes File Sharing for Backup & Restore  \"].staticTexts[@\"  Use iTunes File Sharing for Backup & Restore  \"]",".staticTexts[@\"  Use iTunes File Sharing for Backup & Restore  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
@@ -103,6 +104,7 @@
 - (void)testAddDivision {
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app launch];
     XCUIElement *tabBar = app.tabBars[@"Tab Bar"];
     [tabBar.buttons[@"Settings"] tap];
     [app/*@START_MENU_TOKEN@*/.staticTexts[@"  Add, Edit or Delete Divisions  "]/*[[".buttons[@\"  Add, Edit or Delete Divisions  \"].staticTexts[@\"  Add, Edit or Delete Divisions  \"]",".staticTexts[@\"  Add, Edit or Delete Divisions  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
@@ -142,6 +144,8 @@
     
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app launch];
+    
     XCUIElement *tabBar = app.tabBars[@"Tab Bar"];
     [tabBar.buttons[@"Settings"] tap];
     [app/*@START_MENU_TOKEN@*/.staticTexts[@"  Add, Edit or Delete Course of Fire  "]/*[[".buttons[@\"  Add, Edit or Delete Course of Fire  \"].staticTexts[@\"  Add, Edit or Delete Course of Fire  \"]",".staticTexts[@\"  Add, Edit or Delete Course of Fire  \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
