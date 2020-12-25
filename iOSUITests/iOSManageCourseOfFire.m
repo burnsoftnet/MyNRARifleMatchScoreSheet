@@ -47,6 +47,7 @@
     [app.navigationBars[@"Match Lists"].buttons[@"Add"] tap];
     [app.textFields[@"Monthly / CMP / etc."] tap];
     
+    //Start code section for string diesect and send
     NSUInteger len = [MatchName length];
     unichar buffer[len+1];
 
@@ -65,6 +66,7 @@
             [app.keys[newValue] tap];
         }
     }
+    //END String disect
     
     [app.textFields[@"Service Rifle/ F-Class etc."] tap];
     [app/*@START_MENU_TOKEN@*/.pickerWheels[@"Any"]/*[[".pickers.pickerWheels[@\"Any\"]",".pickerWheels[@\"Any\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];
