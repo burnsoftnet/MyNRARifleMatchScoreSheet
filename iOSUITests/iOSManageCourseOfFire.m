@@ -234,7 +234,8 @@
     [courseOfFireElement tap];
     [courseOfFireElement swipeUp];
     
-    XCUIElementQuery *elementsQuery = scrollViewsQuery.otherElements;
+    //TODO: Fix this check below
+    //XCUIElementQuery *elementsQuery = scrollViewsQuery.otherElements;
 //    [elementsQuery.staticTexts[@"100"]];
 //    [elementsQuery.staticTexts[@"100"] pressForDuration:0.6];
 //    [elementsQuery.staticTexts[@"200"] pressForDuration:0.6];
@@ -271,7 +272,7 @@
     //Above functions work fine, need to have the delete button activate.
     //TODO: Get Delete button working.
     
-    XCUIElement *test = tablesQuery.staticTexts[tableName].menuButtons[@"Delete"];
+    //XCUIElement *test = tablesQuery.staticTexts[tableName].menuButtons[@"Delete"];
 //    XCUIElement *myAss = selectedMatchToDelete.buttons[@"Delete"];
 //    [myAss tap];
     NSLog(@"Break point holder");
