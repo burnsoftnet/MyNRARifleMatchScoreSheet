@@ -12,6 +12,7 @@
 		A516DE0F1ED9D52100253D11 /* ManageDivisions.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.m */; };
 		A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */; };
 		A51DC7B725957A3900E6C928 /* iOSUISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7B625957A3900E6C928 /* iOSUISettings.m */; };
+		A51DC7BD2595895500E6C928 /* General.m in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7BC2595895500E6C928 /* General.m */; };
 		A53C44DA1EE7795200CC309C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C44D91EE7795200CC309C /* CloudKit.framework */; };
 		A541C0821EBD6194007B857E /* MatchLists.m in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.m */; };
 		A547A9481EDA256B00B1576C /* Icon-Notifcation.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9451EDA256B00B1576C /* Icon-Notifcation.png */; };
@@ -150,6 +151,8 @@
 		A516DE101ED9D75A00253D11 /* ManageDivisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageDivisionTableViewController.h; sourceTree = "<group>"; };
 		A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDivisionTableViewController.m; sourceTree = "<group>"; };
 		A51DC7B625957A3900E6C928 /* iOSUISettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUISettings.m; sourceTree = "<group>"; };
+		A51DC7BB2595895500E6C928 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
+		A51DC7BC2595895500E6C928 /* General.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = General.m; sourceTree = "<group>"; };
 		A521064E255B07440015F858 /* My NRA Rifle Match Score Sheet Lite.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "My NRA Rifle Match Score Sheet Lite.plist"; sourceTree = SOURCE_ROOT; };
 		A53C44D81EE7794B00CC309C /* My NRA Rifle Match Score Sheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My NRA Rifle Match Score Sheet.entitlements"; sourceTree = "<group>"; };
 		A53C44D91EE7795200CC309C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -505,6 +508,8 @@
 				A59E7D812594DB2200A673CE /* iOSViewApp.m */,
 				A59E7D752594DAD600A673CE /* iOSUITests.m */,
 				A59E7D772594DAD600A673CE /* Info.plist */,
+				A51DC7BB2595895500E6C928 /* General.h */,
+				A51DC7BC2595895500E6C928 /* General.m */,
 			);
 			path = iOSUITests;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51DC7BD2595895500E6C928 /* General.m in Sources */,
 				A51DC7B725957A3900E6C928 /* iOSUISettings.m in Sources */,
 				A59E7D822594DB2200A673CE /* iOSViewApp.m in Sources */,
 				A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.m in Sources */,

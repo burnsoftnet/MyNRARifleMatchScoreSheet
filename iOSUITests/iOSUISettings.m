@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "General.h"
 
 @interface iOSUISettings : XCTestCase
 
@@ -111,7 +112,6 @@
     XCUIElement *manageDivisionsNavigationBar = app.navigationBars[@"Manage Divisions"];
     [manageDivisionsNavigationBar.buttons[@"Add"] tap];
     XCUIElementQuery *elementsQuery = app.alerts[@"Divisions"].scrollViews.otherElements;
-    //[elementsQuery.collectionViews/*@START_MENU_TOKEN@*/.buttons[@"Clear text"]/*[[".cells",".textFields[@\"name\"].buttons[@\"Clear text\"]",".buttons[@\"Clear text\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/ tap];
     
     //Start code section for string diesect and send
     NSUInteger len = [DivisionName length];
@@ -140,6 +140,29 @@
     
 }
 
+//- (void)sendTextToKeyBoard:(XCUIApplication *) app :(NSString *) value
+//{
+//    //Start code section for string diesect and send
+//    NSUInteger len = [value length];
+//    unichar buffer[len+1];
+//
+//    [value getCharacters:buffer range:NSMakeRange(0, len)];
+//
+//    NSLog(@"getCharacters:range: with unichar buffer");
+//    for(int i = 0; i < len; i++) {
+//        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
+//
+//        if ([newValue length] > 0)
+//        {
+//            if ([newValue isEqual:@" "])
+//            {
+//                newValue = @"space";
+//            }
+//            [app.keys[newValue] tap];
+//        }
+//    }
+//}
+
 - (void)testAddCourseOfFire {
     
     
@@ -152,26 +175,28 @@
     
     XCUIElement *manageCourseOfFireNavigationBar = app.navigationBars[@"Manage Course of Fire"];
     [manageCourseOfFireNavigationBar.buttons[@"Add"] tap];
+    [General sendTextToKeyBoard:app :COFName];
     
+    //[sendTextToKeyBoard: app: COFName];
     //Start code section for string diesect and send
-    NSUInteger len = [COFName length];
-    unichar buffer[len+1];
-
-    [COFName getCharacters:buffer range:NSMakeRange(0, len)];
-
-    NSLog(@"getCharacters:range: with unichar buffer");
-    for(int i = 0; i < len; i++) {
-        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
-
-        if ([newValue length] > 0)
-        {
-            if ([newValue isEqual:@" "])
-            {
-                newValue = @"space";
-            }
-            [app.keys[newValue] tap];
-        }
-    }
+//    NSUInteger len = [COFName length];
+//    unichar buffer[len+1];
+//
+//    [COFName getCharacters:buffer range:NSMakeRange(0, len)];
+//
+//    NSLog(@"getCharacters:range: with unichar buffer");
+//    for(int i = 0; i < len; i++) {
+//        NSString *newValue = [NSString stringWithFormat:@"%C", buffer[i]];
+//
+//        if ([newValue length] > 0)
+//        {
+//            if ([newValue isEqual:@" "])
+//            {
+//                newValue = @"space";
+//            }
+//            [app.keys[newValue] tap];
+//        }
+//    }
     //END String disect
     
 //    XCUIElement *cKey = app/*@START_MENU_TOKEN@*/.keys[@"c"]/*[[".keyboards.keys[@\"c\"]",".keys[@\"c\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
