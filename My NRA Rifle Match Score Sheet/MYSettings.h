@@ -10,7 +10,7 @@
 
 #define MYDBNAME "MNRSS.db"       //Database Name
 #define MYDBVERSION 1.2        //Expected Database Version for the current version of this app
-#define FULLVERSIONNAME "My NRA Rifle Match Score Sheet"
+#define FULLVERSIONNAME "My Rifle Match Score Sheet"
 //extern BOOL * const BUGGERME;   //Enable the Debug Functions for additional information during run time.
 #ifndef NDEBUG
 static BOOL BUGGERME = YES;

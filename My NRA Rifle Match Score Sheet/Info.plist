@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>My NRA Rifle Match Score Sheet</string>
+	<string>My Rifle Match Score Sheet</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
