@@ -53,11 +53,18 @@ final class Add_MatchViewController: UIViewController, UIPickerViewDelegate, UIP
         // Set the picker's frame. We set the y coordinate to 50px.
         pvClass.frame = CGRect(x: xPoint, y: 50, width: pickerWidth, height: 200)
 
-        // Allow us to pre-select the third option in the pickerView.
-        pvClass.selectRow(2, inComponent: 0, animated: true)
-
         txtClass.inputView = pvClass
         txtClass.inputAccessoryView = makeDoneToolbar(action: #selector(selectMatchClass))
+        txtClass.addTarget(self, action: #selector(classPickerWillShow), for: .editingDidBegin)
+    }
+
+    /// Show the division already in the text box (or the first one) when the picker opens
+    @objc private func classPickerWillShow() {
+        pvClass.reloadAllComponents()
+        let row = pickerDataSource.firstIndex(of: txtClass.text ?? "") ?? 0
+        if row < pickerDataSource.count {
+            pvClass.selectRow(row, inComponent: 0, animated: false)
+        }
     }
 
     /// Toolbar with a trailing Done button for a picker input view
@@ -70,10 +77,11 @@ final class Add_MatchViewController: UIViewController, UIPickerViewDelegate, UIP
         return toolBar
     }
 
-    /// Pass the Class that was selected
+    /// Pass the Class that is selected in the picker
     @objc private func selectMatchClass() {
-        if txtClass.text?.isEmpty ?? true, let first = pickerDataSource.first {
-            txtClass.text = first
+        let row = pvClass.selectedRow(inComponent: 0)
+        if pickerDataSource.indices.contains(row) {
+            txtClass.text = pickerDataSource[row]
         }
         txtClass.resignFirstResponder()
     }
@@ -161,9 +169,12 @@ final class Add_MatchViewController: UIViewController, UIPickerViewDelegate, UIP
         pickerDataSource[row]
     }
 
-    // NOTE: The Objective-C version wrapped pickerView(_:didSelectRow:inComponent:) in `#if iOS`,
-    // a macro that is never defined, so picking a division never updated txtClass; only the Done
-    // button fills in the first division when the field is empty. That behavior is kept as-is.
+    // MARK: PickerView Delegate
+
+    /// when the row is selected from the picker
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtClass.text = pickerDataSource[row]
+    }
 
     /// when the button to add the match was clicked
     @IBAction func btnAddMatch(_ sender: Any) {

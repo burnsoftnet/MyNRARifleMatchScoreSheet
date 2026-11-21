@@ -140,10 +140,8 @@ final class CourseOfFire_ViewController: UIViewController, UIPickerViewDelegate,
         // Set the picker's frame. We set the y coordinate to 50px.
         pvCourseOfFire.frame = CGRect(x: xPoint, y: 50, width: pickerWidth, height: 200)
 
-        // Allow us to pre-select the third option in the pickerView.
-        pvCourseOfFire.selectRow(2, inComponent: 0, animated: true)
-
         txtCourseOfFire.inputView = pvCourseOfFire
+        txtCourseOfFire.addTarget(self, action: #selector(courseOfFirePickerWillShow), for: .editingDidBegin)
 
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
         toolBar.tintColor = .gray
@@ -155,8 +153,21 @@ final class CourseOfFire_ViewController: UIViewController, UIPickerViewDelegate,
 
     // MARK: Select COF
 
-    /// Close the Course of Fire picker
+    /// Show the course of fire already in the text box (or the first one) when the picker opens
+    @objc private func courseOfFirePickerWillShow() {
+        pvCourseOfFire.reloadAllComponents()
+        let row = courseOfFireDataSource.firstIndex(of: txtCourseOfFire.text ?? "") ?? 0
+        if row < courseOfFireDataSource.count {
+            pvCourseOfFire.selectRow(row, inComponent: 0, animated: false)
+        }
+    }
+
+    /// Use the course of fire selected in the picker and close it
     @objc private func selectCourseOfFireDataSource() {
+        let row = pvCourseOfFire.selectedRow(inComponent: 0)
+        if courseOfFireDataSource.indices.contains(row) {
+            txtCourseOfFire.text = courseOfFireDataSource[row]
+        }
         txtCourseOfFire.resignFirstResponder()
     }
 
