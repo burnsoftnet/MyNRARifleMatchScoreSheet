@@ -7,39 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A516DE091ED9B64400253D11 /* ManageCOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE081ED9B64400253D11 /* ManageCOFTableViewController.m */; };
-		A516DE0C1ED9B8F200253D11 /* ManageCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.m */; };
-		A516DE0F1ED9D52100253D11 /* ManageDivisions.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.m */; };
-		A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */; };
-		A51DC7B725957A3900E6C928 /* iOSUISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7B625957A3900E6C928 /* iOSUISettings.m */; };
-		A51DC7BD2595895500E6C928 /* General.m in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7BC2595895500E6C928 /* General.m */; };
+		A516DE091ED9B64400253D11 /* ManageCOFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE081ED9B64400253D11 /* ManageCOFTableViewController.swift */; };
+		A516DE0C1ED9B8F200253D11 /* ManageCOF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.swift */; };
+		A516DE0F1ED9D52100253D11 /* ManageDivisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.swift */; };
+		A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.swift */; };
+		A51DC7B725957A3900E6C928 /* iOSUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7B625957A3900E6C928 /* iOSUISettings.swift */; };
+		A51DC7BD2595895500E6C928 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51DC7BC2595895500E6C928 /* General.swift */; };
 		A53C44DA1EE7795200CC309C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C44D91EE7795200CC309C /* CloudKit.framework */; };
-		A541C0821EBD6194007B857E /* MatchLists.m in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.m */; };
+		A541C0821EBD6194007B857E /* MatchLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.swift */; };
 		A547A9481EDA256B00B1576C /* Icon-Notifcation.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9451EDA256B00B1576C /* Icon-Notifcation.png */; };
 		A547A9491EDA256B00B1576C /* Icon-Notifcation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */; };
 		A547A94A1EDA256B00B1576C /* Icon-Notifcation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A547A9471EDA256B00B1576C /* Icon-Notifcation@3x.png */; };
-		A553E9DE1EE6DFF6009E8291 /* DatabaseManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */; };
-		A553E9DF1EE6DFF6009E8291 /* DBUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DD1EE6DFF6009E8291 /* DBUpgrade.m */; };
-		A557C9741EBD160000E6B0AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9731EBD160000E6B0AC /* main.m */; };
-		A557C9771EBD160000E6B0AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9761EBD160000E6B0AC /* AppDelegate.m */; };
+		A553E9DE1EE6DFF6009E8291 /* DatabaseManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.swift */; };
+		A553E9DF1EE6DFF6009E8291 /* DBUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DD1EE6DFF6009E8291 /* DBUpgrade.swift */; };
+		A557C9771EBD160000E6B0AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9761EBD160000E6B0AC /* AppDelegate.swift */; };
 		A557C97D1EBD160000E6B0AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A557C97B1EBD160000E6B0AC /* Main.storyboard */; };
 		A557C97F1EBD160000E6B0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A557C97E1EBD160000E6B0AC /* Assets.xcassets */; };
 		A557C9821EBD160000E6B0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A557C9801EBD160000E6B0AC /* LaunchScreen.storyboard */; };
 		A557C98E1EBD167500E6B0AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98D1EBD167500E6B0AC /* Foundation.framework */; };
 		A557C9901EBD168200E6B0AC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98F1EBD168200E6B0AC /* libsqlite3.0.tbd */; };
-		A557C9951EBD197100E6B0AC /* LIST_Matches.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9941EBD197100E6B0AC /* LIST_Matches.m */; };
-		A557C9981EBD1A6D00E6B0AC /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9971EBD1A6D00E6B0AC /* Settings.m */; };
-		A557C99E1EBD380400E6B0AC /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.m */; };
-		A557C9A11EBD384900E6B0AC /* BurnSoftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.m */; };
-		A557C9A41EBD388100E6B0AC /* MYSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A31EBD388100E6B0AC /* MYSettings.m */; };
-		A557C9A71EBD389900E6B0AC /* FormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A61EBD389900E6B0AC /* FormFunctions.m */; };
+		A557C9951EBD197100E6B0AC /* LIST_Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9941EBD197100E6B0AC /* LIST_Matches.swift */; };
+		A557C9981EBD1A6D00E6B0AC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9971EBD1A6D00E6B0AC /* Settings.swift */; };
+		A557C99E1EBD380400E6B0AC /* BurnSoftGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.swift */; };
+		A557C9A11EBD384900E6B0AC /* BurnSoftDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.swift */; };
+		A557C9A41EBD388100E6B0AC /* MYSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A31EBD388100E6B0AC /* MYSettings.swift */; };
+		A557C9A71EBD389900E6B0AC /* FormFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A61EBD389900E6B0AC /* FormFunctions.swift */; };
 		A557C9A91EBD38A200E6B0AC /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = A557C9A81EBD38A200E6B0AC /* gear.png */; };
-		A57893E31EBE12AF00D2259B /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57893E21EBE12AF00D2259B /* MainStartViewController.m */; };
+		A57893E31EBE12AF00D2259B /* MainStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57893E21EBE12AF00D2259B /* MainStartViewController.swift */; };
 		A57894191EBE240E00D2259B /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = A57894181EBE240E00D2259B /* document.png */; };
-		A5789E201EBF403900712CA4 /* Add_MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E1F1EBF403900712CA4 /* Add_MatchViewController.m */; };
-		A5789E231EBF4ACF00712CA4 /* MatchListCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E221EBF4ACF00712CA4 /* MatchListCOF.m */; };
-		A5789E261EBF51BC00712CA4 /* LIST_Match_COF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E251EBF51BC00712CA4 /* LIST_Match_COF.m */; };
-		A57B7FD61ED26CCC00F0DEAE /* BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.m */; };
+		A5789E201EBF403900712CA4 /* Add_MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E1F1EBF403900712CA4 /* Add_MatchViewController.swift */; };
+		A5789E231EBF4ACF00712CA4 /* MatchListCOF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E221EBF4ACF00712CA4 /* MatchListCOF.swift */; };
+		A5789E261EBF51BC00712CA4 /* LIST_Match_COF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E251EBF51BC00712CA4 /* LIST_Match_COF.swift */; };
+		A57B7FD61ED26CCC00F0DEAE /* BurnSoftMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.swift */; };
 		A57D6A5A1ED8EACC003BDBA6 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4B1ED8EACC003BDBA6 /* Icon-60.png */; };
 		A57D6A5B1ED8EACC003BDBA6 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4C1ED8EACC003BDBA6 /* Icon-60@2x.png */; };
 		A57D6A5C1ED8EACC003BDBA6 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A4D1ED8EACC003BDBA6 /* Icon-60@3x.png */; };
@@ -55,29 +54,28 @@
 		A57D6A661ED8EACC003BDBA6 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A571ED8EACC003BDBA6 /* Icon-Spotlight-40@3x.png */; };
 		A57D6A671ED8EACC003BDBA6 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */; };
 		A57D6A681ED8EACC003BDBA6 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */; };
-		A57D6A6B1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */; };
-		A5928AD51F5E1DBF00B73F6B /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57893E21EBE12AF00D2259B /* MainStartViewController.m */; };
-		A5928AD61F5E1DBF00B73F6B /* ManageCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.m */; };
-		A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.m */; };
-		A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */; };
-		A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E1F1EBF403900712CA4 /* Add_MatchViewController.m */; };
-		A5928ADA1F5E1DBF00B73F6B /* MatchLists.m in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.m */; };
-		A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E251EBF51BC00712CA4 /* LIST_Match_COF.m */; };
-		A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.m */; };
-		A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.m */; };
-		A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
-		A5928ADF1F5E1DBF00B73F6B /* MYSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A31EBD388100E6B0AC /* MYSettings.m */; };
-		A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */; };
-		A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.m */; };
-		A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A516DE081ED9B64400253D11 /* ManageCOFTableViewController.m */; };
-		A5928AE31F5E1DBF00B73F6B /* LIST_Matches.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9941EBD197100E6B0AC /* LIST_Matches.m */; };
-		A5928AE41F5E1DBF00B73F6B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9971EBD1A6D00E6B0AC /* Settings.m */; };
-		A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */; };
-		A5928AE61F5E1DBF00B73F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9761EBD160000E6B0AC /* AppDelegate.m */; };
-		A5928AE71F5E1DBF00B73F6B /* DBUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DD1EE6DFF6009E8291 /* DBUpgrade.m */; };
-		A5928AE81F5E1DBF00B73F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9731EBD160000E6B0AC /* main.m */; };
-		A5928AE91F5E1DBF00B73F6B /* MatchListCOF.m in Sources */ = {isa = PBXBuildFile; fileRef = A5789E221EBF4ACF00712CA4 /* MatchListCOF.m */; };
-		A5928AEA1F5E1DBF00B73F6B /* FormFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A61EBD389900E6B0AC /* FormFunctions.m */; };
+		A57D6A6B1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift */; };
+		A5928AD51F5E1DBF00B73F6B /* MainStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57893E21EBE12AF00D2259B /* MainStartViewController.swift */; };
+		A5928AD61F5E1DBF00B73F6B /* ManageCOF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0B1ED9B8F200253D11 /* ManageCOF.swift */; };
+		A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.swift */; };
+		A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.swift */; };
+		A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E1F1EBF403900712CA4 /* Add_MatchViewController.swift */; };
+		A5928ADA1F5E1DBF00B73F6B /* MatchLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = A541C0811EBD6194007B857E /* MatchLists.swift */; };
+		A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E251EBF51BC00712CA4 /* LIST_Match_COF.swift */; };
+		A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE0E1ED9D52100253D11 /* ManageDivisions.swift */; };
+		A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.swift */; };
+		A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.swift */; };
+		A5928ADF1F5E1DBF00B73F6B /* MYSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A31EBD388100E6B0AC /* MYSettings.swift */; };
+		A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift */; };
+		A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.swift */; };
+		A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DE081ED9B64400253D11 /* ManageCOFTableViewController.swift */; };
+		A5928AE31F5E1DBF00B73F6B /* LIST_Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9941EBD197100E6B0AC /* LIST_Matches.swift */; };
+		A5928AE41F5E1DBF00B73F6B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9971EBD1A6D00E6B0AC /* Settings.swift */; };
+		A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.swift */; };
+		A5928AE61F5E1DBF00B73F6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9761EBD160000E6B0AC /* AppDelegate.swift */; };
+		A5928AE71F5E1DBF00B73F6B /* DBUpgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E9DD1EE6DFF6009E8291 /* DBUpgrade.swift */; };
+		A5928AE91F5E1DBF00B73F6B /* MatchListCOF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5789E221EBF4ACF00712CA4 /* MatchListCOF.swift */; };
+		A5928AEA1F5E1DBF00B73F6B /* FormFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557C9A61EBD389900E6B0AC /* FormFunctions.swift */; };
 		A5928AEC1F5E1DBF00B73F6B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C44D91EE7795200CC309C /* CloudKit.framework */; };
 		A5928AED1F5E1DBF00B73F6B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98F1EBD168200E6B0AC /* libsqlite3.0.tbd */; };
 		A5928AEE1F5E1DBF00B73F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A557C98D1EBD167500E6B0AC /* Foundation.framework */; };
@@ -100,10 +98,10 @@
 		A5928B031F5E1DBF00B73F6B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */; };
 		A5928B051F5E1DBF00B73F6B /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A551ED8EACC003BDBA6 /* Icon-Spotlight-40.png */; };
 		A5928B061F5E1DBF00B73F6B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */; };
-		A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */; };
-		A59E7D762594DAD600A673CE /* iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D752594DAD600A673CE /* iOSUITests.m */; };
-		A59E7D822594DB2200A673CE /* iOSViewApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D812594DB2200A673CE /* iOSViewApp.m */; };
-		A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */; };
+		A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.swift */; };
+		A59E7D762594DAD600A673CE /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D752594DAD600A673CE /* iOSUITests.swift */; };
+		A59E7D822594DB2200A673CE /* iOSViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D812594DB2200A673CE /* iOSViewApp.swift */; };
+		A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.swift */; };
 		A5CECBC51ECE3164003A6B91 /* MNRSS.db in Resources */ = {isa = PBXBuildFile; fileRef = A5CECBC41ECE3146003A6B91 /* MNRSS.db */; };
 		A5EE50401F5E216800AE024F /* lite_Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50281F5E216800AE024F /* lite_Icon-60.png */; };
 		A5EE50411F5E216800AE024F /* lite_Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */; };
@@ -142,65 +140,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A516DE071ED9B64400253D11 /* ManageCOFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCOFTableViewController.h; sourceTree = "<group>"; };
-		A516DE081ED9B64400253D11 /* ManageCOFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCOFTableViewController.m; sourceTree = "<group>"; };
-		A516DE0A1ED9B8F200253D11 /* ManageCOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCOF.h; sourceTree = "<group>"; };
-		A516DE0B1ED9B8F200253D11 /* ManageCOF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCOF.m; sourceTree = "<group>"; };
-		A516DE0D1ED9D52100253D11 /* ManageDivisions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageDivisions.h; sourceTree = "<group>"; };
-		A516DE0E1ED9D52100253D11 /* ManageDivisions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDivisions.m; sourceTree = "<group>"; };
-		A516DE101ED9D75A00253D11 /* ManageDivisionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageDivisionTableViewController.h; sourceTree = "<group>"; };
-		A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageDivisionTableViewController.m; sourceTree = "<group>"; };
-		A51DC7B625957A3900E6C928 /* iOSUISettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUISettings.m; sourceTree = "<group>"; };
-		A51DC7BB2595895500E6C928 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
-		A51DC7BC2595895500E6C928 /* General.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = General.m; sourceTree = "<group>"; };
+		A516DE081ED9B64400253D11 /* ManageCOFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageCOFTableViewController.swift; sourceTree = "<group>"; };
+		A516DE0B1ED9B8F200253D11 /* ManageCOF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageCOF.swift; sourceTree = "<group>"; };
+		A516DE0E1ED9D52100253D11 /* ManageDivisions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageDivisions.swift; sourceTree = "<group>"; };
+		A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageDivisionTableViewController.swift; sourceTree = "<group>"; };
+		A51DC7B625957A3900E6C928 /* iOSUISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUISettings.swift; sourceTree = "<group>"; };
+		A51DC7BC2595895500E6C928 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		A521064E255B07440015F858 /* My NRA Rifle Match Score Sheet Lite.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "My NRA Rifle Match Score Sheet Lite.plist"; sourceTree = SOURCE_ROOT; };
 		A53C44D81EE7794B00CC309C /* My NRA Rifle Match Score Sheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My NRA Rifle Match Score Sheet.entitlements"; sourceTree = "<group>"; };
 		A53C44D91EE7795200CC309C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		A541C0801EBD6194007B857E /* MatchLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchLists.h; sourceTree = "<group>"; };
-		A541C0811EBD6194007B857E /* MatchLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchLists.m; sourceTree = "<group>"; };
+		A541C0811EBD6194007B857E /* MatchLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLists.swift; sourceTree = "<group>"; };
 		A547A9451EDA256B00B1576C /* Icon-Notifcation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation.png"; sourceTree = "<group>"; };
 		A547A9461EDA256B00B1576C /* Icon-Notifcation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation@2x.png"; sourceTree = "<group>"; };
 		A547A9471EDA256B00B1576C /* Icon-Notifcation@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Notifcation@3x.png"; sourceTree = "<group>"; };
 		A54F0B6B249AC5BF00C93C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54F0B79249AC67F00C93C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A553E9DA1EE6DFF6009E8291 /* DatabaseManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManagement.h; sourceTree = "<group>"; };
-		A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManagement.m; sourceTree = "<group>"; };
-		A553E9DC1EE6DFF6009E8291 /* DBUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUpgrade.h; sourceTree = "<group>"; };
-		A553E9DD1EE6DFF6009E8291 /* DBUpgrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUpgrade.m; sourceTree = "<group>"; };
+		A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagement.swift; sourceTree = "<group>"; };
+		A553E9DD1EE6DFF6009E8291 /* DBUpgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUpgrade.swift; sourceTree = "<group>"; };
 		A557C96F1EBD160000E6B0AC /* My NRA Rifle Match Score Sheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My NRA Rifle Match Score Sheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A557C9731EBD160000E6B0AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A557C9751EBD160000E6B0AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A557C9761EBD160000E6B0AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A557C9761EBD160000E6B0AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A557C97C1EBD160000E6B0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A557C97E1EBD160000E6B0AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A557C9811EBD160000E6B0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A557C9831EBD160000E6B0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A557C98D1EBD167500E6B0AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A557C98F1EBD168200E6B0AC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		A557C9931EBD197100E6B0AC /* LIST_Matches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIST_Matches.h; sourceTree = "<group>"; };
-		A557C9941EBD197100E6B0AC /* LIST_Matches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIST_Matches.m; sourceTree = "<group>"; };
-		A557C9961EBD1A6D00E6B0AC /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		A557C9971EBD1A6D00E6B0AC /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		A557C99C1EBD380400E6B0AC /* BurnSoftGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftGeneral.h; sourceTree = "<group>"; };
-		A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftGeneral.m; sourceTree = "<group>"; };
-		A557C99F1EBD384900E6B0AC /* BurnSoftDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftDatabase.h; sourceTree = "<group>"; };
-		A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftDatabase.m; sourceTree = "<group>"; };
-		A557C9A21EBD388100E6B0AC /* MYSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSettings.h; sourceTree = "<group>"; };
-		A557C9A31EBD388100E6B0AC /* MYSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSettings.m; sourceTree = "<group>"; };
-		A557C9A51EBD389900E6B0AC /* FormFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormFunctions.h; sourceTree = "<group>"; };
-		A557C9A61EBD389900E6B0AC /* FormFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormFunctions.m; sourceTree = "<group>"; };
+		A557C9941EBD197100E6B0AC /* LIST_Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIST_Matches.swift; sourceTree = "<group>"; };
+		A557C9971EBD1A6D00E6B0AC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurnSoftGeneral.swift; sourceTree = "<group>"; };
+		A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurnSoftDatabase.swift; sourceTree = "<group>"; };
+		A557C9A31EBD388100E6B0AC /* MYSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MYSettings.swift; sourceTree = "<group>"; };
+		A557C9A61EBD389900E6B0AC /* FormFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFunctions.swift; sourceTree = "<group>"; };
 		A557C9A81EBD38A200E6B0AC /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		A57893E11EBE12AF00D2259B /* MainStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainStartViewController.h; sourceTree = "<group>"; };
-		A57893E21EBE12AF00D2259B /* MainStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainStartViewController.m; sourceTree = "<group>"; };
+		A57893E21EBE12AF00D2259B /* MainStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStartViewController.swift; sourceTree = "<group>"; };
 		A57894181EBE240E00D2259B /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = document.png; sourceTree = "<group>"; };
-		A5789E1E1EBF403900712CA4 /* Add_MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add_MatchViewController.h; sourceTree = "<group>"; };
-		A5789E1F1EBF403900712CA4 /* Add_MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Add_MatchViewController.m; sourceTree = "<group>"; };
-		A5789E211EBF4ACF00712CA4 /* MatchListCOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchListCOF.h; sourceTree = "<group>"; };
-		A5789E221EBF4ACF00712CA4 /* MatchListCOF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchListCOF.m; sourceTree = "<group>"; };
-		A5789E241EBF51BC00712CA4 /* LIST_Match_COF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIST_Match_COF.h; sourceTree = "<group>"; };
-		A5789E251EBF51BC00712CA4 /* LIST_Match_COF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIST_Match_COF.m; sourceTree = "<group>"; };
-		A57B7FD41ED26CCC00F0DEAE /* BurnSoftMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurnSoftMath.h; sourceTree = "<group>"; };
-		A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurnSoftMath.m; sourceTree = "<group>"; };
+		A5789E1F1EBF403900712CA4 /* Add_MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add_MatchViewController.swift; sourceTree = "<group>"; };
+		A5789E221EBF4ACF00712CA4 /* MatchListCOF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchListCOF.swift; sourceTree = "<group>"; };
+		A5789E251EBF51BC00712CA4 /* LIST_Match_COF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIST_Match_COF.swift; sourceTree = "<group>"; };
+		A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurnSoftMath.swift; sourceTree = "<group>"; };
 		A57D6A4B1ED8EACC003BDBA6 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		A57D6A4C1ED8EACC003BDBA6 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		A57D6A4D1ED8EACC003BDBA6 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
@@ -216,17 +193,15 @@
 		A57D6A571ED8EACC003BDBA6 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
 		A57D6A581ED8EACC003BDBA6 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		A57D6A591ED8EACC003BDBA6 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		A57D6A691ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsiTunesBackupRestoreViewController.h; sourceTree = "<group>"; };
-		A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsiTunesBackupRestoreViewController.m; sourceTree = "<group>"; };
+		A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsiTunesBackupRestoreViewController.swift; sourceTree = "<group>"; };
 		A5928B0B1F5E1DBF00B73F6B /* My NRA Rifle Match Score Sheet Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My NRA Rifle Match Score Sheet Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A59486C41EC2A1520005BCF4 /* CourseOfFire_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseOfFire_ViewController.h; sourceTree = "<group>"; };
-		A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseOfFire_ViewController.m; sourceTree = "<group>"; };
+		A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseOfFire_ViewController.swift; sourceTree = "<group>"; };
 		A59E7D5B2594D6B800A673CE /* iOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iOSTestPlan.xctestplan; sourceTree = "<group>"; };
 		A59E7D732594DAD600A673CE /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A59E7D752594DAD600A673CE /* iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUITests.m; sourceTree = "<group>"; };
+		A59E7D752594DAD600A673CE /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		A59E7D772594DAD600A673CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A59E7D812594DB2200A673CE /* iOSViewApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSViewApp.m; sourceTree = "<group>"; };
-		A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSManageCourseOfFire.m; sourceTree = "<group>"; };
+		A59E7D812594DB2200A673CE /* iOSViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewApp.swift; sourceTree = "<group>"; };
+		A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSManageCourseOfFire.swift; sourceTree = "<group>"; };
 		A5CECBC41ECE3146003A6B91 /* MNRSS.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MNRSS.db; sourceTree = "<group>"; };
 		A5EE50281F5E216800AE024F /* lite_Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60.png"; sourceTree = "<group>"; };
 		A5EE50291F5E216800AE024F /* lite_Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lite_Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -288,8 +263,7 @@
 		A547A94B1EDA3B5900B1576C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A557C9751EBD160000E6B0AC /* AppDelegate.h */,
-				A557C9761EBD160000E6B0AC /* AppDelegate.m */,
+				A557C9761EBD160000E6B0AC /* AppDelegate.swift */,
 				A557C97B1EBD160000E6B0AC /* Main.storyboard */,
 				A557C97E1EBD160000E6B0AC /* Assets.xcassets */,
 				A557C9801EBD160000E6B0AC /* LaunchScreen.storyboard */,
@@ -356,7 +330,6 @@
 			children = (
 				A5CECBC41ECE3146003A6B91 /* MNRSS.db */,
 				A557C9991EBD37CF00E6B0AC /* include */,
-				A557C9731EBD160000E6B0AC /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -392,22 +365,14 @@
 		A557C98A1EBD163200E6B0AC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A553E9DA1EE6DFF6009E8291 /* DatabaseManagement.h */,
-				A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.m */,
-				A553E9DC1EE6DFF6009E8291 /* DBUpgrade.h */,
-				A553E9DD1EE6DFF6009E8291 /* DBUpgrade.m */,
-				A557C9A51EBD389900E6B0AC /* FormFunctions.h */,
-				A557C9A61EBD389900E6B0AC /* FormFunctions.m */,
-				A557C9A21EBD388100E6B0AC /* MYSettings.h */,
-				A557C9A31EBD388100E6B0AC /* MYSettings.m */,
-				A541C0801EBD6194007B857E /* MatchLists.h */,
-				A541C0811EBD6194007B857E /* MatchLists.m */,
-				A5789E211EBF4ACF00712CA4 /* MatchListCOF.h */,
-				A5789E221EBF4ACF00712CA4 /* MatchListCOF.m */,
-				A516DE0A1ED9B8F200253D11 /* ManageCOF.h */,
-				A516DE0B1ED9B8F200253D11 /* ManageCOF.m */,
-				A516DE0D1ED9D52100253D11 /* ManageDivisions.h */,
-				A516DE0E1ED9D52100253D11 /* ManageDivisions.m */,
+				A553E9DB1EE6DFF6009E8291 /* DatabaseManagement.swift */,
+				A553E9DD1EE6DFF6009E8291 /* DBUpgrade.swift */,
+				A557C9A61EBD389900E6B0AC /* FormFunctions.swift */,
+				A557C9A31EBD388100E6B0AC /* MYSettings.swift */,
+				A541C0811EBD6194007B857E /* MatchLists.swift */,
+				A5789E221EBF4ACF00712CA4 /* MatchListCOF.swift */,
+				A516DE0B1ED9B8F200253D11 /* ManageCOF.swift */,
+				A516DE0E1ED9D52100253D11 /* ManageDivisions.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -417,8 +382,7 @@
 			children = (
 				A557C9921EBD193F00E6B0AC /* Settings */,
 				A557C9911EBD193400E6B0AC /* MatchLists */,
-				A57893E11EBE12AF00D2259B /* MainStartViewController.h */,
-				A57893E21EBE12AF00D2259B /* MainStartViewController.m */,
+				A57893E21EBE12AF00D2259B /* MainStartViewController.swift */,
 			);
 			name = "Form Classes";
 			sourceTree = "<group>";
@@ -436,14 +400,10 @@
 		A557C9911EBD193400E6B0AC /* MatchLists */ = {
 			isa = PBXGroup;
 			children = (
-				A557C9931EBD197100E6B0AC /* LIST_Matches.h */,
-				A557C9941EBD197100E6B0AC /* LIST_Matches.m */,
-				A5789E1E1EBF403900712CA4 /* Add_MatchViewController.h */,
-				A5789E1F1EBF403900712CA4 /* Add_MatchViewController.m */,
-				A5789E241EBF51BC00712CA4 /* LIST_Match_COF.h */,
-				A5789E251EBF51BC00712CA4 /* LIST_Match_COF.m */,
-				A59486C41EC2A1520005BCF4 /* CourseOfFire_ViewController.h */,
-				A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.m */,
+				A557C9941EBD197100E6B0AC /* LIST_Matches.swift */,
+				A5789E1F1EBF403900712CA4 /* Add_MatchViewController.swift */,
+				A5789E251EBF51BC00712CA4 /* LIST_Match_COF.swift */,
+				A59486C51EC2A1520005BCF4 /* CourseOfFire_ViewController.swift */,
 			);
 			name = MatchLists;
 			sourceTree = "<group>";
@@ -451,14 +411,10 @@
 		A557C9921EBD193F00E6B0AC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				A557C9961EBD1A6D00E6B0AC /* Settings.h */,
-				A557C9971EBD1A6D00E6B0AC /* Settings.m */,
-				A57D6A691ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.h */,
-				A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m */,
-				A516DE071ED9B64400253D11 /* ManageCOFTableViewController.h */,
-				A516DE081ED9B64400253D11 /* ManageCOFTableViewController.m */,
-				A516DE101ED9D75A00253D11 /* ManageDivisionTableViewController.h */,
-				A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.m */,
+				A557C9971EBD1A6D00E6B0AC /* Settings.swift */,
+				A57D6A6A1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift */,
+				A516DE081ED9B64400253D11 /* ManageCOFTableViewController.swift */,
+				A516DE111ED9D75A00253D11 /* ManageDivisionTableViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -476,8 +432,7 @@
 		A557C99A1EBD37EA00E6B0AC /* BurnSoftDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				A557C99F1EBD384900E6B0AC /* BurnSoftDatabase.h */,
-				A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.m */,
+				A557C9A01EBD384900E6B0AC /* BurnSoftDatabase.swift */,
 			);
 			name = BurnSoftDatabase;
 			sourceTree = "<group>";
@@ -485,8 +440,7 @@
 		A557C99B1EBD37F100E6B0AC /* BurnSoftGeneral */ = {
 			isa = PBXGroup;
 			children = (
-				A557C99C1EBD380400E6B0AC /* BurnSoftGeneral.h */,
-				A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.m */,
+				A557C99D1EBD380400E6B0AC /* BurnSoftGeneral.swift */,
 			);
 			name = BurnSoftGeneral;
 			sourceTree = "<group>";
@@ -494,8 +448,7 @@
 		A57B7FD31ED26CA900F0DEAE /* BurnSoftMath */ = {
 			isa = PBXGroup;
 			children = (
-				A57B7FD41ED26CCC00F0DEAE /* BurnSoftMath.h */,
-				A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.m */,
+				A57B7FD51ED26CCC00F0DEAE /* BurnSoftMath.swift */,
 			);
 			name = BurnSoftMath;
 			sourceTree = "<group>";
@@ -503,13 +456,12 @@
 		A59E7D742594DAD600A673CE /* iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A51DC7B625957A3900E6C928 /* iOSUISettings.m */,
-				A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.m */,
-				A59E7D812594DB2200A673CE /* iOSViewApp.m */,
-				A59E7D752594DAD600A673CE /* iOSUITests.m */,
+				A51DC7B625957A3900E6C928 /* iOSUISettings.swift */,
+				A59E7D8B2594DE8700A673CE /* iOSManageCourseOfFire.swift */,
+				A59E7D812594DB2200A673CE /* iOSViewApp.swift */,
+				A59E7D752594DAD600A673CE /* iOSUITests.swift */,
 				A59E7D772594DAD600A673CE /* Info.plist */,
-				A51DC7BB2595895500E6C928 /* General.h */,
-				A51DC7BC2595895500E6C928 /* General.m */,
+				A51DC7BC2595895500E6C928 /* General.swift */,
 			);
 			path = iOSUITests;
 			sourceTree = "<group>";
@@ -752,28 +704,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57893E31EBE12AF00D2259B /* MainStartViewController.m in Sources */,
-				A516DE0C1ED9B8F200253D11 /* ManageCOF.m in Sources */,
-				A557C99E1EBD380400E6B0AC /* BurnSoftGeneral.m in Sources */,
-				A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.m in Sources */,
-				A5789E201EBF403900712CA4 /* Add_MatchViewController.m in Sources */,
-				A541C0821EBD6194007B857E /* MatchLists.m in Sources */,
-				A5789E261EBF51BC00712CA4 /* LIST_Match_COF.m in Sources */,
-				A516DE0F1ED9D52100253D11 /* ManageDivisions.m in Sources */,
-				A557C9A11EBD384900E6B0AC /* BurnSoftDatabase.m in Sources */,
-				A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.m in Sources */,
-				A557C9A41EBD388100E6B0AC /* MYSettings.m in Sources */,
-				A57D6A6B1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.m in Sources */,
-				A57B7FD61ED26CCC00F0DEAE /* BurnSoftMath.m in Sources */,
-				A516DE091ED9B64400253D11 /* ManageCOFTableViewController.m in Sources */,
-				A557C9951EBD197100E6B0AC /* LIST_Matches.m in Sources */,
-				A557C9981EBD1A6D00E6B0AC /* Settings.m in Sources */,
-				A553E9DE1EE6DFF6009E8291 /* DatabaseManagement.m in Sources */,
-				A557C9771EBD160000E6B0AC /* AppDelegate.m in Sources */,
-				A553E9DF1EE6DFF6009E8291 /* DBUpgrade.m in Sources */,
-				A557C9741EBD160000E6B0AC /* main.m in Sources */,
-				A5789E231EBF4ACF00712CA4 /* MatchListCOF.m in Sources */,
-				A557C9A71EBD389900E6B0AC /* FormFunctions.m in Sources */,
+				A57893E31EBE12AF00D2259B /* MainStartViewController.swift in Sources */,
+				A516DE0C1ED9B8F200253D11 /* ManageCOF.swift in Sources */,
+				A557C99E1EBD380400E6B0AC /* BurnSoftGeneral.swift in Sources */,
+				A516DE121ED9D75A00253D11 /* ManageDivisionTableViewController.swift in Sources */,
+				A5789E201EBF403900712CA4 /* Add_MatchViewController.swift in Sources */,
+				A541C0821EBD6194007B857E /* MatchLists.swift in Sources */,
+				A5789E261EBF51BC00712CA4 /* LIST_Match_COF.swift in Sources */,
+				A516DE0F1ED9D52100253D11 /* ManageDivisions.swift in Sources */,
+				A557C9A11EBD384900E6B0AC /* BurnSoftDatabase.swift in Sources */,
+				A59486C61EC2A1520005BCF4 /* CourseOfFire_ViewController.swift in Sources */,
+				A557C9A41EBD388100E6B0AC /* MYSettings.swift in Sources */,
+				A57D6A6B1ED90E0E003BDBA6 /* SettingsiTunesBackupRestoreViewController.swift in Sources */,
+				A57B7FD61ED26CCC00F0DEAE /* BurnSoftMath.swift in Sources */,
+				A516DE091ED9B64400253D11 /* ManageCOFTableViewController.swift in Sources */,
+				A557C9951EBD197100E6B0AC /* LIST_Matches.swift in Sources */,
+				A557C9981EBD1A6D00E6B0AC /* Settings.swift in Sources */,
+				A553E9DE1EE6DFF6009E8291 /* DatabaseManagement.swift in Sources */,
+				A557C9771EBD160000E6B0AC /* AppDelegate.swift in Sources */,
+				A553E9DF1EE6DFF6009E8291 /* DBUpgrade.swift in Sources */,
+				A5789E231EBF4ACF00712CA4 /* MatchListCOF.swift in Sources */,
+				A557C9A71EBD389900E6B0AC /* FormFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,28 +732,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5928AD51F5E1DBF00B73F6B /* MainStartViewController.m in Sources */,
-				A5928AD61F5E1DBF00B73F6B /* ManageCOF.m in Sources */,
-				A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.m in Sources */,
-				A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.m in Sources */,
-				A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.m in Sources */,
-				A5928ADA1F5E1DBF00B73F6B /* MatchLists.m in Sources */,
-				A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.m in Sources */,
-				A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.m in Sources */,
-				A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.m in Sources */,
-				A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.m in Sources */,
-				A5928ADF1F5E1DBF00B73F6B /* MYSettings.m in Sources */,
-				A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.m in Sources */,
-				A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.m in Sources */,
-				A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.m in Sources */,
-				A5928AE31F5E1DBF00B73F6B /* LIST_Matches.m in Sources */,
-				A5928AE41F5E1DBF00B73F6B /* Settings.m in Sources */,
-				A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.m in Sources */,
-				A5928AE61F5E1DBF00B73F6B /* AppDelegate.m in Sources */,
-				A5928AE71F5E1DBF00B73F6B /* DBUpgrade.m in Sources */,
-				A5928AE81F5E1DBF00B73F6B /* main.m in Sources */,
-				A5928AE91F5E1DBF00B73F6B /* MatchListCOF.m in Sources */,
-				A5928AEA1F5E1DBF00B73F6B /* FormFunctions.m in Sources */,
+				A5928AD51F5E1DBF00B73F6B /* MainStartViewController.swift in Sources */,
+				A5928AD61F5E1DBF00B73F6B /* ManageCOF.swift in Sources */,
+				A5928AD71F5E1DBF00B73F6B /* BurnSoftGeneral.swift in Sources */,
+				A5928AD81F5E1DBF00B73F6B /* ManageDivisionTableViewController.swift in Sources */,
+				A5928AD91F5E1DBF00B73F6B /* Add_MatchViewController.swift in Sources */,
+				A5928ADA1F5E1DBF00B73F6B /* MatchLists.swift in Sources */,
+				A5928ADB1F5E1DBF00B73F6B /* LIST_Match_COF.swift in Sources */,
+				A5928ADC1F5E1DBF00B73F6B /* ManageDivisions.swift in Sources */,
+				A5928ADD1F5E1DBF00B73F6B /* BurnSoftDatabase.swift in Sources */,
+				A5928ADE1F5E1DBF00B73F6B /* CourseOfFire_ViewController.swift in Sources */,
+				A5928ADF1F5E1DBF00B73F6B /* MYSettings.swift in Sources */,
+				A5928AE01F5E1DBF00B73F6B /* SettingsiTunesBackupRestoreViewController.swift in Sources */,
+				A5928AE11F5E1DBF00B73F6B /* BurnSoftMath.swift in Sources */,
+				A5928AE21F5E1DBF00B73F6B /* ManageCOFTableViewController.swift in Sources */,
+				A5928AE31F5E1DBF00B73F6B /* LIST_Matches.swift in Sources */,
+				A5928AE41F5E1DBF00B73F6B /* Settings.swift in Sources */,
+				A5928AE51F5E1DBF00B73F6B /* DatabaseManagement.swift in Sources */,
+				A5928AE61F5E1DBF00B73F6B /* AppDelegate.swift in Sources */,
+				A5928AE71F5E1DBF00B73F6B /* DBUpgrade.swift in Sources */,
+				A5928AE91F5E1DBF00B73F6B /* MatchListCOF.swift in Sources */,
+				A5928AEA1F5E1DBF00B73F6B /* FormFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,11 +760,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51DC7BD2595895500E6C928 /* General.m in Sources */,
-				A51DC7B725957A3900E6C928 /* iOSUISettings.m in Sources */,
-				A59E7D822594DB2200A673CE /* iOSViewApp.m in Sources */,
-				A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.m in Sources */,
-				A59E7D762594DAD600A673CE /* iOSUITests.m in Sources */,
+				A51DC7BD2595895500E6C928 /* General.swift in Sources */,
+				A51DC7B725957A3900E6C928 /* iOSUISettings.swift in Sources */,
+				A59E7D822594DB2200A673CE /* iOSViewApp.swift in Sources */,
+				A59E7D8C2594DE8700A673CE /* iOSManageCourseOfFire.swift in Sources */,
+				A59E7D762594DAD600A673CE /* iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +801,9 @@
 		A557C9841EBD160000E6B0AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -900,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -910,6 +863,9 @@
 		A557C9851EBD160000E6B0AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -953,7 +909,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -963,13 +919,15 @@
 		A557C9871EBD160000E6B0AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet";
@@ -982,13 +940,15 @@
 		A557C9881EBD160000E6B0AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet";
@@ -1001,13 +961,15 @@
 		A5928B091F5E1DBF00B73F6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Lite";
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet Lite.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet-Lite";
@@ -1020,13 +982,15 @@
 		A5928B0A1F5E1DBF00B73F6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon Lite";
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = "My NRA Rifle Match Score Sheet/My NRA Rifle Match Score Sheet.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				INFOPLIST_FILE = "My NRA Rifle Match Score Sheet Lite.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.burnsoft.My-NRA-Rifle-Match-Score-Sheet-Lite";
@@ -1047,7 +1011,7 @@
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = iOSUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1069,7 +1033,7 @@
 				DEVELOPMENT_TEAM = MF94VYSKL4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = iOSUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = net.burnsoft.iOSUITests;

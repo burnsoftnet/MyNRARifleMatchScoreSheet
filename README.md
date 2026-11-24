@@ -16,6 +16,10 @@ The My NRA Rifle Match Score Sheet was created to allow you to keep track of you
 
 ## Reload Log
 
+### v1.4 Nov 21, 2026
+* Converted from Objective-C to Swift
+* Fixed Datatime Picker.
+
 ### v1.3 Feb 21, 2020
 
 - FIXED - Adjusted To use light mode for iOS13
